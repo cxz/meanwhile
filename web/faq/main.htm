@@ -19,7 +19,7 @@
     </ul>
   </li>
   <li>
-    <b>Gaim Plugin</b>
+    <b>Plugins</b>
     <a name="group_gaim">
 			&nbsp;</a>
     <ul>
@@ -27,13 +27,11 @@
         <a href="#what_is_gaim">What is Gaim?</a>
       </li>
       <li>
-        <a href="#how_to_compile">I have the source, now how do I compile this?</a>
-      </li>
-      <li>
-        <a href="#how_to_compile_srpm">Why is the SRPM not building the Gaim plugin?</a>
-      </li>
-      <li>
         <a href="#case_sensitive">Why aren't some of my buddies showing as online?</a>
+      </li>
+      <li>
+        <a href="#storage_buddy_list">How do I make the Meanwhile Gaim plugin use my server-side
+	buddy list?</a>
       </li>
     </ul>
   </li>
@@ -134,53 +132,6 @@
 </table><table class="question">
   <tr>
     <td class="q-title">
-      <a name="how_to_compile" href="#how_to_compile">I have the source, now how do I compile this?</a>
-    </td>
-    <td class="q-back">
-      <a href="#group_gaim">back</a>
-    </td>
-  </tr>
-  <tr>
-    <td class="q-answer" colspan="2">
-      <p>Ah, now that's tricky.</p>
-      <p>This plugin is dynamically linked against libMeanwhile, which must
-	already be installed. That part at least, is easy. Just make sure that
-	you've run <code>ldconfig</code>, and detection should work find.</p>
-      <p>This is also a Gaim plugin, which naturally requires headers from
-	Gaim. However, Gaim has no real development package, so the only way
-	to get the Gaim headers is to get the Gaim source. Once you've
-	obtained that, running the following should produce Makefiles which
-	build the plugin.</p>
-      <p>
-        <code>./configure --with-gaim-source=$path_to_gaim/src</code>
-      </p>
-      <p>This is outlined in the <code>INSTALL</code> file.</p>
-    </td>
-  </tr>
-</table><table class="question">
-  <tr>
-    <td class="q-title">
-      <a name="how_to_compile_srpm" href="#how_to_compile_srpm">Why is the SRPM not building the Gaim plugin?</a>
-    </td>
-    <td class="q-back">
-      <a href="#group_gaim">back</a>
-    </td>
-  </tr>
-  <tr>
-    <td class="q-answer" colspan="2">
-      <p>The reasoning is the same as outlined above. The fix for
-	this is to rebuild the rpm with the environment variable
-	<code>gaim_src_dir</code> set to the absolute path to the
-	<code>src</code> directory for Gaim. For example:</p>
-      <p>
-        <code>gaim_src_dir=/path/to/gaim/src
-	rpmbuild --rebuild meanwhile-0.2-1.srpm</code>
-      </p>
-    </td>
-  </tr>
-</table><table class="question">
-  <tr>
-    <td class="q-title">
       <a name="case_sensitive" href="#case_sensitive">Why aren't some of my buddies showing as online?</a>
     </td>
     <td class="q-back">
@@ -201,5 +152,18 @@
 	buddy-list, and sametime's messaging service will erroneously inform
 	you that the user you're sending to is not online.</p>
     </td>
+  </tr>
+</table><table class="question">
+  <tr>
+    <td class="q-title">
+      <a name="storage_buddy_list" href="#storage_buddy_list">How do I make the Meanwhile Gaim plugin use my server-side
+	buddy list?</a>
+    </td>
+    <td class="q-back">
+      <a href="#group_gaim">back</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="q-answer" colspan="2"/>
   </tr>
 </table>
