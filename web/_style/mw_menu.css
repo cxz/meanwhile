@@ -8,12 +8,11 @@
 }
 
 #dNavMenu {
-	border-bottom: 1px solid #99ccff;
+	border-bottom: 1px solid #ddd;
 }
 
 #dNavMenu a, #dNavMenu p {
 	border: none;
-	color: #000;
 	display: block;
 	line-height: 1.2em;
 	margin: 0px 0px 1px 0px;
@@ -27,7 +26,7 @@
 }
 
 #dNavMenu a.depth_1 {
-	background-color: #99ccff;
+	background-color: #eee;
 }
 
 #dNavMenu .depth_2 {
@@ -35,11 +34,11 @@
 }
 
 #dNavMenu a.depth_2 {
-	background-color: #ddeeff;
+	background-color: #ddd;
 }
 
 #dNavMenu a:hover {
-	background-color: #eeeeee;
+	background-color: #def;
 	text-decoration: underline;
 }
 
