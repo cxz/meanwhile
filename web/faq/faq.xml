@@ -29,7 +29,7 @@
 	<title>Should I use Meanwhile?</title>
 	<answer>
 	<p>Meanwhile is still a beta, and is not stable. If you are a hobbyist,
-	or some other varient of insane person, then go right ahead. Problems
+	or some other variant of insane person, then go right ahead. Problems
 	should be logged in the appropriate trackers with as much pertinent
 	information as possible.</p>
 	<p>Remember: If it breaks, you get to keep the pieces!</p>
@@ -107,6 +107,16 @@
 	safely set to Local Only.</p>
 	</answer>
 	</question>
+
+	<question>
+	<title>Why don't you support ${FEATURE}?</title>
+	<answer><p>It's not entirely a matter of not supporting, it's more a
+	matter of not <i>yet</i> supporting. Please look through the
+	<a href="http://sourceforge.net/tracker/?atid=656721&amp;group_id=110565&amp;func=browse">RFE Tracker</a> for features that the project intends to
+	eventually provide. If you have something you'd like to add to that
+	list, go ahead and do so.</p>
+	</answer>
+	</question>
 </group>
 
 
@@ -127,12 +137,13 @@
 	<question id="protocol_help">
 	<title>How can I help with the protocol research?</title>
 	<answer>
-	<p>The two best ways are through libpcap packet dumps, and written
+	<p>The two best ways are through <a href="http://sourceforge.net/projects/libpcap/">libpcap</a> packet dumps, and written
 	extrapolation on network antics. It may be helpful to have used the
 	Lotus libraries before, but that's not necessary. If you notice that
 	an unsupported feature seems to generate network traffic whenever you
 	use it, capture those packets and explain exactly what you were doing
 	to produce them. We'll get this thing figured out yet!</p>
+	<p>try: <code>tcpdump -i eth0 -w gaim-meanwhile.capture tcp port 1533</code></p>
 	</answer>
 	</question>
 
@@ -156,6 +167,7 @@
 	able to safely incorporate any changes or fixes. You may be able to
 	safely communicate the idea/fix, but please check with your management
 	first.</p>
+	<p><a href="http://sourceforge.net/tracker/?atid=656720&amp;group_id=110565&amp;func=browse">Patch Tracker</a></p>
 	</answer>
 	</question>
 
@@ -175,6 +187,7 @@
 	<p>These are all parts of the bug reporting process. Failing these
 	steps yet still submitting an item into the tracker is not reporting
 	a bug, it's just senseless noise.</p>
+	<p><a href="http://sourceforge.net/tracker/?atid=656718&amp;group_id=110565&amp;func=browse">Bug Tracker</a></p>
 	</answer>
 	</question>
 

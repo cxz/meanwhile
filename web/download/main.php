@@ -23,7 +23,7 @@ or two. If you're still feeling brave, simply follow these steps:</p>
 <a href="http://sourceforge.net/cvs/?group_id=235">http://sourceforge.net/cvs/?group_id=235</a></li>
 
 <li>Build and install first gaim, then meanwhile, then meanwhile-gaim. Simply running the following in each sandbox should work:<br />
-<code>./autogen.sh &amp;&amp; ./configure &amp;&amp; make all &amp;&amp; su -c "make install"</code></li>
+<code>./autogen.sh &amp;&amp; make all &amp;&amp; su -c "make install"</code></li>
 
 <li>Run <code>ldconfig</code> as root. This will ensure that your system will be able to load the meanwhile libraries when gaim starts.</li>
 
