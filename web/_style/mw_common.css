@@ -10,7 +10,7 @@ body, p, li, div, a {
 }
 
 body {
-	background: #ffffff;
+	background: #fff;
 	font-weight: normal;
 	margin: 0px;
 	padding: 0px;
@@ -55,8 +55,9 @@ a, a:link, a:visited {
 }
 
 a:hover, a:active, a:focus {
+	background-color: #eee;
 	border: none;
-	text-decoration: underline;
+	text-decoration: none;
 }
 
 a {
@@ -87,6 +88,7 @@ h4, h5 {	font-size: 9pt; }
 	background: #eee
 	 url("img/site_mark.png")
 	 no-repeat left;
+	border-bottom: 1pt solid #555;
 	height: 70px;
 	margin: 0px;
 	position: relative;
@@ -104,6 +106,11 @@ h4, h5 {	font-size: 9pt; }
 	top: 14px;
 }
 
+#dHeadTitle p.subtitle {
+	font-size: 10pt;
+	color: #555;
+}
+
 #dHeadLogo {
 	position: absolute;
 	right: 20px;
@@ -116,14 +123,6 @@ h4, h5 {	font-size: 9pt; }
 	font-weight: bold; 
 	position: absolute;
 	right: 20px;
-}
-
-#dHeadNav a {
-	text-decoration: none;
-}
-
-#dHeadNav a:hover {
-	text-decoration: underline;
 }
 
 
@@ -185,13 +184,13 @@ h4, h5 {	font-size: 9pt; }
 /* Formatting for the footer text: a goodbye and a copyright notice */
 #dFoot {
 	color: #aaa;
-	margin: 40px 0px 10px 0px;
-	width: 100%;
+	margin: 10px 10px 0px 160px;
+	width: 450px;
 }
 
 #pGoodbye, #pCopyright {
-	line-height: 1em;
-	margin: 0em;
+	font-size: 8pt;
+	margin: 0em 0em 1em 0em;
 	text-align: center;
 }
 

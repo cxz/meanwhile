@@ -59,7 +59,8 @@ require($full_path . "release.php");
     <p class="hide"><a href="#content">Skip to content</a></p>
 
     <div id="dHeadTitle">
-      <? echo($page_title); ?>
+      The Meanwhile Project
+      <p class="subtitle">An Open Re-Implementation of Lotus Sametime</p>
     </div>
 
     <div id="dHeadLogo">
@@ -162,8 +163,12 @@ require($full_path . "release.php");
   <!-- ==================================================================== -->
   <!-- the footer -->
   <div id="dFoot">
-    <p id="pGoodbye">Thanks for visiting</p>
-    <p id="pCopyright">&copy; Christopher (siege) O'Brien, 2005</p>
+    <p id="pGoodbye">Thanks for visiting, hope you found something useful.</p>
+    <p id="pCopyright">
+	Site content &copy; Christopher (siege) O'Brien, 2005.
+	Site and project are neither endorsed by nor affiliated with IBM
+	or Lotus. Lotus and Sametime are trademarks of Lotus Development
+	Corportation and/or IBM Corporation.
   </div>
 
 
