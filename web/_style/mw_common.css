@@ -33,6 +33,7 @@ p img.pthumb {
 	border: none;
 	float: left;
 	height: 48px;
+	margin-top: 0.2em;
 	margin-right: 4pt;
 	width: 48px;
 }
