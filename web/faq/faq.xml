@@ -79,6 +79,7 @@
 	<question id="storage_buddy_list">
 	<title>How do I make the Meanwhile Gaim plugin use my server-side
 	buddy list?</title>
+	<answer>
 	<p>Back up your buddy list <i>right now</i> with an official
 	client.</p>
 	<p>The act of obtaining the server-side list is trivial. Correctly
@@ -94,6 +95,7 @@
 	preference attached to the protocol plugin. It has three settings:
 	Local Only; Load from Server; Load and Save to Server. The default is
 	safely set to Local Only.</p>
+	</answer>
 	</question>
 </group>
 

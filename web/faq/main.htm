@@ -164,6 +164,22 @@
     </td>
   </tr>
   <tr>
-    <td class="q-answer" colspan="2"/>
+    <td class="q-answer" colspan="2">
+      <p>Back up your buddy list <i>right now</i> with an official
+	client.</p>
+      <p>The act of obtaining the server-side list is trivial. Correctly
+	parsing the data from it however has turned out to be much more
+	complex. Rebuilding that data from what's in your Gaim buddy list and
+	saving to the server-side list can be even worse, depending on your
+	Sametime deployment. If your deployment is using LDAP style user IDs,
+	such as "cn=My Name, o=My Company", then you probably don't want to
+	use the Save feature, but the Load feature should be safe. If your
+	deployment is using email-addresses such as "myname@mycompany.com",
+	then you should be safe for both Loading and Saving.</p>
+      <p>The level to which the server side list is used is set in a
+	preference attached to the protocol plugin. It has three settings:
+	Local Only; Load from Server; Load and Save to Server. The default is
+	safely set to Local Only.</p>
+    </td>
   </tr>
 </table>
