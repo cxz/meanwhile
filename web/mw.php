@@ -11,7 +11,8 @@ $page_title = "Meanwhile Project";
 if($title && $title != $page_title)
 	$page_title = $page_title . " | " . $title;
 
-if(! $date) $date = date("Y-m-d", filemtime($back . $body));
+if(! $date)
+	$date = date("Y-m-d", filemtime($back . $body));
 
 
 function drawLink($href, $test) {
@@ -112,6 +113,7 @@ require($full_path . "release.php");
 	    <li><a href="http://sf.net/projects/meanwhile/files/">Files</a></li>
 	    <li><a href="http://sf.net/forum/?group_id=110565">Forums</a></li>
 	    <li><a href="http://sf.net/tracker/?group_id=110565">Trackers</a></li>
+	    <li><a href="http://cvs.sourceforge.net/viewcvs.py/meanwhile/">CVS</a></li>
 	    </ul></li>
 	  </ul>
         </div>
