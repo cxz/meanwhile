@@ -11,7 +11,7 @@
 
 	$mw_release = "meanwhile 0.4.0";
 	$mw_release_url = $base_url . "&amp;package_id=119439" .
-		"&amp;release_id=253393";
+		"&amp;release_id=253395";
 
 	$mw_gaim = "gaim-meanwhile 1.2.0";
 	$mw_gaim_url =  $base_url . "&amp;package_id=119703" .
