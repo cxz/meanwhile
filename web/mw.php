@@ -107,8 +107,8 @@ require("release.php");
 	    <ul>
 	    <li><a href="http://sf.net/projects/meanwhile">Project Page</a></li>
 	    <li><a href="http://sf.net/projects/meanwhile/files/">Files</a></li>
-	    <li><a href="http://sf.net/projects/meanwhile/forums/">Forums</a></li>
-	    <li><a href="http://sf.net/projects/meanwhile/tracker/">Trackers</a></li>
+	    <li><a href="http://sf.net/forum/?group_id=110565">Forums</a></li>
+	    <li><a href="http://sf.net/tracker/?group_id=110565">Trackers</a></li>
 	    </ul></li>
 	  </ul>
         </div>
