@@ -65,7 +65,7 @@ require($full_path . "release.php");
 
     <div id="dHeadLogo">
       <a href="http://sf.net/"><img
-       src="http://sf.net/sflogo.php?group_id=110565&amp;type=1"
+       src="http://sflogo.sourceforge.net/sflogo.php?group_id=110565&amp;type=1"
        alt="SF.net" width="88" height="31" /></a>
     </div>
 

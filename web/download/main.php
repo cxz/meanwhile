@@ -14,16 +14,14 @@ Gaim in any way.</p>
 
 
 <h2>CVS</h2>
-<p>The CVS version of gaim-meanwhile is written against the latest release of
-Gaim, and the latest release of Meanwhile.</p>
-
-<p>The CVS version of meanwhile is not guaranteed to work with the CVS version
-of gaim-meanwhile. In fact, until 0.4.0 is released, it's guaranteed <i>not</i>
-to work. However, the new Python bindings are in CVS, and are worth playing
-around with if you have the time and a sametime server that doesn't mind. You
-don't have to install CVS meanwhile to play with the Python bindings, the
-included test scripts will function in the sandbox just fine.</p>
+<p>The CVS versions of meanwhile, gaim-meanwhile, and meanwhile-python are
+written to work with each other, rather than to work with any  of the existing
+releases. Because it's a rather dynamic environment, one or two of the modules
+may be un-buildable from time to time.</p>
 
 <p>To build from CVS, just check out the appropriate module and
-run <code>./autogen.sh &amp;&amp; make all</code></p>
+use <code>autogen.sh</code> to generate the configure script. gaim-meanwhile
+has a handy <code>private-install</code> target to install the plugin to
+<code>$HOME/.gaim/plugins/</code></p>
+
 
