@@ -1,11 +1,2 @@
-meanwhile
-*.aux
-*.dvi
-*.lof
-*.log
-*.nfs
-*.out
-*.pdf
-*.toc
 Makefile
 Makefile.in
