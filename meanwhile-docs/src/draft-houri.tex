@@ -32,20 +32,24 @@ Internet-Drafts as reference material or to cite them other than as
 "work in progress."
 
 \par{} The list of current Internet-Drafts can be accessed at
+
 \subpar{} http://www.ietf.org/ietf/1id-abstracts.txt
 
 \par{} The list of Internet-Draft Shadow Directories can be accessed
 at
-\subpar{}http://www.ietf.org/shadow.html.
+
+\subpar{} http://www.ietf.org/shadow.html.
 
 \par{} This document and related documents are discussed on the impp
 mailing list. To join the list, send mail to impp-request@iastate.edu.
 To contribute to the discussion, send mail to impp@iastate.edu.  The
 archives are at:
+
 \subpar{} http://lists.fsck.com/cgi-bin/wilma/pip.
 
 \par{} The IMPP working group charter, including the current list of
 group documents, can be found at:
+
 \subpar{} http://www.ietf.org/html.charters/impp-charter.html.
 
 \chapter{Abstract}
@@ -83,7 +87,7 @@ users.
 \par{} The largest number of concurrent users of a community running
 Ubique's software is 50K.
 
-\section{Terms I\& Definitions}
+\section{Terms \& Definitions}
 
 \par{} - Community - A set of servers and service providers supplying
 presence management to a group of users that are authenticated by the
@@ -372,7 +376,7 @@ functionality. We refer to these functionalities as Services.
 service providers, and are relevant to this protocol documentation:
 
 \par{} * Who Is Online - Widely known as the buddy list service. This
-service supplies users with notifications about status I\& properties of
+service supplies users with notifications about status \& properties of
 other users in the community.
 
 \par{} * Authenticate - Authenticates users against the database for
@@ -858,18 +862,25 @@ according to the message type specified in the Sametime header. The
 Master Protocol is used to interpret all Sametime messages. The
 following   activities are handled at the Master protocol level:
 
-\par{}     * Handshake
-\par{}     * Login and authentication
-\par{}     * Channel creation and destruction
-\par{}     * Sending messages on other channels. These messages are not
+\subpar{}     * Handshake
+
+\subpar{}     * Login and authentication
+
+\subpar{}     * Channel creation and destruction
+
+\subpar{}     * Sending messages on other channels. These messages are not
       interpreted at the master protocol. They are interpreted by
       the particular service protocol associated with the channel
       on which the message was sent.
-\par{}     * Sending broadcast messages
-\par{}     * Sending one time messages
-\par{}     * Sending utility messages (such as, "service up" and "service
+
+\subpar{}     * Sending broadcast messages
+
+\subpar{}     * Sending one time messages
+
+\subpar{}     * Sending utility messages (such as, "service up" and "service
       down")
-\par{}     * Sending privacy and status messages
+
+\subpar{}     * Sending privacy and status messages
 
 \par{} - Service Protocol Layer - Interprets the message data that is sent
 within certain master protocol messages on established channels. The
@@ -892,11 +903,16 @@ diagrams.
 \par{} The following types are used in field descriptions:
 
 \par{} Flag (Boolean) - 1 byte
+
 \par{} char           - 1 byte
+
 \par{} Ulong          - 4 bytes
+
 \par{} Ushort         - 2 bytes
+
 \par{} Opaque         - A large binary object, with its length in the header,
                  the length is an unsigned long ( = 4 bytes)
+
 \par{} String         - A null terminated string, with its length in the
                  header, the length is short (= 2 bytes), The length
                  does not include the null character terminating the
@@ -942,41 +958,50 @@ Message Body
 \par{} Description of Fields:
 
 \par{} Login ID
-\par{}   A string containing the unique (within the community) ID of the
+
+\subpar{}   A string containing the unique (within the community) ID of the
   login described.
 
 \par{} Login Type
-\par{}   A 2-byte field. Specifies the type of Sametime login described. See
+
+\subpar{}   A 2-byte field. Specifies the type of Sametime login described. See
   "User Model" on 8.3.6 for a list of established constants.
 
 \par{} User ID
-\par{}   A string containing the unique (within the community) ID of the
+
+\subpar{}   A string containing the unique (within the community) ID of the
   user.
 
 \par{} User Name
-\par{}   A string containing the name of the user. This is the string that
+
+\subpar{}   A string containing the name of the user. This is the string that
   appears as the user's name on the screen. It is stored in a
   database and is looked up according to the login name.
 
 \par{} Community-Name
-\par{}   A string containing the name of the community. The community name
+
+\subpar{}   A string containing the name of the community. The community name
   can be any string, but the Internet domain name is usually used.
 
 \par{} Full Flag
-\par{}   A single byte. If the value equals 1, the rest of the Login Info
+
+\subpar{}   A single byte. If the value equals 1, the rest of the Login Info
   block (Description, IP Address, and Server ID fields) is
   transmitted. If the value equals 0, the rest of the block is not
   present.
 
 \par{} Description
-\par{}   A string field. The description can be any string data. The current
+
+\subpar{}   A string field. The description can be any string data. The current
   implementation does not place any information in this field.
 
 \par{} IP Address
-\par{}   A 4-byte field containing the IP address of the login described.
+
+\subpar{}   A 4-byte field containing the IP address of the login described.
 
 \par{} Server ID
-\par{}   A string containing the unique ID of the login's server
+
+\subpar{}   A string containing the unique ID of the login's server
   (where the login is held).
 
 \subsection{Privacy Info Block}
@@ -1008,17 +1033,20 @@ Message Body
 \par{} Description of Fields
 
 \par{} Internal Use Byte
-\par{}   Reserved for internal use
+
+\subpar{}   Reserved for internal use
 
 \par{} Excluding Flag
-\par{}   A single byte. If the value equals 1, the list of users that follows
+
+\subpar{} A single byte. If the value equals 1, the list of users that follows
   represents the users who are excluded from seeing the user whose
   privacy is described (all other users are permitted).
   If the value equals 0, the list contains the users who may see the
   user whose privacy is described (all others are excluded).
 
 \par{} User List
-\par{}   A list of users representing either the users who are excluded from
+
+\subpar{}   A list of users representing either the users who are excluded from
   seeing the user whose privacy is described or the users who are
   permitted to see the user whose privacy is described. The list
   begins with a 4-byte field specifying the number of items in the
@@ -1051,15 +1079,18 @@ Message Body
 \par{} Description of Fields
 
 \par{} User Status Type
-\par{}   A 2-byte field indicating the status of the user. See 
+
+\subpar{}   A 2-byte field indicating the status of the user. See 
   8.3.5 for a list of established constants.
 
 \par{} Time
-\par{}   A 4-byte field containing the time of the last change in the user's
+
+\subpar{}   A 4-byte field containing the time of the last change in the user's
   status in minutes. Not set by Sametime 1.0 and 1.5 servers.
 
 \par{} Description
-\par{}   A string containing the message associated with the status type for
+
+\subpar{}   A string containing the message associated with the status type for
   this user. The user's server saves the message customized by the user
   for certain status types.
 
@@ -1081,17 +1112,22 @@ environment.
 \par{} Description of Fields:
 
 \par{} Target ID
-\par{}   A string that can be either a User ID or a Login ID or an empty
+
+\subpar{}   A string that can be either a User ID or a Login ID or an empty
   string.
-\par{}     * If it is a User ID, the ID block specifies a user. A user may
+
+\subpar{}     * If it is a User ID, the ID block specifies a user. A user may
       have more than one associated login. The server may decide which
       login will be the ultimate target.
-\par{}     * If it is an Login ID, the ID block specifies a single login.
-\par{}     * If it is an empty string, the message target will be decided on
+
+\subpar{}     * If it is an Login ID, the ID block specifies a single login.
+
+\subpar{}     * If it is an empty string, the message target will be decided on
       the basis of alternative criteria - service type.
 
 \par{} Community Name
-\par{}   A string specifying the community name. This may be an empty string
+
+\subpar{}   A string specifying the community name. This may be an empty string
   if the target is on the same community.
 
 \subsection{Encryption Block}
@@ -1111,7 +1147,9 @@ non-encrypted channel creation.
 value zero.
 
 \section{Constants}
+
 \subsection{Error Codes}
+
 \subsubsection{General Error/Success Codes}
 
 operation succeeded                               --- 0x00000000
@@ -1380,6 +1418,7 @@ Notes Token Authentication                        --- 0x0001
 Encrpyted Password Authentication                 --- 0x0002
 
 \subsection{Awareness Constants}
+
 \subsubsection{Awareness Context Constants}
 
 The following are Awareness context constants (all are 2 byte unsigned
@@ -1393,28 +1432,31 @@ SNAPSHOT   0x01F4
 
 UPDATE     0x01F5
 
-UPDATE_ID  0x01F7
+UPDATE\_ID  0x01F7
 
 \subsubsection{Awareness Presence Types}
 
 The following are Awareness presence types (all are 2 byte unsigned
 short) :
 
-User       0x0002
+USER       0x0002
 
 \section{Messages}
+
 \subsection{Basic Community Messages}
+
 \subsubsection{Handshake}
 
-This message is sent by the initiator of a TCP connection when the TCP
+\par{} This message is sent by the initiator of a TCP connection when the TCP
 connection is created. This message creates a new master channel from
 the initiator to the recipient (a server).
 
-The message structure includes two fields for the client IP address:
+\par{} The message structure includes two fields for the client IP address:
 one is calculated locally and one is calculated at the server end of
 the TCP connection. This allows for differences that may result when,
 for example, the client uses a proxy.
 
+\begin{verbatim}
 Message Body
 0         8         16        24      31
 +---------+---------+---------+---------+
@@ -1430,22 +1472,26 @@ Message Body
 |Local calculated IP|
 |Address (cont.)    |
 +-------------------+
+\end{verbatim}
 
-Description of Fields
+\par{} Description of Fields
 
-Major/Minor Version
-  Two 2-byte fields containing the originator's Sametime major and
+\par{} Major/Minor Version
+
+\subpar{}  Two 2-byte fields containing the originator's Sametime major and
   minor version numbers. The version number of the handshake requestor
   is checked by the server to determine whether the protocols are
   compatible, for values used in Sametime 1.5 see 8.3.4.
 
-Master Channel ID
-  A 4-byte field containing the Master Channel ID (MCID) of the new
+\par{} Master Channel ID
+
+\subpar{}  A 4-byte field containing the Master Channel ID (MCID) of the new
   channel. When the message is sent from the originator, the MCID is
   0.
 
-server-calculated Client IP Address
-  A 4-byte field containing the IP address of the originator as
+\par{} Server-calculated Client IP Address
+
+\subpar{}  A 4-byte field containing the IP address of the originator as
   calculated at the server end of the TCP connection. When the message
   is sent from the originator, this field is 0. This number is replaced
   by the server before the message is routed to the next station.
@@ -1453,24 +1499,27 @@ server-calculated Client IP Address
   calculated locally by the originator (for example, when the client
   uses a proxy).
 
-Login Type
-  A 2-byte field representing the type of login originating the TCP
+\par{} Login Type
+
+\subpar{}  A 2-byte field representing the type of login originating the TCP
   connection. See 8.3.6 for values.
 
-Local-calculated Client IP Address
-  A 4-byte field containing the IP address of the originator as
+\par{} Local-calculated Client IP Address
+
+\subpar{}   A 4-byte field containing the IP address of the originator as
   calculated locally.
 
 \subsubsection{HandshakeAck}
 
-This message is sent from the server to the initiator of the
+\par{} This message is sent from the server to the initiator of the
 connection. It is an acknowledgement of a successful handshake and the
 creation of a master channel between the initiator and the server. This
 message also informs the initiator of the version number of the server
 and the initiator's IP address as calculated by the server.
 
-Note: The Master Channel ID is included in the message header.
+\par{} Note: The Master Channel ID is included in the message header.
 
+\begin{verbatim}
 Message Body
 0         8         16        24      31
 +---------+---------+---------+---------+
@@ -1478,32 +1527,36 @@ Message Body
 +-------------------+-------------------+
 | server calculated client IP Address[4]|
 +-------------------+-------------------+
+\end{verbatim}
 
-Description of Fields
+\par{} Description of Fields
 
-Major/Minor Version
-  Two 2-byte fields containing the server's Sametime major and minor
+\par{} Major/Minor Version
+
+\subpar{}  Two 2-byte fields containing the server's Sametime major and minor
   version numbers. The version number of the handshake requestor
   enables the server to determine if it can support the protocol
   version. The server also might use different protocols according to
   the version sent by the requestor.  For values used in Sametime 1.5
   see 8.3.4.
 
-server-calculated Client IP Address
-  A 4-byte field containing the IP address of the originator as
+\par{} Server-calculated Client IP Address
+
+\subpar{}  A 4-byte field containing the IP address of the originator as
   calculated at the server end of the TCP connection. The IP address
   seen by the server may be different than that calculated locally by
   the originator (for example, when the client uses a proxy).
 
 \subsubsection{Login}
 
-This message provides login data to the server. The Login Type field
+\par{} This message provides login data to the server. The Login Type field
 determines the format and interpretation of the remainder of the
 message body. For a client, the message contains the Login Name and
 authentication data (see "Login" on 8.4.1.3).
 
-Note: The Master Channel ID is included in the message header.
+\par{} Note: The Master Channel ID is included in the message header.
 
+\begin{verbatim}
 Message Body
 0         8         16        24      31
 +---------+---------+---------+---------+
@@ -1516,39 +1569,44 @@ Message Body
 +-------------------+-------------------+
 | Authentication Data [Opaque]
 +---------------------------------------+
+\end{verbatim}
 
+\par{} Description of Fields:
 
-Description of Fields:
+\par{} Login Type
 
-Login Type
-  A 2-byte field. Specifies the type of Sametime login sending the
+\subpar{}   A 2-byte field. Specifies the type of Sametime login sending the
   message. See 8.3.6.
 
-Login Name
-  A string containing the user's login name. The login name is used in
+\par{} Login Name
+
+\subpar{}  A string containing the user's login name. The login name is used in
   conjunction with the authentication data to identify and
   authenticate the user. The first two bytes specify the total length
   of the string.
 
-Authentication Type
-  A two-byte field indicating the type of authentication. See 
+\par{} Authentication Type
+
+\subpar{}  A two-byte field indicating the type of authentication. See 
   8.3.7. The authentication type determines the 
   interpretation of the authentication data.
 
-Authentication Data
-  An opaque containing data used for authentication of the user (e.g.,
+\par{} Authentication Data
+
+\subpar{}  An opaque containing data used for authentication of the user (e.g.,
   a password or a token). The meaning of this data is determined by
   the authentication type.
 
 \subsubsection{LoginAck}
 
-This message is sent by the server to the login that requested a
+\par{} This message is sent by the server to the login that requested a
 login after a successful login has been accomplished. It returns
 information about the requestor stored in the server to the requestor.
 
-Note: The Master Channel ID is included in the message header.
+\par{} Note: The Master Channel ID is included in the message header.
 Message Body
 
+\begin{verbatim}
 +--------------------+
 |  Login Info Block  |
 +--------------------+
@@ -1556,37 +1614,41 @@ Message Body
 +--------------------+
 |  User Status Block |
 +--------------------+
+\end{verbatim}
 
-Description of Fields:
+\par{} Description of Fields:
 
-Login Info Block
-  The login described in this block (see "Login Info Block" in
+\par{} Login Info Block
+
+\subpar{}  The login described in this block (see "Login Info Block" in
   8.2.1) is the login requestor. The Full flag is always TRUE.
   The IP address
   In this block is the IP address as seen from the server side.
   Therefore, if the client is using a proxy, the IP address will be
   the proxy's IP address.
 
-Privacy Info Block
-  This block (see "Privacy Info Block" on 8.2.2) is used to
+\par{} Privacy Info Block
+
+\subpar{}  This block (see "Privacy Info Block" on 8.2.2) is used to
   send the user's privacy information, which the server retrieves, to
   the client.
 
-User Status Block
-  This block (see "Status Info Block" on 8.2.3) is used to
+\par{} User Status Block
+
+\subpar{}  This block (see "Status Info Block" on 8.2.3) is used to
   send the user's status information. This information is based on
   other (current) logins of the same user.
 
 \subsubsection{LoginCont}
 
-This message has no body. It just notifies the server that the client
+\par{} This message has no body. It just notifies the server that the client
 wishes to be redirected (by the current server) to the remote server.
 This message is a response to a AuthPassed message sent to the client
 by the server, as described in 8.4.1.6.
 
 \subsubsection{AuthPassed}
 
-When a client logs into a server, and the server decides to redirect
+\par{} When a client logs into a server, and the server decides to redirect
 the client to another server, for any reason (the home server of the
 user is different or the user already has a login in another server),
 the server sends an AuthPassed message to the client, notifying it
@@ -1597,26 +1659,30 @@ server. Should the client decide to continue with the current server, a
 LoginCont message should be sent to the server (as described in
 8.4.1.5).
 
-Message Body
+\par{} Message Body
 
+\begin{verbatim}
 0         8         16        24      31
 +---------+---------+---------+---------+
 | Home Server ID [String]
 +---------------------------------------+
 |        Home Server Version [4]        |
 +---------------------------------------+
+\end{verbatim}
 
-Description of Fields:
+\par{} Description of Fields:
 
-Home Server ID
-  The server the client should connect to (or will be redirected to).
+\par{} Home Server ID
 
-Home Server Version
-  A 4-byte long describing the version of the remote server.
+\subpar{}   The server the client should connect to (or will be redirected to).
+
+\par{} Home Server Version
+
+\subpar{}  A 4-byte long describing the version of the remote server.
 
 \subsubsection{CreateCnl}
 
-All interactions between community entities take place over channels
+\par{} All interactions between community entities take place over channels
 (that is, additional channels on top of the master channel). When a
 login needs to create a new channel to another entity, the channel
 creator sends a CreateCnl message to the target. A new channel is
@@ -1625,8 +1691,9 @@ service. A new channel will be created for every N-way chat even though
 all the N-way chats that the login is participating in, are supplied by
 the same service provider.
 
-Note: The Master Channel ID is included in the message header.
+\par{} Note: The Master Channel ID is included in the message header.
 
+\begin{verbatim}
 Message Body
 0         8         16        24      31
 +---------+---------+---------+---------+
@@ -1651,48 +1718,57 @@ Message Body
 +---------+-------------------+
           |  Encryption Block |
           +-------------------+
+\end{verbatim}
 
-Description of Fields:
+\par{} Description of Fields:
 
-Reserved
-  A 4-byte field. Reserved for future use. Must be set to zero in this
+\par{} Reserved
+
+\subpar{}  A 4-byte field. Reserved for future use. Must be set to zero in this
   version of the protocol.
 
-Channel ID
-  The channel-ID (4 bytes long) of the channel.
+\par{} Channel ID
 
-ID Block
-  A block of two strings that describes the target entity (single
+\subpar{}  The channel-ID (4 bytes long) of the channel.
+
+\par{} ID Block
+
+\subpar{}  A block of two strings that describes the target entity (single
   login) or user of the channel. If the ID string is empty, the channel
   is targeted based on the Service Type. For more details about this
   block, see "ID Block" on 8.2.4.
 
-Service Type
-  A 4-byte field indicating the type of service that the channel
+\par{} Service Type
+
+\subpar{}  A 4-byte field indicating the type of service that the channel
   creator is requesting from the target. For a list of all service
   types, see 8.3.2.
 
-Protocol Type
-  A 4-byte field indicating the type of service protocol that will be 
+\par{} Protocol Type
+
+\subpar{}  A 4-byte field indicating the type of service protocol that will be 
   used on the channel. For a list of all protocol types, see 
   8.3.3.
 
-Protocol Version
-  A 4-byte field indicating the version number of the specified service
+\par{} Protocol Version
+
+\subpar{} A 4-byte field indicating the version number of the specified service
   protocol. This number is used for synchronizing both sides the
   channel on the same version of the protocol
 
-Options
+\par{} Options
 
-  A 4-byte field. Reserved for future use. Must be set to zero in this
+\subpar{}  A 4-byte field. Reserved for future use. Must be set to zero in this
   version of the protocol.
 
-Additional Data
-  Opaque data that further specifies the purpose of the channel. This
+\par{} Additional Data
+
+\subpar{}  Opaque data that further specifies the purpose of the channel. This
   information may be used by the target entity for various purposes.
 
-Creator Flag
-  A single byte field, which indicates the presence of and Login Info
+\par{} Creator Flag
+
+\subpar{}  A single byte field, which indicates the presence of and Login Info
   block in the message. This allows the message size to be adjusted as
   necessary. For example, when the message originator is a client, the
   Login Info block is 0 (since the client does not send the
@@ -1700,24 +1776,27 @@ Creator Flag
   routed through the client's server, the server adds the login Info
   block and the Creator Flag becomes TRUE.
 
-Login Info Block
-  An optional block. Describes the channel creator (message
+\par{} Login Info Block
+
+\subpar{}  An optional block. Describes the channel creator (message
   originator). The Full flag is always TRUE. See "Login Info Block" in
   8.2.1.
 
-Encryption Block
-  See "Encryption Block" in 5.8.
+\par{} Encryption Block
+
+\subpar{}  See "Encryption Block" in 5.8.
 
 \subsubsection{AcceptCnl}
 
-This message is sent from the channel acceptor to the channel creator
+\par{} This message is sent from the channel acceptor to the channel creator
 as an acknowledgement of the channel creation. The message may also
 provide information about the acceptor, which is stored on the server.
 In the Login Info block in this message type, the Full flag is always
 TRUE, and the login described is the channel acceptor.
 
-Note: The Local Channel ID is included in the message header.
+\par{} Note: The Local Channel ID is included in the message header.
 
+\begin{verbatim}
 Message Body
 0         8         16        24      31
 +---------+---------+---------+---------+
@@ -1732,30 +1811,36 @@ Message Body
 +---------+-------------------+
           |  Encryption Block |
           +-------------------+
+\end{verbatim}
 
-Description of Fields
+\par{}Description of Fields
 
-Service Type
-  A 4-byte field indicating the type of service that the channel
+\par{} Service Type
+
+\subpar{}  A 4-byte field indicating the type of service that the channel
   acceptor is providing. For a list of all service types, see
   8.3.2.
 
-Protocol Type
-  A 4-byte field indicating the type of service protocol that will be
+\par{} Protocol Type
+
+\subpar{}  A 4-byte field indicating the type of service protocol that will be
   used on the channel. For a list of all protocol types, see
   8.3.3.
 
-Protocol Version
-  A 4-byte field indicating the version number of the specified service
+\par{} Protocol Version
+
+\subpar{} A 4-byte field indicating the version number of the specified service
   protocol. This number is used to synchronize both ends of the channel
   to use a compatible service protocol version. See 
   8.3.4.
 
-Additional Data
-  Opaque data that further specifies the purpose of the channel.
+\par{} Additional Data
 
-Acceptor Flag
-  A single byte field, which indicates the presence of a Login Info
+\subpar{}  Opaque data that further specifies the purpose of the channel.
+
+\par{} Acceptor Flag
+
+\subpar{}  A single byte field, which indicates the presence of a Login Info
   Block in the message. This allows the message size to be adjusted as
   necessary. For example, when the message originator is a client, the
   Login Info block is 0 (since the client does not send the
@@ -1763,26 +1848,28 @@ Acceptor Flag
   routed through the client's server, the server adds the Login Info
   Block and the Acceptor Flag becomes TRUE.
 
-Login Info Block
-  An optional block. Describes the channel acceptor (message
+\par{} Login Info Block
+
+\subpar{}  An optional block. Describes the channel acceptor (message
   originator). The Full Flag is always TRUE. See "Login Info Block" on
   8.2.1.
 
-Encryption Block
-  See "Encryption Block" on 5.8.
+\par{} Encryption Block
+
+\subpar{}  See "Encryption Block" on 5.8.
 
 \subsubsection{SendOnCnl}
 
-This message sends enclosed message data from one login to another on
+\par{} This message sends enclosed message data from one login to another on
 an existing channel. The Message Data field is interpreted using the
 Service Protocol that is specified for the channel.
 
-Note that on encrypted channels the Message Data may be encrypted,
+\par{} Note that on encrypted channels the Message Data may be encrypted,
 however encrypted channels are not documented in this document.
 
-Note: The Local Channel ID is included in the message header.
+\par{} Note: The Local Channel ID is included in the message header.
 
-
+\begin{verbatim}
 Message Body
 0         8         16        24      31
 +---------+---------+---------+---------+
@@ -1794,25 +1881,29 @@ Message Body
 +-------------------+-------------------+
 |      Message Data (cont.) ....
 +----------------------------------------
+\end{verbatim}
 
-Description of Fields:
+\par{} Description of Fields:
 
-Message Type
-  A two-byte field specifying the message type within the established
+\par{} Message Type
+
+\subpar{}  A two-byte field specifying the message type within the established
   service protocol. For definitions, refer to the individual protocol
   chapter.
 
-Message Data
-  Opaque data (preceded by a 4-byte length field), which is
+\par{} Message Data
+
+\subpar{}  Opaque data (preceded by a 4-byte length field), which is
   interpreted by the service protocol established for the channel.
 
 \subsubsection{DestroyCnl}
 
-This is the last message on a channel. It contains enclosed message
+\par{} This is the last message on a channel. It contains enclosed message
 data.
 
-Note: The Channel ID is included in message header.
+\par{} Note: The Channel ID is included in message header.
 
+\begin{verbatim}
 Message Body
 0         8         16        24      31
 +---------+---------+---------+---------+
@@ -1820,53 +1911,60 @@ Message Body
 +-------------------+-------------------+
 | Message Data [Opaque]
 +-------------------+-------------------+
+\end{verbatim}
 
-Description of Fields
+\par{} Description of Fields
 
-Reason Code
-  A 4-byte field specifying the reason for the destruction of the
+\par{} Reason Code
+
+\subpar{}  A 4-byte field specifying the reason for the destruction of the
   channel. This reason code is understood at the Master protocol level.
   For code reference, see "Constants" in 8.3.
 
-Message Data
-  Opaque data (preceded by a 4-byte length field), which is
+\par{} Message Data
+
+\subpar{}  Opaque data (preceded by a 4-byte length field), which is
   interpreted by the service protocol established for the channel.
 
 \subsubsection{SetUserStatus}
 
-This message informs the server of any changes in the user's status.
+\par{} This message informs the server of any changes in the user's status.
 This same message is also used by the server to inform other logins
 belonging to the same user of the status change.
 
-Note: The Master Channel ID is included in the message header.
+\par{} Note: The Master Channel ID is included in the message header.
 
+\begin{verbatim}
 Message Body
 +-------------------+
 | User Status Block |
 +-------------------+
+\end{verbatim}
 
-Description of Fields
+\par{} Description of Fields
 
-User Status Block
-  Describes the new user status. For details about this block, see
+\par{} User Status Block
+
+\subpar{}  Describes the new user status. For details about this block, see
   "User Status Block" on 8.2.3.
 
 \subsubsection{SetPrivacyList}
 
-This message is sent from a client to request that the server set new
+\par{} This message is sent from a client to request that the server set new
 privacy list options for the user. The privacy list is a list of users
 who are either permitted to, or prohibited from, seeing presence
 information about the requesting user ("Who Can See Me" options). The
 server is responsible for storing the change in a database by means
 outside the scope of this document.
 
-This same message is also used by the server to inform other logins,
+\par{} This same message is also used by the server to inform other logins,
 belonging to the same user, of the privacy list options change. The
 server sends the notification message after the change has been
 entered successfully in the database.
 
-Note: The Master Channel ID is included in the message header.
+\par{} Note: The Master Channel ID is included in the message header.
 
+\begin{verbatim}
 Message Body
 0         8         16        24      31
 +---------+---------+---------+---------+
@@ -1883,19 +1981,21 @@ Message Body
 +-------------------+-------------------+  -----          |
 | User Name [String]                       if Full Flag   v
 +----------------------------------------  ----------------
+\end{verbatim}
 
+\par{} Description of Fields:
 
-Description of Fields:
+\par{} Excluding Flag
 
-Excluding Flag
-  A single byte. If the value equals 1, the list of users that follows
+\subpar{}  A single byte. If the value equals 1, the list of users that follows
   represents the users who are excluded from seeing the user whose
   privacy is described (all other users are permitted). If the value
   equals 0, the list contains the users who may see the user whose
   privacy is described (all others are excluded).
 
-User List
-  A list of users representing either the users who are excluded from
+\par{} User List
+
+\subpar{}  A list of users representing either the users who are excluded from
   seeing the user whose privacy is described, or the users who are
   permitted to see the user whose privacy is described. The list begins
   with a 4-byte field specifying the number of items in the list. Each
@@ -1908,62 +2008,69 @@ User List
 
 \subsubsection{SetPrivacyDenied}
 
-This message is sent by the server to notify the client that a previous
+\par{} This message is sent by the server to notify the client that a previous
 SetPrivacyList action (see 8.4.1.12) was not successful
 (that is, the server attempted to save the changes using a server
 application, and the changes were not saved successfully).
 
-Note: The Master Channel ID is included in the message header.
+\par{} Note: The Master Channel ID is included in the message header.
 
+\begin{verbatim}
 Message Body
 0         8         16        24      31
 +---------+---------+---------+---------+
 |             Error Code [4]            |
 +---------------------------------------+
+\end{verbatim}
 
-Description of Fields
+\par{} Description of Fields
 
-Error Code
-  A 4-byte field indicating the reason for the denial of the
+\par{} Error Code
+
+\subpar{}  A 4-byte field indicating the reason for the denial of the
   request. This error code is understood at the Master protocol
   level. For code reference, see 8.3.1.
 
 \subsubsection{SenseService}
 
-This message is sent by a client to a server to request a notification
+\par{} This message is sent by a client to a server to request a notification
 when a specified service becomes available. This same message is sent
 by the server to the client as a notification when the service is
 available. The notification on availability of a service provider is
 possible only within a single community.
 
-Note: The Master Channel ID is included in the message header.
+\par{} Note: The Master Channel ID is included in the message header.
 
+\begin{verbatim}
 Message Body
 0         8         16        24      31
 +---------+---------+---------+---------+
 |            Service Type  [4]          |
 +---------------------------------------+
+\end{verbatim}
 
-Description of Fields
+\par{} Description of Fields
 
-Service Type
-  A 4-byte field indicating the type of service on which the client is 
+\par{} Service Type
+
+\subpar{} A 4-byte field indicating the type of service on which the client is 
   requesting notification. For a list of all service types, see 
   8.3.2.
 
 \subsection{Awareness Messages}
 
-Awareness messages are "transported" over an Awareness channel. These
+\par{} Awareness messages are "transported" over an Awareness channel. These
 messages are used to subscribe (addWatch) to, and unsubscribe
 (removeWatch) from other users.
 
 \subsubsection{Awareness ID Block}
 
-This block is used as the IDs in the Awareness context. It is a 
+\par{} This block is used as the IDs in the Awareness context. It is a 
 combination of a presence type and a regular ID Block (see 
 8.2.4). For values of Presence Types see 
 8.3.8.2.
 
+\begin{verbatim}
 0         8         16        24      31
 +---------+---------+---------+---------+
 |Presence Type [2]  | Length of ID [2]  |
@@ -1975,15 +2082,17 @@ combination of a presence type and a regular ID Block (see
 +-------------------+-------------------+
 |   Community Name (cont.) ...
 +----------------------------------------
+\end{verbatim}
 
 \subsubsection{AddWatch}
 
-This message "subscribes" the initiator to a presence. It is sent
+\par{} This message "subscribes" the initiator to a presence. It is sent
 from the client to the Awareness server application.
 
-Message Type is ADD.
+\par{} Message Type is ADD.
   (For hexadecimal values, see 8.3.8.1).
 
+\begin{verbatim}
 Message Body
 0         8         16        24      31
 +---------+---------+---------+---------+
@@ -1991,24 +2100,29 @@ Message Body
 +-------------------+-------------------+
 | Awareness ID Block                    | x times count of
 +-------------------+-------------------+   Awareness id block
+\end{verbatim}
 
-Description of Fields:
+\par{} Description of Fields:
 
-Count of Awareness IDs Block
-  The number of Awareness ID Blocks that follows in the message.
+\par{} Count of Awareness IDs Block
 
-Awareness ID Block
-  The presence to subscribe to. See "Awareness ID Block" on
+\subpar{}  The number of Awareness ID Blocks that follows in the message.
+
+\par{} Awareness ID Block
+
+\subpar{}  The presence to subscribe to. See "Awareness ID Block" on
 8.4.2.1.
 
 \subsubsection{RemoveWatch}
 
-This message "unsubscribes" the initiator from a presence. It is sent 
+\par{} This message "unsubscribes" the initiator from a presence. It is sent 
 from the client to the Awareness server application.
 
-Message Type is REMOVE.
-  (For hexadecimal values, see 8.3.8.1).
+\par{} Message Type is REMOVE.
 
+\subpar{}  (For hexadecimal values, see 8.3.8.1).
+
+\begin{verbatim}
 Message Body
 0         8         16        24      31
 +---------+---------+---------+---------+
@@ -2016,27 +2130,32 @@ Message Body
 +-------------------+-------------------+
 | Awareness ID Block                    | x times count of
 +-------------------+-------------------+   Awareness ID block
+\end{verbatim}
 
-Description of Fields:
+\par{} Description of Fields:
 
-Message Context
-  The message context is a two-byte unsigned short. For this message 
+\par{} Message Context
+
+\subpar{}  The message context is a two-byte unsigned short. For this message 
   the value is "REMOVE" (for hexadecimal values, see 
   8.3.8.1).
 
-Count of Awareness IDs Block
-  The number of Awareness ID Blocks that follow in the message.
+\par{} Count of Awareness IDs Block
 
-Awareness ID Block
-  The presence to see subscribe to. See "Awareness ID Block" on
+\subpar{}  The number of Awareness ID Blocks that follow in the message.
+
+\par{} Awareness ID Block
+
+\subpar{}  The presence to see subscribe to. See "Awareness ID Block" on
   8.4.2.1.
 
 \subsubsection{Snapshot}
 
-This is sent from the Awareness service application to the clients.
+\par{} This is sent from the Awareness service application to the clients.
 For each subscribe request, the Awareness service synchronizes the
 subscriber with the current Awareness knowledge of the presence.
 
+\begin{verbatim}
 Message Body
 0         8         16        24      31
 +---------+---------+---------+---------+
@@ -2058,46 +2177,56 @@ Message Body
 +---------+---------+---------+---------+    |       |
 | User Name [String]                         v       v
 +---------------------------------------+ ------------
+\end{verbatim}
 
-Description of Fields:
+\par{} Description of Fields:
 
-Count of Snapshot Messages Blocks
-  The number of Snapshot messages to follow.
+\par{} Count of Snapshot Messages Blocks
 
-End Of Block Offset
-  The offset (in bytes) of the end of the current block. Used for
+\subpar{}  The number of Snapshot messages to follow.
+
+\par{} End Of Block Offset
+
+\subpar{}  The offset (in bytes) of the end of the current block. Used for
   future compatibility.
 
-Awareness ID Block
-  The presence in question. See "Awareness ID Block" on
+\par{} Awareness ID Block
+
+\subpar{}  The presence in question. See "Awareness ID Block" on
 8.4.2.1.
 
-Empty Awareness ID Block
-  For internal use. Should be empty. See "Awareness ID Block" on
+\par{} Empty Awareness ID Block
+
+\subpar{}  For internal use. Should be empty. See "Awareness ID Block" on
   8.4.2.1.
 
-Online Flag
-  The current presence of the user. If TRUE, the user is online and
+\par{} Online Flag
+
+\subpar{}  The current presence of the user. If TRUE, the user is online and
   the rest of the block contains details of the user. If FALSE, this
   is the end of the block.
 
-Alternate User ID
-  A string, for internal use. Should not be used.
+\par{} Alternate User ID
 
-Status Block
-  The current status of the user. See "Status Info Block" on
+\subpar{}  A string, for internal use. Should not be used.
+
+\par{} Status Block
+
+\subpar{}  The current status of the user. See "Status Info Block" on
 8.2.3.
 
-User Name
-  The display name of the user. Should not be used; this information
+\par{} User Name
+
+\subpar{}  The display name of the user. Should not be used; this information
   should be known to the client.
 
 \subsubsection{Update}
 
-Every time the presence changes it's status, or logs off, an update is
+\par{} Every time the presence changes it's status, or logs off, an update is
 sent to it's subscribers. It is sent from the awareness service
 provider to the client.
 
+\begin{verbatim}
 Message Body
 0         8         16        24      31
 +---------------------------------------+
@@ -2117,59 +2246,68 @@ Message Body
 +---------+---------+---------+---------+
 | User Name [String]
 +---------------------------------------+
+\end{verbatim}
 
-Description of Fields:
+\par{} Description of Fields:
 
-End Of Block Offset
-  The offset (in bytes) of the end of the current block. Used for
+\par{} End Of Block Offset
+
+\subpar{}  The offset (in bytes) of the end of the current block. Used for
   future compatibility.
 
-Awareness ID Block
-  The presence in question. See "Awareness ID Block" on
+\par{} Awareness ID Block
+
+\subpar{}  The presence in question. See "Awareness ID Block" on
 8.4.2.1.
 
-Empty Awareness ID Block
-  For internal use. Should be empty. See "Awareness ID Block" on
+\par{} Empty Awareness ID Block
+
+\subpar{}  For internal use. Should be empty. See "Awareness ID Block" on
   8.4.2.1.
 
-Online Flag
-  The current presence of the user. If TRUE the user is online, and
+\par{} Online Flag
+
+\subpar{}  The current presence of the user. If TRUE the user is online, and
   the rest of the block contains details of the user. If FALSE, this
   is the end of the block.
 
-Alternate User ID
-  A string, for internal use. Should not be used.
+\par{} Alternate User ID
 
-Status Block
-  The current status of the user. See "Status Info Block" on
+\subpar{}  A string, for internal use. Should not be used.
+
+\par{} Status Block
+
+\subpar{}  The current status of the user. See "Status Info Block" on
   8.2.3.
 
-User Name
-  The display name of the user. Should not be used, this information
+\par{} User Name
+
+\subpar{}  The display name of the user. Should not be used, this information
   should be usually known to the client.
 
 \subsection{Instant Messaging}
 
-Instant Messages are sent over an "Instant Message Channel". Messages
+\par{} Instant Messages are sent over an "Instant Message Channel". Messages
 are typed in order to convey various types of data. When the IM channel
 is created, certain values should be sent in the opaque that is
 contained in the channel creation.
 
 \subsubsection{IM Channel Creation}
 
-When creating an IM channel, the opaque that is sent as part of the 
+\par{} When creating an IM channel, the opaque that is sent as part of the 
 channel creation should contain two 4-byte words each of them 
 containing 1.
 
-Create IM channel requests that contain other values are beyond the
+\par{} Create IM channel requests that contain other values are beyond the
 scope of this document and should be rejected by clients that their
 implementation is based on this document.
 
 \subsubsection{IM Channel Accepting}
 
-When accepting an IM channel, the opaque that is sent as part of the
+\par{} When accepting an IM channel, the opaque that is sent as part of the
 channel acceptance should contain the following:
 
+\begin{verbatim}
 0         8         16        24      31
 +---------------------------------------+
 |                  1                    |
@@ -2180,12 +2318,14 @@ channel acceptance should contain the following:
 +--------+-------------------+----------+
          | User Status Block |
          +-------------------+
+\end{verbatim}
 
-User Status Block should be filled with the current status of the user
+\par{} User Status Block should be filled with the current status of the user
 to whome the IM channel was created.
 
 \subsubsection{Data Message}
 
+\begin{verbatim}
 Message Body
 0         8         16        24      31
 +---------------------------------------+
@@ -2197,27 +2337,34 @@ Message Body
 +---------------------------------------+
 |             Data [Opaque]
 +---------------------------------------+
+\end{verbatim}
 
-Description of Fields:
+\par{} Description of Fields:
 
-Data Message Identifier
-  The Value is 0x00000001. It identifies the message (to the
+\par{} Data Message Identifier
+
+\subpar{}  The Value is 0x00000001. It identifies the message (to the
   receiver) as a "Data Message".
 
-Message Type
-  Used to identify the type of the data sent.
+\par{} Message Type
 
-Message SubType
-  Used to further identify the type of the data sent.
+\subpar{}  Used to identify the type of the data sent.
 
-Data Length
-  The length of the data sent.
+\par{} Message SubType
 
-Data
-  The raw data.
+\subpar{}  Used to further identify the type of the data sent.
+
+\par{} Data Length
+
+\subpar{}  The length of the data sent.
+
+\par{} Data
+
+\subpar{}  The raw data.
 
 \subsubsection{Text Message}
 
+\begin{verbatim}
 Message Body
 0         8         16        24      31
 +-------------------+-------------------+
@@ -2225,28 +2372,33 @@ Message Body
 +-------------------+-------------------+
 |        Text [String]
 +---------------------------------------+
+\end{verbatim}
 
-Description of Fields:
+\par{} Description of Fields:
 
-Data Message Identifier
-  The Value is 0x00000002. It identifies the message (to the
+\par{} Data Message Identifier
+
+\subpar{}  The Value is 0x00000002. It identifies the message (to the
   receiver) as a text message.
 
-Text Length
-  The length of the text message
+\par{} Text Length
 
-Text
-  The message itself.
+\subpar{}  The length of the text message
+
+\par{} Text
+
+\subpar{}  The message itself.
 
 \subsection{}
 
-start talking - data with 0 bytes.
+\par{} start talking - data with 0 bytes.
 
 \subsubsection{Resolve Request}
 
-Used to request the Resolver Service to resolve user name(s) to user
+\par{} Used to request the Resolver Service to resolve user name(s) to user
 ID(s).
 
+\begin{verbatim}
 Message Body
 0         8         16        24      31
 +---------------------------------------+
@@ -2260,42 +2412,46 @@ Message Body
 +-------------------+-------------------+
 |            Request Options [4]        |
 +---------------------------------------+
+\end{verbatim}
 
-Description of Fields:
+\par{} Description of Fields:
 
-Length of Request
-  Size of Message Body in bytes including this field.
+\par{} Length of Request
 
-Request Id
-  Issued by the client, used to identify the request.
+\subpar{}   Size of Message Body in bytes including this field.
 
-Number of Names to resolve
-  Indicates how much names there are to follow...
+\par{} Request Id
 
-Names
-  Strings of names to resolve. Appears as times as indicated before.
+\subpar{}  Issued by the client, used to identify the request.
 
-Options
-  A bit mask of the following options:
+\par{} Number of Names to resolve
 
-    0x00000001 - Return only unique matches (if number if matches <> 1,
+\subpar{}  Indicates how much names there are to follow...
+
+\par{} Names
+
+\subpar{}  Strings of names to resolve. Appears as times as indicated before.
+
+\par{} Options
+
+\subpar{}  A bit mask of the following options:
+
+\subpar{}    0x00000001 - Return only unique matches (if number if matches <> 1,
     return empty list of matches
 
-    0x00000002 - Return first match only
+\subpar{}    0x00000002 - Return first match only
 
-    0x00000004 - Search all available directories (otherwise do not
+\subpar{}    0x00000004 - Search all available directories (otherwise do not
     search beyond the directory were the first match was found
 
-    0x00000008 - Users bit (should always be on).
+\subpar{}    0x00000008 - Users bit (should always be on).
 
 \subsubsection{Resolve Response}
 
-The response for the clients ResolveRequest. This message is a list of
+\par{}The response for the clients ResolveRequest. This message is a list of
 results, each result being a list of matches.
 
----
-
-
+\begin{verbatim}
 Message Body
 0         8         16        24      31
 +---------------------------------------+
@@ -2325,45 +2481,54 @@ Message Body
 +-------------------+-------------------+     |        |
 |          Match Type [4]               |     v        v
 +---------------------------------------+   -------------
+\end{verbatim}
 
+\par{} Description of fields:
 
-Description of fields:
+\par{} Internal Use Bytes
 
-Internal Use Bytes
-  These bytes are used for backward / forward compatability. These
+\subpar{}  These bytes are used for backward / forward compatability. These
   bytes should be ignored in the resolve response.
 
-Request Id
-  Identifies the response for the request Id'ed by the client
+\par{} Request Id
 
-Return Code
-  Of the entire response.
+\subpar{}  Identifies the response for the request Id'ed by the client
 
-Number of Results
-  Number of nested results to follow
+\par{} Return Code
 
-Result Return Code
-  A return code for a specific name.
+\subpar{}  Of the entire response.
 
-Number of matches
-  Number of matches to follow
+\par{} Number of Results
 
-Id I\& Community
-  Created for the UserId resolved
+\subpar{}  Number of nested results to follow
 
-Name
-  The "official" user name
+\par{} Result Return Code
 
-Description
-  Description of the user as kept in the database
+\subpar{}  A return code for a specific name.
 
-Match Type Should always be 0x00000001.
+\par{} Number of matches
+
+\subpar{}  Number of matches to follow
+
+\par{} Id \& Community
+
+\subpar{}  Created for the UserId resolved
+
+\par{} Name
+
+\subpar{}  The "official" user name
+
+\par{} Description
+
+\subpar{}  Description of the user as kept in the database
+
+\par{} Match Type Should always be 0x00000001.
 
 \chapter{Acknowledgements}
 
 \par{} The authors of this document wish to acknowledge the following
 that contirbuted to this document: Mark Day, Alon Kleinman, Maxim
-Kovalenko I\& Marjorie Schejter.
+Kovalenko \& Marjorie Schejter.
 
 \chapter{Author Addresses}
 
