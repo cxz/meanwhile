@@ -11,6 +11,9 @@
         <a href="#born_free">Is this project affiliated with IBM or Lotus?</a>
       </li>
       <li>
+        <a href="#is_it_safe">Should I use Meanwhile?</a>
+      </li>
+      <li>
         <a href="#where_can_it_run">On what platforms can I use Meanwhile?</a>
       </li>
       <li>
@@ -32,6 +35,31 @@
       <li>
         <a href="#storage_buddy_list">How do I make the Meanwhile Gaim plugin use my server-side
 	buddy list?</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <b>Contributions</b>
+    <a name="contrib">
+			&nbsp;</a>
+    <ul>
+      <li>
+        <a href="#how_to_help">How can I help?</a>
+      </li>
+      <li>
+        <a href="#protocol_help">How can I help with the protocol research?</a>
+      </li>
+      <li>
+        <a href="#patches">Are you accepting patches?</a>
+      </li>
+      <li>
+        <a href="#bug_reports">What's the method for reporting bugs?</a>
+      </li>
+      <li>
+        <a href="#attitude">How do I keep the developer happy?</a>
+      </li>
+      <li>
+        <a href="#donations">Why are you taking peoples' money?</a>
       </li>
     </ul>
   </li>
@@ -70,6 +98,24 @@
       <p>The project was first available exclusively inside of IBM, because
 	I didn't want to be sued. This has been resolved with Lotus, and
 	Meanwhile is now open to the world.</p>
+    </td>
+  </tr>
+</table><table class="question">
+  <tr>
+    <td class="q-title">
+      <a name="is_it_safe" href="#is_it_safe">Should I use Meanwhile?</a>
+    </td>
+    <td class="q-back">
+      <a href="#group_general">back</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="q-answer" colspan="2">
+      <p>Meanwhile is still a beta, and is not stable. If you are a hobbyist,
+	or some other varient of insane person, then go right ahead. Problems
+	should be logged in the appropriate trackers with as much pertinent
+	information as possible.</p>
+      <p>Remember: If it breaks, you get to keep the pieces!</p>
     </td>
   </tr>
 </table><table class="question">
@@ -175,6 +221,138 @@
 	preference attached to the protocol plugin. It has three settings:
 	Local Only; Load from Server; Load and Save to Server. The default is
 	safely set to Local Only.</p>
+    </td>
+  </tr>
+</table><table class="question">
+  <tr>
+    <td class="q-title">
+      <a name="how_to_help" href="#how_to_help">How can I help?</a>
+    </td>
+    <td class="q-back">
+      <a href="#contrib">back</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="q-answer" colspan="2">
+      <p>Be supportive! The developer may be very sad, and your happy words
+	could turn his day right around!</p>
+      <p>In order of precedence, the following are all super helpful:
+	protocol insight; patches and bug fixes; bug reports; happy thoughts;
+	donations of cold, hard cash</p>
+    </td>
+  </tr>
+</table><table class="question">
+  <tr>
+    <td class="q-title">
+      <a name="protocol_help" href="#protocol_help">How can I help with the protocol research?</a>
+    </td>
+    <td class="q-back">
+      <a href="#contrib">back</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="q-answer" colspan="2">
+      <p>The two best ways are through libpcap packet dumps, and written
+	extrapolation on network antics. It may be helpful to have used the
+	Lotus libraries before, but that's not necessary. If you notice that
+	an unsupported feature seems to generate network traffic whenever you
+	use it, capture those packets and explain exactly what you were doing
+	to produce them. We'll get this thing figured out yet!</p>
+    </td>
+  </tr>
+</table><table class="question">
+  <tr>
+    <td class="q-title">
+      <a name="patches" href="#patches">Are you accepting patches?</a>
+    </td>
+    <td class="q-back">
+      <a href="#contrib">back</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="q-answer" colspan="2">
+      <p>Maybe.</p>
+      <p>As with any project, there are apparently arbitrary code factors to
+	be taken into account when submitting code. Look for the HACKING file
+	in your source tree. If there isn't one, wait. I'll get to it
+	eventually.</p>
+      <p>Added functionality should not step out of the scope of the rest of
+	the file. Services should never mingle or require one-another. Don't
+	write code that's deployment specific. And check your parameters on
+	public interface functions.</p>
+      <p>As far as formatting, just look at the code (in emacs, preferrably).
+	Note the spacing between functions, the apparent naming conventions,
+	and the line width. Just try and mimic all that, and you should be
+	fine.</p>
+      <p>If you're working for Lotus or IBM, it's very doubtful that I'll be
+	able to safely incorporate any changes or fixes. You may be able to
+	safely communicate the idea/fix, but please check with your management
+	first.</p>
+    </td>
+  </tr>
+</table><table class="question">
+  <tr>
+    <td class="q-title">
+      <a name="bug_reports" href="#bug_reports">What's the method for reporting bugs?</a>
+    </td>
+    <td class="q-back">
+      <a href="#contrib">back</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="q-answer" colspan="2">
+      <p>First, ensure that no existing bug report for the same item exists
+	before creating a new report. If one does exist, read through the
+	commentary. If you feel you still have something important to add, then
+	continue on.</p>
+      <p>Next, indicate with specificity the nature, demeanor, astrological
+	sign, molecular weight, and specific gravity of the bug.</p>
+      <p>Finally, re-read the report. Check all fields. Is this enough
+	information to actually figure out what you're talking about? If-- and
+	only if-- you are satisfied that adequate information is provided, then
+	submit/update the bug.</p>
+      <p>These are all parts of the bug reporting process. Failing these
+	steps yet still submitting an item into the tracker is not reporting
+	a bug, it's just senseless noise.</p>
+    </td>
+  </tr>
+</table><table class="question">
+  <tr>
+    <td class="q-title">
+      <a name="attitude" href="#attitude">How do I keep the developer happy?</a>
+    </td>
+    <td class="q-back">
+      <a href="#contrib">back</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="q-answer" colspan="2">
+      <p>A happy developer wants to solve your problems. He wants to help
+	you out, and will take extra time just for you. An unhappy developer
+	will instruct you to put sharp things into hurtful places on your
+	body, and will then stomp away. In order for a project to continue at
+	a good pace, it's important to keep the developer(s) happy.</p>
+      <p>For the most part, this just means Be Polite. Do not make demands.
+	Don't act threatening or try to wrest control of the project away.</p>
+      <p>If you have something to say, write it out on a piece of paper.
+	Read it out loud in a wheedling, annoying voice. Do you think it would
+	entice a surly twenty-five year old with a lot of pent up aggression
+	to want to punch you in the face? If so, try rewording it.</p>
+    </td>
+  </tr>
+</table><table class="question">
+  <tr>
+    <td class="q-title">
+      <a name="donations" href="#donations">Why are you taking peoples' money?</a>
+    </td>
+    <td class="q-back">
+      <a href="#contrib">back</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="q-answer" colspan="2">
+      <p>Because I am broke. Please note that I immediately hand over 50% to
+	the EFF. The rest will probably buy me toys or something.</p>
     </td>
   </tr>
 </table>

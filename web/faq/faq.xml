@@ -25,6 +25,17 @@
 	</answer>
 	</question>
 
+	<question id="is_it_safe">
+	<title>Should I use Meanwhile?</title>
+	<answer>
+	<p>Meanwhile is still a beta, and is not stable. If you are a hobbyist,
+	or some other varient of insane person, then go right ahead. Problems
+	should be logged in the appropriate trackers with as much pertinent
+	information as possible.</p>
+	<p>Remember: If it breaks, you get to keep the pieces!</p>
+	</answer>
+	</question>
+
 	<question id="where_can_it_run">
 	<title>On what platforms can I use Meanwhile?</title>
 	<answer><p>Meanwhile has been successfully compiled and used on Linux,
@@ -93,6 +104,102 @@
 	safely set to Local Only.</p>
 	</answer>
 	</question>
+</group>
+
+
+<group id="contrib">
+	<title>Contributions</title>
+
+	<question id="how_to_help">
+	<title>How can I help?</title>
+	<answer>
+	<p>Be supportive! The developer may be very sad, and your happy words
+	could turn his day right around!</p>
+	<p>In order of precedence, the following are all super helpful:
+	protocol insight; patches and bug fixes; bug reports; happy thoughts;
+	donations of cold, hard cash</p>
+	</answer>
+	</question>
+
+	<question id="protocol_help">
+	<title>How can I help with the protocol research?</title>
+	<answer>
+	<p>The two best ways are through libpcap packet dumps, and written
+	extrapolation on network antics. It may be helpful to have used the
+	Lotus libraries before, but that's not necessary. If you notice that
+	an unsupported feature seems to generate network traffic whenever you
+	use it, capture those packets and explain exactly what you were doing
+	to produce them. We'll get this thing figured out yet!</p>
+	</answer>
+	</question>
+
+	<question id="patches">
+	<title>Are you accepting patches?</title>
+	<answer>
+	<p>Maybe.</p>
+	<p>As with any project, there are apparently arbitrary code factors to
+	be taken into account when submitting code. Look for the HACKING file
+	in your source tree. If there isn't one, wait. I'll get to it
+	eventually.</p>
+	<p>Added functionality should not step out of the scope of the rest of
+	the file. Services should never mingle or require one-another. Don't
+	write code that's deployment specific. And check your parameters on
+	public interface functions.</p>
+	<p>As far as formatting, just look at the code (in emacs, preferrably).
+	Note the spacing between functions, the apparent naming conventions,
+	and the line width. Just try and mimic all that, and you should be
+	fine.</p>
+	<p>If you're working for Lotus or IBM, it's very doubtful that I'll be
+	able to safely incorporate any changes or fixes. You may be able to
+	safely communicate the idea/fix, but please check with your management
+	first.</p>
+	</answer>
+	</question>
+
+	<question id="bug_reports">
+	<title>What's the method for reporting bugs?</title>
+	<answer>
+	<p>First, ensure that no existing bug report for the same item exists
+	before creating a new report. If one does exist, read through the
+	commentary. If you feel you still have something important to add, then
+	continue on.</p>
+	<p>Next, indicate with specificity the nature, demeanor, astrological
+	sign, molecular weight, and specific gravity of the bug.</p>
+	<p>Finally, re-read the report. Check all fields. Is this enough
+	information to actually figure out what you're talking about? If-- and
+	only if-- you are satisfied that adequate information is provided, then
+	submit/update the bug.</p>
+	<p>These are all parts of the bug reporting process. Failing these
+	steps yet still submitting an item into the tracker is not reporting
+	a bug, it's just senseless noise.</p>
+	</answer>
+	</question>
+
+	<question id="attitude">
+	<title>How do I keep the developer happy?</title>
+	<answer>
+	<p>A happy developer wants to solve your problems. He wants to help
+	you out, and will take extra time just for you. An unhappy developer
+	will instruct you to put sharp things into hurtful places on your
+	body, and will then stomp away. In order for a project to continue at
+	a good pace, it's important to keep the developer(s) happy.</p>
+	<p>For the most part, this just means Be Polite. Do not make demands.
+	Don't act threatening or try to wrest control of the project away.</p>
+	<p>If you have something to say, write it out on a piece of paper.
+	Read it out loud in a wheedling, annoying voice. Do you think it would
+	entice a surly twenty-five year old with a lot of pent up aggression
+	to want to punch you in the face? If so, try rewording it.</p>
+	</answer>
+	</question>
+
+	<question id="donations">
+	<title>Why are you taking peoples' money?</title>
+	<answer>
+	<p>Because I am broke. Please note that I immediately hand over 50% to
+	the EFF. The rest will probably buy me toys or something.</p>
+	</answer>
+	</question>
+
 </group>
 
 </faq>
