@@ -4,14 +4,35 @@
 <group id="group_general">
 	<title>General</title>
 
+	<question id="what_is_sametime">
+	<title>What is Lotus Sametime?</title>
+	<answer>
+	<p>Lotus Sametime is a corporate Instant Messaging product sold by
+	IBM and Lotus.</p>
+	<p>It was originally offered by a company called Ubique as Virtual
+	Places (VP), utilizing a client called VPBuddy. The protocol and the
+	client application were renamed	to Sametime when Ubique was purchased
+	by Lotus. Later, the product again underwent a name change and is now
+	officially Lotus Instant Messenger (LIM).</p>
+	<p>The VP protocol is what Meanwhile implements. LIM is slowly moving
+	away from VP, instead favoring SIP/SIMPLE as the underlying messaging
+	protocol. Hypothetically this means that the Meanwhile project will
+	slowly become obsolete. Realistically, VP-based deployments of Sametime
+	will probably be around for quite a while.</p>
+	<p>If anyone has more information on the history of Ubique, please
+	let me know via the contact page.</p> 
+	</answer>
+	</question>
+
 	<question id="what_is_meanwhile">
 	<title>What is Meanwhile?</title>
 	<answer>
 	<p>Meanwhile is an open source project for connecting as a client
 	to a <a href="http://www.lotus.com/products/lotussametime.nsf/wdocs/homepage">Lotus Sametime Connect</a> community. There is a stand-alone library
-	portion, which can be used to write a client, and there is a Gaim
-	protocol plugin which turns Gaim into a Sametime client. There is also
-	a significant amount of work into documenting the Sametime protocol.</p>
+	portion, which can be used to write a client, there is a Python
+	module wrapping the library, and there is a Gaim protocol plugin which
+	turns Gaim into a Sametime client. There is also a significant amount
+	of work into documenting the Sametime protocol.</p>
 	</answer>
 	</question>
 
@@ -23,6 +44,11 @@
 	<p>The project was first available exclusively inside of IBM, because
 	I didn't want to be sued. This has been resolved with Lotus, and
 	Meanwhile is now open to the world.</p>
+	<p>To re-cap (because people really seem to have a hard time with this
+	one), Meanwhile is not an IBM project. IBM does not control Meanwhile.
+	IBM does not fund Meanwhile. IBM does not support Meanwhile. Meanwhile
+	is developed outside of IBM. The development of Meanwhile is external
+	to IBM. Inside of IBM is not where Meanwhile is developed.</p>
 	</answer>
 	</question>
 
@@ -40,12 +66,12 @@
 	<question id="where_can_it_run">
 	<title>On what platforms can I use Meanwhile?</title>
 	<answer><p>Meanwhile has been successfully compiled and used on Linux,
-	Win32 (via mingw), and Darwin (Mac OSX). Possibly and probably more,
-	but those are the only ones I've heard of so far.</p>
+	Win32 (via mingw), Solaris, and Darwin (Mac OSX). Possibly and probably
+	more, but those are the only ones I've heard of so far.</p>
 	<p>Wanted: someone to get it to build under OS/2</p>
-	<p>There are some type size assumptions which will pose problems for
-	builds under non 32-bit systems. These will be resolved in the next
-	release.</p>
+	<p>There are some type size assumptions with the 0.3 releases which
+	will pose problems for builds under non 32-bit systems. These are fixed
+	in CVS, and will be fully resolved in the next release.</p>
 	</answer>
 	</question>
 
@@ -207,7 +233,7 @@
 	<p>If you have something to say, write it out on a piece of paper.
 	Read it out loud in a wheedling, annoying voice. Do you think it would
 	entice a surly twenty-five year old with a lot of pent up aggression
-	to want to punch you in the face? If so, try rewording it.</p>
+	to punch you in the face? If so, try rewording it.</p>
 	</answer>
 	</question>
 
@@ -215,7 +241,8 @@
 	<title>Why are you taking peoples' money?</title>
 	<answer>
 	<p>Because I am broke. Please note that I immediately hand over 50% to
-	the <a href="http://eff.org/">EFF</a>. The rest will probably buy me toys or something.</p>
+	the <a href="http://eff.org/">EFF</a>. The rest will probably buy me
+	toys or something.</p>
 	</answer>
 	</question>
 
