@@ -64,10 +64,11 @@
 	<question id="is_it_safe">
 	<title>Should I use Meanwhile?</title>
 	<answer>
-	<p>Meanwhile is still a beta, and is not stable. If you are a hobbyist,
-	or some other variant of insane person, then go right ahead. Problems
-	should be logged in the appropriate trackers with as much pertinent
-	information as possible.</p>
+	<p>It's safest to say that Meanwhile is still a beta, and is not
+	completely stable. If you are a hobbyist, or some other variant of
+	insane person, then go right ahead. Problems should be logged in the
+	appropriate trackers with as much pertinent information as
+	possible.</p>
 	<p>Remember: If it breaks, you get to keep the pieces!</p>
 	</answer>
 	</question>
@@ -78,9 +79,6 @@
 	Win32 (via mingw), Solaris, and Darwin (Mac OSX). Possibly and probably
 	more, but those are the only ones I've heard of so far.</p>
 	<p>Wanted: someone to get it to build under OS/2</p>
-	<p>There are some type size assumptions with the 0.3 releases which
-	will pose problems for builds under non 32-bit systems. These are fixed
-	in CVS, and will be fully resolved in the next release.</p>
 	</answer>
 	</question>
 
@@ -104,7 +102,8 @@
 	Messaging client platform. Gaim supports almost every instant messaging
 	protocol, and any number of additional protocols can be added in as
 	modules. It provides a single front end for all of a user's various
-	instant messaging accounts and buddy lists.</p>
+	instant messaging accounts and buddy lists. The Meanwhile plugin for
+	Gaim is maintained as part of this project.</p>
 	</answer>
 	</question>
 
@@ -132,17 +131,16 @@
 	client.</p>
 	<p>The act of obtaining the server-side list is trivial. Correctly
 	parsing the data from it however has turned out to be much more
-	complex. Rebuilding that data from what's in your Gaim buddy list and
-	saving to the server-side list can be even worse, depending on your
-	Sametime deployment. If your deployment is using LDAP style user IDs,
-	such as "cn=My Name, o=My Company", then you probably don't want to
-	use the Save feature, but the Load feature should be safe. If your
-	deployment is using email-addresses such as "myname@mycompany.com",
-	then you should be safe for both Loading and Saving.</p>
+	complex.</p>
 	<p>The level to which the server side list is used is set in a
 	preference attached to the protocol plugin. It has three settings:
 	Local Only; Load from Server; Load and Save to Server. The default is
 	safely set to Local Only.</p>
+	<p>Meanwhile's handling of certain problems with the list format
+	mimics the official client, in that any saved aliases with the comma
+	(,) character in them will be misinterpreted when the list is later
+	loaded. Don't put commas in your buddy aliases and you should be fine.	
+	</p>
 	</answer>
 	</question>
 
@@ -194,13 +192,9 @@
 	in your source tree. If there isn't one, wait. I'll get to it
 	eventually.</p>
 	<p>Added functionality should not step out of the scope of the rest of
-	the file. Services should never mingle or require one-another. Don't
+	the file. Services should never co-mingle or require one-another. Don't
 	write code that's deployment specific. And check your parameters on
 	public interface functions.</p>
-	<p>As far as formatting, just look at the code (in emacs, preferrably).
-	Note the spacing between functions, the apparent naming conventions,
-	and the line width. Just try and mimic all that, and you should be
-	fine.</p>
 	<p>If you're working for Lotus or IBM, it's very doubtful that I'll be
 	able to safely incorporate any changes or fixes. You may be able to
 	safely communicate the idea/fix, but please check with your management
@@ -239,10 +233,6 @@
 	a good pace, it's important to keep the developer(s) happy.</p>
 	<p>For the most part, this just means Be Polite. Do not make demands.
 	Don't act threatening or try to wrest control of the project away.</p>
-	<p>If you have something to say, write it out on a piece of paper.
-	Read it out loud in a wheedling, annoying voice. Do you think it would
-	entice a surly twenty-five year old with a lot of pent up aggression
-	to punch you in the face? If so, try rewording it.</p>
 	</answer>
 	</question>
 
@@ -251,7 +241,7 @@
 	<answer>
 	<p>Because I am broke. Please note that I immediately hand over 50% to
 	the <a href="http://eff.org/">EFF</a>. The rest will probably buy me
-	toys or something.</p>
+	toys, or manga, or something.</p>
 	</answer>
 	</question>
 
