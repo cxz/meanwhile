@@ -70,7 +70,7 @@ require($full_path . "release.php");
     <div id="dHeadNav">
       <a href="http://sf.net/">SF.net</a> |
       <a href="http://gnu.org/copyleft/gpl.html">GNU GPL</a> |
-      <a href="https://sf.net/donate/index.php?group_id=110565">Donate</a>
+      <a href="https://sourceforge.net/donate/index.php?group_id=110565">Donate</a>
     </div>
   </div>
 
