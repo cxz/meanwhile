@@ -122,8 +122,9 @@ require($full_path . "release.php");
 		<? if($links) require($full_path . $links); ?>
 	</div>
 
-	<div id="dFriendlies">
-		<a href="http://www.spreadfirefox.com/?q=affiliates&amp;id=0&amp;t=86"><img border="0" width="125" height="50" alt="Get Firefox!" title="Get Firefox!" src="http://spreadfirefox.com/community/images/affiliates/Buttons/125x50/takebacktheweb_125x50.png" /></a>
+	<div id="dNavFriendlies">
+		<p><a href="http://www.spreadfirefox.com/?q=affiliates&amp;id=0&amp;t=86"><img border="0" width="125" height="50" alt="Get Firefox!" title="Get Firefox!" src="http://spreadfirefox.com/community/images/affiliates/Buttons/125x50/takebacktheweb_125x50.png" /></a></p>
+		<p>Valid <a href="http://validator.w3.org/check/referer">XHTML</a> and <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a></p>
 	</div>
 
       </td>
@@ -162,7 +163,7 @@ require($full_path . "release.php");
   <!-- the footer -->
   <div id="dFoot">
     <p id="pGoodbye">Thanks for visiting</p>
-    <p id="pCopyright">&copy; Christopher (siege) O'Brien, 2004</p>
+    <p id="pCopyright">&copy; Christopher (siege) O'Brien, 2005</p>
   </div>
 
 
