@@ -166,9 +166,10 @@ require($full_path . "release.php");
     <p id="pGoodbye">Thanks for visiting, hope you found something useful.</p>
     <p id="pCopyright">
 	Site content &copy; Christopher (siege) O'Brien, 2005.
-	Site and project are neither endorsed by nor affiliated with IBM
-	or Lotus. Lotus and Sametime are trademarks of Lotus Development
-	Corportation and/or IBM Corporation.
+	Site and project are neither endorsed by<br />
+	nor affiliated with IBM or Lotus. Lotus and Sametime are trademarks
+	of Lotus Development<br />
+	Corportation and/or IBM Corporation.</p>
   </div>
 
 

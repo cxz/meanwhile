@@ -184,14 +184,12 @@ h4, h5 {	font-size: 9pt; }
 /* Formatting for the footer text: a goodbye and a copyright notice */
 #dFoot {
 	color: #aaa;
-	margin: 10px 10px 0px 160px;
-	width: 450px;
+	text-align: center;
 }
 
 #pGoodbye, #pCopyright {
 	font-size: 8pt;
 	margin: 0em 0em 1em 0em;
-	text-align: center;
 }
 
 
