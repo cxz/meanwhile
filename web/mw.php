@@ -49,7 +49,7 @@ require("release.php");
 
 
   <!-- ==================================================================== -->
-  <!-- the w3 mark, the site title, the IBM logo, and the standard nav -->
+  <!-- the site title, the sf.net logo, stuff -->
   <div id="dHead">
     <p class="hide"><a href="#content">Skip to content</a></p>
 
@@ -67,7 +67,6 @@ require("release.php");
       <a href="http://sf.net/">SF.net</a> |
       <a href="http://gnu.org/copyleft/gpl.html">GNU GPL</a> |
       <a href="https://sf.net/donate/index.php?group_id=110565">Donate</a>
-      <!-- put javascript page search code here -->
     </div>
   </div>
 
