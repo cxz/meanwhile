@@ -6,11 +6,12 @@
 
 	<question id="what_is_meanwhile">
 	<title>What is Meanwhile?</title>
-	<answer>Meanwhile is an open source project for connecting as a client
+	<answer>
+	<p>Meanwhile is an open source project for connecting as a client
 	to a <a href="http://www.lotus.com/products/lotussametime.nsf/wdocs/homepage">Lotus Sametime Connect</a> community. There is a stand-alone library
 	portion, which can be used to write a client, and there is a Gaim
 	protocol plugin which turns Gaim into a Sametime client. There is also
-	a significant amount of work into documenting the Sametime protocol.
+	a significant amount of work into documenting the Sametime protocol.</p>
 	</answer>
 	</question>
 
@@ -63,11 +64,13 @@
 
 	<question id="what_is_gaim">
 	<title>What is Gaim?</title>
-	<answer><a href="http://gaim.sf.net/">Gaim</a> is an open source Instant Messaging client platform.
-	Gaim supports almost every instant messaging protocol, and any number
-	of additional protocols can be added in as modules. It provides a
-	single front end for all of a user's various instant messaging accounts
-	and buddy lists.</answer>
+	<answer>
+	<p><a href="http://gaim.sf.net/">Gaim</a> is an open source Instant
+	Messaging client platform. Gaim supports almost every instant messaging
+	protocol, and any number of additional protocols can be added in as
+	modules. It provides a single front end for all of a user's various
+	instant messaging accounts and buddy lists.</p>
+	</answer>
 	</question>
 
 	<question id="case_sensitive">
