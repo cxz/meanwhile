@@ -89,6 +89,16 @@
 	<p><code>rpmbuild -ts [tarball]</code></p>
 	</answer>
 	</question>
+
+	<question id="should_i_package">
+	<title>Should I package Meanwhile into my distribution?</title>
+	<answer><p>I would strongly recommend against it until Meanwhile
+	exits beta and becomes version 1.0.0, which shouldn't be too far off
+	into the future. The 0.4.x release is going to be very similar to the
+	1.0.0 release, but some things need to be nailed down still, and API
+	breakage is very very likely.</p>
+	</answer>
+	</question>
 </group>
 
 
