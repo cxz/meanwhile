@@ -7,26 +7,23 @@ global $mw_gaim, $mw_gaim_url;
 <h2>Release</h2>
 <p>The current Meanwhile release is <a href="<?= $mw_release_url ?>"><?= $mw_release ?></a>, and the current Gaim plugin release is <a href="<?= $mw_gaim_url ?>"><?= $mw_gaim ?></a>.</p>
 
-<p>Release numbering for the Gaim plugin currently mirrors the <a href="http://gaim.sf.net/">Gaim</a> release that the plugin portion is built against. Since Gaim often changes the plugin ABI significantly between releases, please make sure your versions match.</p>
+<p>Release numbering for the Gaim plugin indicates the <i>required</i> major
+and <i>minimum</i> minor version of Gaim required for the plugin to function.
+The micro number only differentiates plugin releases and is independant of any
+Gaim requirements</p>
 
 
 <h2>CVS</h2>
-<p>The CVS versions of meanwhile-gaim are built against the (near) current CVS
-version of Gaim. Since the meanwhile-gaim plugin code is therefore aiming at a
-moving target, ocasionally the build will break. Ideally however, changes to
-the Gaim prpl or plugin interfaces will be reflected in Meanwhile within a day
-or two. If you're still feeling brave, simply follow these steps:</p>
+<p>The CVS version of gaim-meanwhile is written against the latest release of
+Gaim, and the latest release of Meanwhile.</p>
 
-<ol>
+<p>The CVS version of meanwhile is not guaranteed to work with the CVS version
+of gaim-meanwhile. In fact, until 0.4.0 is released, it's guaranteed <i>not</i>
+to work. However, the new Python bindings are in CVS, and are worth playing
+around with if you have the time and a sametime server that doesn't mind. You
+don't have to install CVS meanwhile to play with the Python bindings, the
+included test scripts will function in the sandbox just fine.</p>
 
-<li>Checkout the <code>gaim</code> module from Sourceforge anonymous CVS<br />
-<a href="http://sourceforge.net/cvs/?group_id=235">http://sourceforge.net/cvs/?group_id=235</a></li>
-
-<li>Build and install first gaim, then meanwhile, then meanwhile-gaim. Simply running the following in each sandbox should work:<br />
-<code>./autogen.sh &amp;&amp; make all &amp;&amp; su -c "make install"</code></li>
-
-<li>Run <code>ldconfig</code> as root. This will ensure that your system will be able to load the meanwhile libraries when gaim starts.</li>
-
-<li>Start up Gaim, and with luck you'll be ready to go!</li>
-</ol>
+<p>To build from CVS, just check out the appropriate module and
+run <code>./autogen.sh &amp;&amp; make all</code></p>
 
