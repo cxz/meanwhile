@@ -92,7 +92,7 @@ require($full_path . "release.php");
 	/* drawLink("news/", "News"); */
 	drawLink("download/", "Download");
 	drawLink("docs/", "Documentation");
-	drawLink("plugins/", "Plugins");
+	drawLink("plugins/", "Client Plugins");
 	drawLink("faq/", "Questions");
 	drawLink("contact/", "Contact");
 	?>
@@ -118,6 +118,10 @@ require($full_path . "release.php");
 
 	<div id="dNavLink">
 		<? if($links) require($full_path . $links); ?>
+	</div>
+
+	<div id="dFriendlies">
+		<a href="http://www.spreadfirefox.com/?q=affiliates&amp;id=0&amp;t=86"><img border="0" width="125" height="50" alt="Get Firefox!" title="Get Firefox!" src="http://spreadfirefox.com/community/images/affiliates/Buttons/125x50/takebacktheweb_125x50.png" /></a>
 	</div>
 
       </td>

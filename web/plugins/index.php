@@ -3,7 +3,7 @@ global $back, $body, $title, $side;
 
 $back = "../";
 $body = "plugins/main.htm";
-$title = "Plugins";
+$title = "Client Plugins";
 
 include($back . "mw.php");
 ?>

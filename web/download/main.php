@@ -7,10 +7,10 @@ global $mw_gaim, $mw_gaim_url;
 <h2>Release</h2>
 <p>The current Meanwhile release is <a href="<?= $mw_release_url ?>"><?= $mw_release ?></a>, and the current Gaim plugin release is <a href="<?= $mw_gaim_url ?>"><?= $mw_gaim ?></a>.</p>
 
-<p>Release numbering for the Gaim plugin indicates the <i>required</i> major
+<p>Release numbering for the Gaim plugin indicates the <i>exact</i> major
 and <i>minimum</i> minor version of Gaim required for the plugin to function.
-The micro number only differentiates plugin releases and is independant of any
-Gaim requirements</p>
+The micro number only differentiates plugin releases and doesn't relate to
+Gaim in any way.</p>
 
 
 <h2>CVS</h2>

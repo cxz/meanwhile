@@ -16,16 +16,27 @@ body {
 	padding: 0px;
 }
 
+
 hr {
 	color: black;
 	margin: 1.5em 1em 2em 1em;
 }
+
 
 p {
 	margin: 0.2em 0px 1.2em 0px;
 	font-weight: normal;
 	/* text-align: justify; */
 }
+
+p img.pthumb {
+	border: none;
+	float: left;
+	height: 48px;
+	margin-right: 4pt;
+	width: 48px;
+}
+
 
 ol, ul {
 	margin: 0px 1em 0.4em 0px;
@@ -35,6 +46,8 @@ ol, ul {
 li {
 	margin-left: 0px;
 }
+
+
 
 a, a:link, a:visited {
 	text-decoration: none;
@@ -50,10 +63,12 @@ a {
 }
 
 
+/* Such nice headings */
 h1, h2, h3, h4, h5 {
 	color: #c60;
 	font-weight: bold;
 	margin: 0px;
+	clear: left;
 }
 
 h2, h3, h4 {
@@ -179,6 +194,8 @@ h4, h5 {	font-size: 9pt; }
 	text-align: center;
 }
 
+
+/* FAQ styles */
 table.question {
 	border: none;
 	margin: 1em 2em 0px 1em;
