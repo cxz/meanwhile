@@ -1,7 +1,11 @@
 <?= "<?xml version=\"1.0\" ?>\n" ?>
 
 <?
+global $full_path;
+$full_path = "/home/groups/m/me/meanwhile/htdocs/";
+
 global $title, $back, $body, $side, $links, $date;
+
 
 $page_title = "Meanwhile Project";
 if($title && $title != $page_title)
@@ -24,7 +28,7 @@ global $mw_release, $mw_release_url;
 global $mw_gaim, $mw_gaim_url;
 
 /* using a require here, because occasionally sf.net's php craps out */
-require("release.php");
+require($full_path . "release.php");
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
@@ -113,7 +117,7 @@ require("release.php");
         </div>
 
 	<div id="dNavLink">
-		<? if($links) require($links); ?>
+		<? if($links) require($full_path . $links); ?>
 	</div>
 
       </td>
@@ -132,16 +136,16 @@ require("release.php");
       <? if($side) { ?>
         <td id="dMainBody">
           <h1><?= $title ?></h1><a name="content"></a>
-          <? require($body); ?>
+          <? require($full_path . $body); ?>
         </td>
         <td id="dMainSide">
-          <? require($side); ?>
+          <? require($full_path . $side); ?>
         </td>
 
       <? } else { ?>
         <td colspan="2" id="dMainBody">
           <h1><?= $title ?></h1><a name="content"></a>
-          <? require($body); ?>
+          <? require($full_path . $body); ?>
         </td>
       <? } ?>
     </tr>
