@@ -189,7 +189,7 @@
 	an unsupported feature seems to generate network traffic whenever you
 	use it, capture those packets and explain exactly what you were doing
 	to produce them. We'll get this thing figured out yet!</p>
-	<p><code>tcpdump -i eth0 -w gaim-meanwhile.capture tcp port 1533</code></p>
+	<p><code>tcpdump -i eth0 -w gaim-meanwhile.capture -s 0 tcp port 1533</code></p>
 	</answer>
 	</question>
 
