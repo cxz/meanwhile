@@ -5,7 +5,7 @@
 	$mw_release = "meanwhile 0.3";
 	$mw_release_url = "http://sourceforge.net/project/showfiles.php?group_id=110565&package_id=119439&release_id=249199";
 
-	$mw_gaim = "meanwhile-gaim 0.79";
-	$mw_gaim_url = "http://sourceforge.net/project/showfiles.php?group_id=110565&package_id=119703&release_id=249201";
+	$mw_gaim = "gaim-meanwhile 0.80";
+	$mw_gaim_url = "http://sourceforge.net/project/showfiles.php?group_id=110565&package_id=119703&release_id=253394";
 
 ?>
