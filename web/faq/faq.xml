@@ -7,7 +7,7 @@
 	<question id="what_is_meanwhile">
 	<title>What is Meanwhile?</title>
 	<answer>Meanwhile is an open source project for connecting as a client
-	to a Lotus Sametime Connect community. There is a stand-alone library
+	to a <a href="http://www.lotus.com/products/lotussametime.nsf/wdocs/homepage">Lotus Sametime Connect</a> community. There is a stand-alone library
 	portion, which can be used to write a client, and there is a Gaim
 	protocol plugin which turns Gaim into a Sametime client. There is also
 	a significant amount of work into documenting the Sametime protocol.
@@ -63,7 +63,7 @@
 
 	<question id="what_is_gaim">
 	<title>What is Gaim?</title>
-	<answer>Gaim is an open source Instant Messaging client platform.
+	<answer><a href="http://gaim.sf.net/">Gaim</a> is an open source Instant Messaging client platform.
 	Gaim supports almost every instant messaging protocol, and any number
 	of additional protocols can be added in as modules. It provides a
 	single front end for all of a user's various instant messaging accounts
@@ -108,7 +108,7 @@
 	</answer>
 	</question>
 
-	<question>
+	<question id="rfe">
 	<title>Why don't you support ${FEATURE}?</title>
 	<answer><p>It's not entirely a matter of not supporting, it's more a
 	matter of not <i>yet</i> supporting. Please look through the
@@ -143,7 +143,7 @@
 	an unsupported feature seems to generate network traffic whenever you
 	use it, capture those packets and explain exactly what you were doing
 	to produce them. We'll get this thing figured out yet!</p>
-	<p>try: <code>tcpdump -i eth0 -w gaim-meanwhile.capture tcp port 1533</code></p>
+	<p><code>tcpdump -i eth0 -w gaim-meanwhile.capture tcp port 1533</code></p>
 	</answer>
 	</question>
 
@@ -212,7 +212,7 @@
 	<title>Why are you taking peoples' money?</title>
 	<answer>
 	<p>Because I am broke. Please note that I immediately hand over 50% to
-	the EFF. The rest will probably buy me toys or something.</p>
+	the <a href="http://eff.org/">EFF</a>. The rest will probably buy me toys or something.</p>
 	</answer>
 	</question>
 

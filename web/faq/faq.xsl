@@ -12,11 +12,20 @@
 
 
 <xsl:template name="gen-index">
+	<xsl:variable name="qid">
+		<xsl:choose>
+		<xsl:when test="@id"><xsl:value-of select="@id" />
+		</xsl:when>
+		<xsl:otherwise><xsl:value-of select="position()" />
+		</xsl:otherwise>
+		</xsl:choose>
+	</xsl:variable>
+
 	<ul>
 	<xsl:for-each select="faq/group">
 		<xsl:if test="question">
 			<li><b><xsl:value-of select="title" /></b>
-			<a name="{@id}">
+			<a name="{$qid}">
 			<xsl:text disable-output-escaping="yes">
 			<![CDATA[&nbsp;]]></xsl:text></a>
 			<ul>
@@ -32,16 +41,33 @@
 
 
 <xsl:template name="gen-question">
-	<li><a href="#{@id}"><xsl:value-of select="title" /></a></li>
+	<xsl:variable name="qid">
+		<xsl:choose>
+		<xsl:when test="@id"><xsl:value-of select="@id" />
+		</xsl:when>
+		<xsl:otherwise><xsl:value-of select="position()" />
+		</xsl:otherwise>
+		</xsl:choose>
+	</xsl:variable>
+	<li><a href="#{$qid}"><xsl:value-of select="title" /></a></li>
 </xsl:template>
 
 
 <xsl:template match="question">
+	<xsl:variable name="qid">
+		<xsl:choose>
+		<xsl:when test="@id"><xsl:value-of select="@id" />
+		</xsl:when>
+		<xsl:otherwise><xsl:value-of select="position()" />
+		</xsl:otherwise>
+		</xsl:choose>
+	</xsl:variable>
+
 	<table class="question">
 	<tr><td class="q-title">
-	<a name="{@id}" href="#{@id}"><xsl:value-of select="title" /></a>
+	<a name="{$qid}" href="#{$qid}"><xsl:value-of select="title" /></a>
 	</td><td class="q-back">
-	<a href="#{../@id}">back</a>
+	<a href="#content">back</a>
 	</td></tr>
 
 	<tr><td class="q-answer" colspan="2">
