@@ -52,6 +52,15 @@
 	</answer>
 	</question>
 
+	<question id="use_lotus">
+	<title>Does Meanwhile use the Lotus toolkit?</title>
+	<answer>
+	<p>No. It is a project to opperate similarly to the Lotus toolkit, but
+	built from extrapolating the binary protocol from captured network
+	packets.</p>
+	</answer>
+	</question>
+
 	<question id="is_it_safe">
 	<title>Should I use Meanwhile?</title>
 	<answer>

@@ -32,8 +32,8 @@ global $mw_gaim, $mw_gaim_url;
 require($full_path . "release.php");
 ?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
@@ -66,7 +66,7 @@ require($full_path . "release.php");
     <div id="dHeadLogo">
       <a href="http://sf.net/"><img
        src="http://sf.net/sflogo.php?group_id=110565&amp;type=1"
-       alt="SF.net" width="88" height="31" border="0" /></a>
+       alt="SF.net" width="88" height="31" /></a>
     </div>
 
     <div id="dHeadNav">
@@ -124,7 +124,7 @@ require($full_path . "release.php");
 	</div>
 
 	<div id="dNavFriendlies">
-		<p><a href="http://www.spreadfirefox.com/?q=affiliates&amp;id=0&amp;t=86"><img border="0" width="125" height="50" alt="Get Firefox!" title="Get Firefox!" src="http://spreadfirefox.com/community/images/affiliates/Buttons/125x50/takebacktheweb_125x50.png" /></a></p>
+		<p><a href="http://www.spreadfirefox.com/?q=affiliates&amp;id=0&amp;t=86"><img width="125" height="50" alt="Get Firefox!" title="Get Firefox!" src="http://spreadfirefox.com/community/images/affiliates/Buttons/125x50/takebacktheweb_125x50.png" /></a></p>
 		<p>Valid <a href="http://validator.w3.org/check/referer">XHTML</a> and <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a></p>
 	</div>
 

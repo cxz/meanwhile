@@ -17,6 +17,10 @@ body {
 }
 
 
+img {
+	border: none;
+}
+
 hr {
 	color: black;
 	margin: 1.5em 1em 2em 1em;
@@ -30,7 +34,6 @@ p {
 }
 
 p img.pthumb {
-	border: none;
 	float: left;
 	height: 48px;
 	margin-top: 0.4em;
