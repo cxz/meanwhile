@@ -1,0 +1,50 @@
+
+
+/* color classes, stolen directly from the w3v8 standard. */
+.primary-blue-dark {	color: #47b; }
+.primary-blue-med {	color: #9cf; }
+.primary-blue-light {	color: #def; }
+
+.blue-dark {		color: #05a; }
+.blue-med-dark {	color: #47b; }
+.blue-med {		color: #69c; }
+.blue-med-light {	color: #9be; }
+.blue-light {		color: #cef; }
+
+.black {		color: #000; }
+.gray-dark {		color: #666; }
+.gray-med-dark {	color: #999; }
+.gray-med {		color: #aaa; }
+.gray-med-light {	color: #ccc; }
+.gray-light {		color: #ddd; }
+.gray-lightest {	color: #eee; }
+
+.green-dark {		color: #7a3; }
+.green-med-dark {	color: #9c3; }
+.green-med-light {	color: #bd6; }
+.green-light {		color: #dfb; }
+
+.yellow-med {		color: #fe2; }
+.yellow-light {		color: #ffa; }
+
+.orange-dark {		color: #c60; }
+.orange-med {		color: #f90; }
+
+.red-dark {		color: #a00; }
+.red-med {		color: #c33; }
+
+.pink-med {		color: #f76; }
+.pink-light {		color: #fcc; }
+
+.violet-dark {		color: #936; }
+.violet-med-dark {	color: #969; }
+.violet-med-light {	color: #b7b; }
+.violet-light {		color: #ede; }
+
+.alert-stop {		color: #c00; }
+.alert-go {		color: #0f0; }
+.alert-caution {	color: #ff0; }
+
+.hide {			display: none; }
+
+

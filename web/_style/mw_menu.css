@@ -1,0 +1,60 @@
+
+
+/* the navigational menu */
+#dNav {
+	font-size: 9pt;
+	padding: 0px 10px 0px 2px;
+	text-align: left;
+}
+
+#dNavMenu {
+	border-bottom: 1px solid #99ccff;
+}
+
+#dNavMenu a, #dNavMenu p {
+	border: none;
+	color: #000;
+	display: block;
+	line-height: 1.2em;
+	margin: 0px 0px 1px 0px;
+	text-align: left;
+	vertical-align: middle;
+	white-space: normal;
+}
+
+#dNavMenu .depth_1 {
+	padding: 0.4em 0.5em 0.4em 1.2em;
+}
+
+#dNavMenu a.depth_1 {
+	background-color: #99ccff;
+}
+
+#dNavMenu .depth_2 {
+	padding: 0.4em 0.5em 0.4em 2.2em;
+}
+
+#dNavMenu a.depth_2 {
+	background-color: #ddeeff;
+}
+
+#dNavMenu a:hover {
+	background-color: #eeeeee;
+	text-decoration: underline;
+}
+
+#dNavLink, #dNavJunk {
+	font-size: 8pt;
+	margin-top: 2em;
+	vertical-align: top;
+}
+
+#dNavLink ul, #dNavJunk ul {
+	padding-left: 1.4em;
+}
+
+#dNavJunk img {
+	float: left;
+	margin: 0.2em 0.4em 0em 0em;
+}
+

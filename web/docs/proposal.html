@@ -1,0 +1,153 @@
+
+<html>
+
+<head>
+	<title>The Meanwhile Project</title>
+	<style type="text/css">
+	body {
+	 max-width: 50em; }
+	h1 {
+	 border-top: thin solid #6666aa;
+	 padding-top: 4px;
+	 font-size: 14pt; }
+	p {
+	 text-align: justify; }
+	a {
+	 color: #6666aa;
+	 text-decoration: none; }
+	a:hover {
+	 text-decoration: underline; }
+	td {
+	 margin: 2px 0px 0px 0px; }
+	</style>
+</head>
+
+<body>
+
+<table width="100%"><tr><td>
+<img src="meanwhile-bg.png" height="48" width="48" />
+</td><td style="text-align: right;">
+<b>The Meanwhile Project</b>, 2004-01-30<br />
+Christopher O'Brien
+&lt;<a href="mailto:obriencj@us.ibm.com">obriencj@us.ibm.com</a>&gt;
+</td></tr></table>
+
+
+<h1>Introduction</h1>
+
+<p>Lately I have been spending my free time developing an open-source, as of
+yet unreleased, project named Meanwhile. This document describes my intent as
+of the time of its composition. Going forward, the goals or end results may
+shift if such a change proves necessary.</p>
+
+<p>The ideal outcome of this project is to give Lotus's Sametime product a
+foot-hold in the emerging Linux client space. Releasing this project publicly
+under the various Open Source licenses will allow the project to mature, and
+will provide an outlet for name recognition. The additional goal of garnering
+support from Lotus-- in the form of additinal insight into their protocol--
+would only strengthen Lotus's position as a commercial messaging solution. It
+would also ensure compatability of the project with Lotus's proprietary
+messaging server technologies.</p>
+
+<p>The Meanwhile project is comprised of three primary parts, set out when the
+idea for the project first came to mind. The first part, called libMeanwhile,
+is a simple library for processing data and keeping state of a Lotus Sametime
+session. The second part utilizes this library to provide an existing
+instant-messaging platform with Lotus Sametime capabilities. The third part
+provided documentation for libMeanwhile and the Sametime Client protocol
+itself.</p>
+
+
+<h1>The libMeanwhile Library</h1>
+
+<p>In 2000, the IETF established a working group called the IMPP (Instant
+Messaging and Presence Protocol), whose goal was to create a standard for all
+the existing instant-messaging solutions to eventually adopt in order to merge
+them all into a single space (similar to email). Among the drafts submitted as
+potential solutions was a draft by Avshalom Houri and Ittai Golde, both from
+Ubique/Lotus. Their draft provided some of the first public introspection into
+the Lotus Sametime protocol as it existed at the time. It layed out the various
+packet types and state flow for connecting and using a Sametime server, and for
+initiating one-to-one and one-to-many conversations with other users.</p>
+
+<p>A good portion of the information in the draft was (perhaps deliberately)
+incorrect. However, with a working client, a partially correct draft, and a
+packet analyzation and connection tracking application (such as tcpdump and
+ethereal, both in most linux distributions) it was possible to decipher and
+eventually re-create a working library meeting the minimal needs of an IM
+client.</p>
+
+<p>The encryption portions of the protocol were not covered in the draft. A
+search on google for "lotus sametime encryption" turns up some interesting
+results, enough so that it's possible to determine what cipher is being used.
+It is even possible to determine the key being used in login messages.</p>
+
+<p>The libMeanwhile library will be released under the GNU Lesser General
+Public License (<a href="http://gnu.org/copyleft/lesser.html">http://gnu.org/copyleft/lesser.html</a>)</p>
+
+
+<h1>The Client Plugin for Gaim</h1>
+
+<p>Gaim (<a href="http://gaim.sf.net/">http://gaim.sf.net/</a>) is the most
+widely distrubted and used IM platform for linux. It is built around a
+plugin-based system, allowing any number of modifications to usability, and any
+number of protocols to be supported. As of right now, Gaim supports:</p>
+
+	<ul>
+	<li>AIM (AOL's IM)</li>
+	<li>MSN (Microsoft Network)</li>
+	<li>Yahoo! Messenger</li>
+	<li>Jabber</li>
+	<li>Zephyr (for old unix systems)</li>
+	<li>ICQ (which is now also run by AOL)</li>
+	<li>Gadu-Gadu (popular in parts of Europe)</li>
+	<li>IRC (Internet Relay Chat)</li>
+	</ul>
+
+<p>From a user's perspective, while there is no wide-ranging solution to
+service interoperability, the easiest way to get all of a user's IM contacts
+into one list is to have a client which supports multiple protocols.</p>
+
+<p>Due to its extensibility, Gaim makes for the perfect open-source IM
+platform.</p>
+
+<p>The Meanwhile plugin for Gaim currently provides presence notificaton,
+encrypted bi-directional one-to-one chats, and custom away states. Support for
+one-to-many chats (conferencing) is in progress, and will effectively complete
+Gaim as a full, stand-alone Sametime client.</p>
+
+<p>Support for some out-of-band communications, such as whiteboards and
+screen-sharing (currently only available on Windows via an Internet Explorer
+plugin) could hypothetically be added in and done over either an existing
+Gaim-driven Meanwhile session, or spawned using a separate libMeanwhile
+instance. A Mozilla (<a href="http://mozilla.org">http://mozilla.org/</a>)
+plugin has been considered, but is not currently being planned.</p>
+
+<p>The Meanwhile Gaim plugin will be released under the GNU General Public
+License (<a href="http://gnu.org/copyleft/gpl.html">http://gnu.org/copyleft/gpl.html</a>)<p>
+
+
+<h1>The Meanwhile Documentation</h1>
+
+<p>The white-paper is in a very basic stage. Topics covered will include:</p>
+
+	<ul>
+	<li>data types in the protocol</li>
+	<li>message specifications</li>
+	<li>state charts for common tasks</li>
+	<li>header file documentation for libMeanwhile</li>
+	<li>abbreviated instructions on the RC2/40 cipher</li>
+	</ul>
+
+<p>This documentation will be released under the GNU Free Documentation License
+(<a href="http://gnu.org/copyleft/fdl.html">http://gnu.org/copyleft/fdl.html</a>)</p>
+
+</body>
+</html>
+
+
+
+
+
+
+

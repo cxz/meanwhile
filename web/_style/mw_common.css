@@ -1,0 +1,223 @@
+
+
+html, body {
+	font-family: arial,verdana,helvetica,sans-serif;
+	min-width: 740px;
+}
+
+body, p, li, div, a {
+	font-family: arial,verdana,helvetica,sans-serif;
+	font-size: 9pt;
+}
+
+body {
+	background: #ffffff;
+	font-weight: normal;
+	margin: 0px;
+	padding: 0px;
+}
+
+hr {
+	color: black;
+	margin: 1.5em 1em 2em 1em;
+}
+
+p {
+	margin: 0.2em 0px 1.2em 0px;
+	font-weight: normal;
+	/* text-align: justify; */
+}
+
+ol, ul {
+	margin: 0px 1em 0.4em 0px;
+	padding-left: 1.8em;
+}
+
+li {
+	margin-left: 0px;
+}
+
+a, a:link, a:visited {
+	text-decoration: none;
+}
+
+a:hover, a:active, a:focus {
+	border: none;
+	color: #69c;
+	text-decoration: underline;
+}
+
+a {
+	color: #05a;
+}
+
+
+/* headings everywhere. Let's stray from the standard and add a little color to
+   this otherwise monochrome style */
+h1, h2, h3, h4, h5 {
+	color: #c60;
+	font-weight: bold;
+	margin: 0px;
+}
+
+h2, h3, h4 {
+	margin-top: 1.2em;
+}
+
+h1 {		font-size: 15pt; }
+h2 {		font-size: 11pt; }
+h3 {		font-size: 10pt; }
+h4, h5 {	font-size: 9pt; }
+
+
+/* the pretty-pretty heading and title */
+#dHead {
+	background: #4477bb
+	 url("img/site_mark.png")
+	 no-repeat left;
+	height: 70px;
+	margin: 0px;
+	position: relative;
+	top: 0px;
+	width: 100%;
+}
+
+#dHeadTitle {
+	background-color: transparent;
+	bottom: 8px;
+	color: #ffffff;
+	font-size: 16pt; 
+	font-weight: bold;
+	left: 140px;
+	position: absolute;
+}
+
+#dHeadLogo {
+	position: absolute;
+	right: 20px;
+	top: 14px;
+}
+
+#dHeadNav {
+	bottom: 2px;
+	color: #ffffff;
+	font-weight: bold; 
+	position: absolute;
+	right: 20px;
+}
+
+#dHeadNav a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+#dHeadNav a:hover {
+	color: #bdf;
+	text-decoration: underline;
+}
+
+
+/* layout for the menu, body, and optional sidebar is done with a table. Why?
+   Because it works sanely and takes less code!! */
+#tLayout {
+	border: none;
+	margin: 5px 0px;
+	position: relative;
+	top: 0px;
+	width: 100%;
+}
+
+#tLayout td {
+	vertical-align: top;
+}
+
+#cNav {		width: 160px; }
+#cBody {	width: auto; }
+#cSide {	width: 200px; }
+
+
+/* the date, maybe a nested path indicator, and a dotted line */
+#dMainHead {
+	border-bottom: thin dotted #aaa;
+	height: 1.6em;
+	margin: 0px;
+	padding: 0.2em 0px 0.2em 0px;
+}
+
+#dMainHead p {
+	color: #aaa;
+	line-height: 1em;
+	margin: 0px;
+	padding: 0px;
+}
+
+
+/* the actual content for the page hides in here */
+#dMainBody {
+	padding: 0.2em 10px 0px 0px;
+}
+
+
+/* the optional sidebar, and the pair of settings for the main body */
+#dMainSide {
+	font-size: 9pt;
+	padding: 0px 10px 40px 10px;
+	border-left: thin dotted #69c;
+	font-family: arial,verdana,helvetica,sans-serif;
+}
+
+#dMainSide ul, #dMainSide ol {
+	margin: 0px 1em 0.4em 0px;
+	padding-left: 1.2em;
+}
+
+
+/* Formatting for the footer text: a goodbye and a copyright notice */
+#dFoot {
+	color: #aaa;
+	margin: 40px 0px 10px 0px;
+	width: 100%;
+}
+
+#pGoodbye, #pCopyright {
+	line-height: 1em;
+	margin: 0em;
+	text-align: center;
+}
+
+table.question {
+	border: none;
+	margin: 1em 2em 0px 1em;
+	width: 100%;
+}
+
+td.q-title {
+	background-color: #9e9;
+	padding-left: 0.6em;
+	padding-right: 0.6em;
+	width: auto;
+}
+
+td.q-title a {
+	color: #000;
+	font-weight: bold;
+}
+
+td.q-back {
+	background-color: #ddd;
+	padding-right: 0.6em;
+	padding-left: 0.6em;
+	text-align: right;
+	width: 4em;
+}
+
+td.q-answer {	
+	border: thin solid #cdc;
+	padding: 0px 0.6em;
+}
+
+td.q-answer p {
+	margin-bottom: 0.5em;
+}
+
+

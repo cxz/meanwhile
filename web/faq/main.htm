@@ -1,0 +1,205 @@
+<ul>
+  <li>
+    <b>General</b>
+    <a name="group_general">
+			&nbsp;</a>
+    <ul>
+      <li>
+        <a href="#what_is_meanwhile">What is Meanwhile?</a>
+      </li>
+      <li>
+        <a href="#born_free">Is this project affiliated with IBM or Lotus?</a>
+      </li>
+      <li>
+        <a href="#where_can_it_run">On what platforms can I use Meanwhile?</a>
+      </li>
+      <li>
+        <a href="#why_no_srpm">Why is there no SRPM?</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <b>Gaim Plugin</b>
+    <a name="group_gaim">
+			&nbsp;</a>
+    <ul>
+      <li>
+        <a href="#what_is_gaim">What is Gaim?</a>
+      </li>
+      <li>
+        <a href="#how_to_compile">I have the source, now how do I compile this?</a>
+      </li>
+      <li>
+        <a href="#how_to_compile_srpm">Why is the SRPM not building the Gaim plugin?</a>
+      </li>
+      <li>
+        <a href="#case_sensitive">Why aren't some of my buddies showing as online?</a>
+      </li>
+    </ul>
+  </li>
+</ul><hr/><table class="question">
+  <tr>
+    <td class="q-title">
+      <a name="what_is_meanwhile" href="#what_is_meanwhile">What is Meanwhile?</a>
+    </td>
+    <td class="q-back">
+      <a href="#group_general">back</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="q-answer" colspan="2">
+      <p>Meanwhile is an open source project for connecting as a client
+	to a Lotus Sametime Connect community. There is a stand-alone library
+	portion, which can be used to write a client, and there is a Gaim
+	protocol plugin which turns Gaim into a Sametime client. There is also
+	a significant amount of work into documenting the Sametime protocol.
+	</p>
+    </td>
+  </tr>
+</table><table class="question">
+  <tr>
+    <td class="q-title">
+      <a name="born_free" href="#born_free">Is this project affiliated with IBM or Lotus?</a>
+    </td>
+    <td class="q-back">
+      <a href="#group_general">back</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="q-answer" colspan="2">
+      <p>No. The Meanwhile project is neither affiliated with, nor
+	endorsed or supported by, either IBM or Lotus.</p>
+      <p>The project was first available exclusively inside of IBM, due to
+	questions of code ownership. These have been resolved, and Meanwhile
+	is now open to the world.</p>
+      <p>There is still a residual internal project-- with some useful
+	IBM-specific features added on-- available from the IBM Intranet at
+	<a href="http://w3.opensource.ibm.com/~meanwhile">http://w3.opensource.ibm.com/~meanwhile</a> (note: IBM-only link)
+	</p>
+    </td>
+  </tr>
+</table><table class="question">
+  <tr>
+    <td class="q-title">
+      <a name="where_can_it_run" href="#where_can_it_run">On what platforms can I use Meanwhile?</a>
+    </td>
+    <td class="q-back">
+      <a href="#group_general">back</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="q-answer" colspan="2">
+      <p>Older versions of Meanwhile has been successfully compiled and
+	used on Linux, Win32 (via mingw), and Darwin (Mac OSX). Possibly and
+	probably more,	but those are the only ones I've heard of so far.
+	</p>
+    </td>
+  </tr>
+</table><table class="question">
+  <tr>
+    <td class="q-title">
+      <a name="why_no_srpm" href="#why_no_srpm">Why is there no SRPM?</a>
+    </td>
+    <td class="q-back">
+      <a href="#group_general">back</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="q-answer" colspan="2">
+      <p>Primarily because you can make a source-rpm from the release
+	tarball with a single command:</p>
+      <p>
+        <code>rpmbuild -ts [tarball]</code>
+      </p>
+    </td>
+  </tr>
+</table><table class="question">
+  <tr>
+    <td class="q-title">
+      <a name="what_is_gaim" href="#what_is_gaim">What is Gaim?</a>
+    </td>
+    <td class="q-back">
+      <a href="#group_gaim">back</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="q-answer" colspan="2">
+      <p>Gaim is an open source Instant Messaging client platform.
+	Gaim supports almost every instant messaging protocol, and any number
+	of additional protocols can be added in as modules. It provides a
+	single front end for all of a user's various instant messaging accounts
+	and buddy lists.</p>
+    </td>
+  </tr>
+</table><table class="question">
+  <tr>
+    <td class="q-title">
+      <a name="how_to_compile" href="#how_to_compile">I have the source, now how do I compile this?</a>
+    </td>
+    <td class="q-back">
+      <a href="#group_gaim">back</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="q-answer" colspan="2">
+      <p>Ah, now that's tricky.</p>
+      <p>This plugin is dynamically linked against libMeanwhile, which must
+	already be installed. That part at least, is easy. Just make sure that
+	you've run <code>ldconfig</code>, and detection should work find.</p>
+      <p>This is also a Gaim plugin, which naturally requires headers from
+	Gaim. However, Gaim has no real development package, so the only way
+	to get the Gaim headers is to get the Gaim source. Once you've
+	obtained that, running the following should produce Makefiles which
+	build the plugin.</p>
+      <p>
+        <code>./configure --with-gaim-source=$path_to_gaim/src</code>
+      </p>
+      <p>This is outlined in the <code>INSTALL</code> file.</p>
+    </td>
+  </tr>
+</table><table class="question">
+  <tr>
+    <td class="q-title">
+      <a name="how_to_compile_srpm" href="#how_to_compile_srpm">Why is the SRPM not building the Gaim plugin?</a>
+    </td>
+    <td class="q-back">
+      <a href="#group_gaim">back</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="q-answer" colspan="2">
+      <p>The reasoning is the same as outlined above. The fix for
+	this is to rebuild the rpm with the environment variable
+	<code>gaim_src_dir</code> set to the absolute path to the
+	<code>src</code> directory for Gaim. For example:</p>
+      <p>
+        <code>gaim_src_dir=/path/to/gaim/src
+	rpmbuild --rebuild meanwhile-0.2-1.srpm</code>
+      </p>
+    </td>
+  </tr>
+</table><table class="question">
+  <tr>
+    <td class="q-title">
+      <a name="case_sensitive" href="#case_sensitive">Why aren't some of my buddies showing as online?</a>
+    </td>
+    <td class="q-back">
+      <a href="#group_gaim">back</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="q-answer" colspan="2">
+      <p>It's been noted that the sametime protocol seems to be
+	case-sensitive in the identification of its users, unlike virtually
+	every other internet identity. Even unlike virtually every use of
+	your IBM Intranet User ID.</p>
+      <p>Therefore, if your buddy has been entered as 'mybuddy',
+	when in fact their ID is 'MyBuddy', sametime will happily
+	accept the addition into your buddy list but never provide any status
+	updates. You will also encounter confusing problems if they message
+	you, as gaim will attempt to reply to the corresponding ID in your
+	buddy-list, and sametime's messaging service will erroneously inform
+	you that the user you're sending to is not online.</p>
+    </td>
+  </tr>
+</table>
