@@ -3,103 +3,132 @@
 
 <group id="group_general">
 	<title>General</title>
-
+	
 	<question id="what_is_sametime">
 	<title>What is Lotus Sametime?</title>
 	<answer>
-	<p>Lotus Sametime is a corporate Instant Messaging product sold by
+
+	<p><a href="http://www.lotus.com/products/lotussametime.nsf/wdocs/homepage">Lotus
+	Sametime</a> is a corporate Instant Messaging product sold by
 	IBM and Lotus.</p>
-	<p>It was originally offered by a company called Ubique as Virtual
-	Places (VP), utilizing a client called VPBuddy. The protocol and the
-	client application were renamed	to Sametime when Ubique was purchased
-	by Lotus. Later, the product again underwent a name change and is now
-	officially Lotus Instant Messenger (LIM).</p>
-	<p>The VP protocol is what Meanwhile implements. LIM is slowly moving
-	away from VP, instead favoring SIP/SIMPLE as the underlying messaging
-	protocol. Hypothetically this means that the Meanwhile project will
-	slowly become obsolete. Realistically, VP-based deployments of Sametime
-	will probably be around for quite a while.</p>
-	<p>If anyone has more information on the history of Ubique, please
-	let me know via the contact page.</p> 
+
+	<p>It was originally offered by a company called Ubique as
+	Virtual Places (VP), utilizing a client called VPBuddy. The
+	protocol and the client application were renamed to Sametime
+	when Ubique was purchased by Lotus. Later, the product again
+	underwent a name change and is now officially Lotus Instant
+	Messenger (LIM).</p>
+
+	<p>The VP protocol is what Meanwhile implements. LIM is slowly
+	moving away from VP, instead favoring SIP/SIMPLE as the
+	underlying messaging protocol. Hypothetically this means that
+	the Meanwhile project will slowly become obsolete.
+	Realistically, VP-based deployments of Sametime will probably
+	be around for quite a while.</p>
+
+	<p>If anyone has more information on the history of Ubique,
+	please let me know via the contact page.</p>
+
 	</answer>
 	</question>
 
 	<question id="what_is_meanwhile">
 	<title>What is Meanwhile?</title>
 	<answer>
-	<p>Meanwhile is an open source project for connecting as a client
-	to a <a href="http://www.lotus.com/products/lotussametime.nsf/wdocs/homepage">Lotus Sametime Connect</a> community. There is a stand-alone library
-	portion, which can be used to write a client, there is a Python
-	module wrapping the library, and there is a Gaim protocol plugin which
-	turns Gaim into a Sametime client. There is also a significant amount
-	of work into documenting the Sametime protocol.</p>
+
+	<p>Meanwhile is an open source project for connecting as a
+	client to a Lotus Sametime Connect community. There is a
+	stand-alone library portion, which can be used to write a
+	client, there is a Python module wrapping the library, and
+	there is a Gaim protocol plugin which turns Gaim into a
+	Sametime client. There is also a significant amount of work
+	into documenting the Sametime protocol.</p>
+
 	</answer>
 	</question>
 
 	<question id="born_free">
 	<title>Is this project affiliated with IBM or Lotus?</title>
 	<answer>
+
 	<p>No. The Meanwhile project is neither affiliated with, nor
 	endorsed, nor supported by, either IBM or Lotus.</p>
-	<p>The project was first available exclusively inside of IBM, because
-	I didn't want to be sued. This has been resolved with Lotus, and
-	Meanwhile is now open to the world.</p>
-	<p>To re-cap (because people really seem to have a hard time with this
-	one), Meanwhile is not an IBM project. IBM does not control Meanwhile.
-	IBM does not fund Meanwhile. IBM does not support Meanwhile. Meanwhile
-	is developed outside of IBM. The development of Meanwhile is external
-	to IBM. Inside of IBM is not where Meanwhile is developed.</p>
+
+	<p>The project was first available exclusively inside of IBM,
+	because I didn't want to be sued. This has been resolved with
+	Lotus, and Meanwhile is now open to the world.</p>
+
+	<p>To re-cap (because people really seem to have a hard time
+	with this one), Meanwhile is not an IBM project. IBM does not
+	control Meanwhile.  IBM does not fund Meanwhile. IBM does not
+	support Meanwhile. Meanwhile is developed outside of IBM. The
+	development of Meanwhile is external to IBM. Inside of IBM is
+	not where Meanwhile is developed.</p>
+
 	</answer>
 	</question>
 
 	<question id="use_lotus">
 	<title>Does Meanwhile use the Lotus toolkit?</title>
 	<answer>
-	<p>No. It is a project to opperate similarly to the Lotus toolkit, but
-	built from extrapolating the binary protocol from captured network
-	packets.</p>
+
+	<p>No. It is a project to opperate similarly to the Lotus
+	toolkit, but built from extrapolating the binary protocol from
+	captured network packets.</p>
+
 	</answer>
 	</question>
 
 	<question id="is_it_safe">
 	<title>Should I use Meanwhile?</title>
 	<answer>
-	<p>It's safest to say that Meanwhile is still a beta, and is not
-	completely stable. If you are a hobbyist, or some other variant of
-	insane person, then go right ahead. Problems should be logged in the
-	appropriate trackers with as much pertinent information as
-	possible.</p>
+
+	<p>It's safest to say that Meanwhile is still a beta, and is
+	not completely stable. If you are a hobbyist, or some other
+	variant of insane person, then go right ahead. Problems should
+	be logged in the appropriate trackers with as much pertinent
+	information as possible.</p>
+
 	<p>Remember: If it breaks, you get to keep the pieces!</p>
+
 	</answer>
 	</question>
 
 	<question id="where_can_it_run">
 	<title>On what platforms can I use Meanwhile?</title>
-	<answer><p>Meanwhile has been successfully compiled and used on Linux,
-	Win32 (via mingw), Solaris, and Darwin (Mac OSX). Possibly and probably
-	more, but those are the only ones I've heard of so far.</p>
+	<answer>
+
+	<p>Meanwhile has been successfully compiled and used on Linux,
+	Win32 (via mingw), Solaris, and Darwin (Mac OSX). Possibly and
+	probably more, but those are the only ones I've heard of so
+	far.</p>
+
 	<p>Wanted: someone to get it to build under OS/2</p>
+
 	</answer>
 	</question>
 
 	<question id="why_no_srpm">
 	<title>Why is there no SRPM?</title>
-	<answer><p>Primarily because you can make a source-rpm from the release
-	tarball with a single command:</p>
+	<answer>
+	<p>Primarily because you can make a source-rpm from the
+	release tarball with a single command:</p>
 	<p><code>rpmbuild -ts [tarball]</code></p>
 	</answer>
 	</question>
 
 	<question id="should_i_package">
 	<title>Should I package Meanwhile into my distribution?</title>
-	<answer><p>I would strongly recommend against it until Meanwhile
-	exits beta and becomes version 1.0.0, which shouldn't be too far off
-	into the future. The 0.4.x release is going to be very similar to the
-	1.0.0 release, but some things need to be nailed down still, and API
-	breakage is very very likely.</p>
+	<answer>
+
+	<p>I would strongly recommend against it until Meanwhile exits
+	beta and becomes version 1.0.0, which shouldn't be too far off
+	into the future. The 0.4.x release is going to be very similar
+	to the 1.0.0 release, but some things need to be nailed down
+	still, and API breakage is very very likely.</p>
+
 	</answer>
-	</question>
-</group>
+	</question> </group>
 
 
 <group id="group_gaim">
@@ -108,28 +137,35 @@
 	<question id="what_is_gaim">
 	<title>What is Gaim?</title>
 	<answer>
-	<p><a href="http://gaim.sf.net/">Gaim</a> is an open source Instant
-	Messaging client platform. Gaim supports almost every instant messaging
-	protocol, and any number of additional protocols can be added in as
-	modules. It provides a single front end for all of a user's various
-	instant messaging accounts and buddy lists. The Meanwhile plugin for
-	Gaim is maintained as part of this project.</p>
+
+	<p><a href="http://gaim.sf.net/">Gaim</a> is an open source
+	Instant Messaging client platform. Gaim supports almost every
+	instant messaging protocol, and any number of additional
+	protocols can be added in as modules. It provides a single
+	front end for all of a user's various instant messaging
+	accounts and buddy lists. The Meanwhile plugin for Gaim is
+	maintained as part of this project.</p>
+
 	</answer>
 	</question>
 
 	<question id="case_sensitive">
 	<title>Why aren't some of my buddies showing as online?</title>
 	<answer>
+
 	<p>It's been noted that the sametime protocol seems to be
-	case-sensitive in the identification of its users, unlike virtually
-	every other internet identity.</p>
+	case-sensitive in the identification of its users, unlike
+	virtually every other internet identity.</p>
+
 	<p>Therefore, if your buddy has been entered as 'mybuddy',
 	when in fact their ID is 'MyBuddy', sametime will happily
-	accept the addition into your buddy list but never provide any status
-	updates. You will also encounter confusing problems if they message
-	you, as gaim will attempt to reply to the corresponding ID in your
-	buddy-list, and sametime's messaging service will erroneously inform
-	you that the user you're sending to is not online.</p>
+	accept the addition into your buddy list but never provide any
+	status updates. You will also encounter confusing problems if
+	they message you, as gaim will attempt to reply to the
+	corresponding ID in your buddy-list, and sametime's messaging
+	service will erroneously inform you that the user you're
+	sending to is not online.</p>
+
 	</answer>
 	</question>
 
@@ -137,30 +173,39 @@
 	<title>How do I make the Meanwhile Gaim plugin use my server-side
 	buddy list?</title>
 	<answer>
+
 	<p>Back up your buddy list <i>right now</i> with an official
 	client.</p>
-	<p>The act of obtaining the server-side list is trivial. Correctly
-	parsing the data from it however has turned out to be much more
-	complex.</p>
+
+	<p>The act of obtaining the server-side list is
+	trivial. Correctly parsing the data from it however has turned
+	out to be much more complex.</p>
+
 	<p>The level to which the server side list is used is set in a
-	preference attached to the protocol plugin. It has three settings:
-	Local Only; Load from Server; Load and Save to Server. The default is
-	safely set to Local Only.</p>
-	<p>Meanwhile's handling of certain problems with the list format
-	mimics the official client, in that any saved aliases with the comma
-	(,) character in them will be misinterpreted when the list is later
-	loaded. Don't put commas in your buddy aliases and you should be fine.	
+	preference attached to the protocol plugin. It has three
+	settings: Local Only; Load from Server; Load and Save to
+	Server. The default is safely set to Local Only.</p>
+
+	<p>Meanwhile's handling of certain problems with the list
+	format mimics the official client, in that any saved aliases
+	with the comma (,) character in them will be misinterpreted
+	when the list is later loaded. Don't put commas in your buddy
+	aliases and you should be fine.
 	</p>
 	</answer>
 	</question>
 
 	<question id="rfe">
 	<title>Why don't you support ${FEATURE}?</title>
-	<answer><p>It's not entirely a matter of not supporting, it's more a
+	<answer>
+
+	<p>It's not entirely a matter of not supporting, it's more a
 	matter of not <i>yet</i> supporting. Please look through the
-	<a href="http://sourceforge.net/tracker/?atid=656721&amp;group_id=110565&amp;func=browse">RFE Tracker</a> for features that the project intends to
-	eventually provide. If you have something you'd like to add to that
-	list, go ahead and do so.</p>
+	<a href="http://sourceforge.net/tracker/?atid=656721&amp;group_id=110565&amp;func=browse">RFE
+	Tracker</a> for features that the project intends to
+	eventually provide. If you have something you'd like to add to
+	that list, go ahead and do so.</p>
+
 	</answer>
 	</question>
 </group>
@@ -172,63 +217,84 @@
 	<question id="how_to_help">
 	<title>How can I help?</title>
 	<answer>
-	<p>Be supportive! The developer may be very sad, and your happy words
-	could turn his day right around!</p>
-	<p>In order of precedence, the following are all super helpful:
-	protocol insight; patches and bug fixes; bug reports; happy thoughts;
-	donations of cold, hard cash</p>
+
+	<p>Be supportive! The developer may be very sad, and your
+	happy words could turn his day right around!</p>
+
+	<p>In order of precedence, the following are all super
+	helpful: protocol insight; patches and bug fixes; bug reports;
+	happy thoughts; donations of cold, hard cash</p>
+
 	</answer>
 	</question>
 
 	<question id="protocol_help">
 	<title>How can I help with the protocol research?</title>
 	<answer>
-	<p>The two best ways are through <a href="http://sourceforge.net/projects/libpcap/">libpcap</a> packet dumps, and written
-	extrapolation on network antics. It may be helpful to have used the
-	Lotus libraries before, but that's not necessary. If you notice that
-	an unsupported feature seems to generate network traffic whenever you
-	use it, capture those packets and explain exactly what you were doing
+
+	<p>The two best ways are through <a
+	href="http://sourceforge.net/projects/libpcap/">libpcap</a>
+	packet dumps, and written extrapolation on network antics. It
+	may be helpful to have used the Lotus libraries before, but
+	that's not necessary. If you notice that an unsupported
+	feature seems to generate network traffic whenever you use it,
+	capture those packets and explain exactly what you were doing
 	to produce them. We'll get this thing figured out yet!</p>
-	<p><code>tcpdump -i eth0 -w gaim-meanwhile.capture -s 0 tcp port 1533</code></p>
+
+	<p><code>tcpdump -i eth0 -w gaim-meanwhile.capture -s 0 tcp
+	port 1533</code></p>
+
 	</answer>
 	</question>
 
 	<question id="patches">
 	<title>Are you accepting patches?</title>
 	<answer>
+
 	<p>Maybe.</p>
-	<p>As with any project, there are apparently arbitrary code factors to
-	be taken into account when submitting code. Look for the HACKING file
-	in your source tree. If there isn't one, wait. I'll get to it
-	eventually.</p>
-	<p>Added functionality should not step out of the scope of the rest of
-	the file. Services should never co-mingle or require one-another. Don't
-	write code that's deployment specific. And check your parameters on
-	public interface functions.</p>
-	<p>If you're working for Lotus or IBM, it's very doubtful that I'll be
-	able to safely incorporate any changes or fixes. You may be able to
-	safely communicate the idea/fix, but please check with your management
-	first.</p>
+
+	<p>As with any project, there are apparently arbitrary code
+	factors to be taken into account when submitting code. Look
+	for the HACKING file in your source tree. If there isn't one,
+	wait. I'll get to it eventually.</p>
+
+	<p>Added functionality should not step out of the scope of the
+	rest of the file. Services should never co-mingle or require
+	one-another. Don't write code that's deployment specific. And
+	check your parameters on public interface functions.</p>
+
+	<p>If you're working for Lotus or IBM, it's very doubtful that
+	I'll be able to safely incorporate any changes or fixes. You
+	may be able to safely communicate the idea/fix, but please
+	check with your management first.</p>
+
 	<p><a href="http://sourceforge.net/tracker/?atid=656720&amp;group_id=110565&amp;func=browse">Patch Tracker</a></p>
+
 	</answer>
 	</question>
 
 	<question id="bug_reports">
 	<title>What's the method for reporting bugs?</title>
 	<answer>
-	<p>First, ensure that no existing bug report for the same item exists
-	before creating a new report. If one does exist, read through the
-	commentary. If you feel you still have something important to add, then
-	continue on.</p>
-	<p>Next, indicate with specificity the nature, demeanor, astrological
-	sign, molecular weight, and specific gravity of the bug.</p>
-	<p>Finally, re-read the report. Check all fields. Is this enough
-	information to actually figure out what you're talking about? If-- and
-	only if-- you are satisfied that adequate information is provided, then
-	submit/update the bug.</p>
-	<p>These are all parts of the bug reporting process. Failing these
-	steps yet still submitting an item into the tracker is not reporting
-	a bug, it's just senseless noise.</p>
+
+	<p>First, ensure that no existing bug report for the same item
+	exists before creating a new report. If one does exist, read
+	through the commentary. If you feel you still have something
+	important to add, then continue on.</p>
+
+	<p>Next, indicate with specificity the nature, demeanor,
+	astrological sign, molecular weight, and specific gravity of
+	the bug.</p>
+
+	<p>Finally, re-read the report. Check all fields. Is this
+	enough information to actually figure out what you're talking
+	about? If-- and only if-- you are satisfied that adequate
+	information is provided, then submit/update the bug.</p>
+
+	<p>These are all parts of the bug reporting process. Failing
+	these steps yet still submitting an item into the tracker is
+	not reporting a bug, it's just senseless noise.</p>
+
 	<p><a href="http://sourceforge.net/tracker/?atid=656718&amp;group_id=110565&amp;func=browse">Bug Tracker</a></p>
 	</answer>
 	</question>
@@ -236,22 +302,29 @@
 	<question id="attitude">
 	<title>How do I keep the developer happy?</title>
 	<answer>
-	<p>A happy developer wants to solve your problems. He wants to help
-	you out, and will take extra time just for you. An unhappy developer
-	will instruct you to put sharp things into hurtful places on your
-	body, and will then stomp away. In order for a project to continue at
-	a good pace, it's important to keep the developer(s) happy.</p>
-	<p>For the most part, this just means Be Polite. Do not make demands.
-	Don't act threatening or try to wrest control of the project away.</p>
+
+	<p>A happy developer wants to solve your problems. He wants to
+	help you out, and will take extra time just for you. An
+	unhappy developer will instruct you to put sharp things into
+	hurtful places on your body, and will then stomp away. In
+	order for a project to continue at a good pace, it's important
+	to keep the developer(s) happy.</p>
+
+	<p>For the most part, this just means Be Polite. Do not make
+	demands.  Don't act threatening or try to wrest control of the
+	project away.</p>
+
 	</answer>
 	</question>
 
 	<question id="donations">
 	<title>Why are you taking peoples' money?</title>
 	<answer>
-	<p>Because I am broke. Please note that I immediately hand over 50% to
-	the <a href="http://eff.org/">EFF</a>. The rest will probably buy me
-	toys, or manga, or something.</p>
+
+	<p>Because I am broke. Please note that I immediately hand
+	over 50% to the <a href="http://eff.org/">EFF</a>. The rest
+	will probably buy me toys, or manga, or something.</p>
+
 	</answer>
 	</question>
 

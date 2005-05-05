@@ -1,45 +1,54 @@
 
 
 <p>The Meanwhile Project is an open implementation of the <a
-href="http://www.lotus.com/sametime">Lotus Sametime Community Client</a>
-protocol.</p>
+href="http://www.lotus.com/sametime">Lotus Sametime Community
+Client</a> protocol.</p>
 
-<p><b>The Meanwhile Project is neither endorsed by, nor affiliated with Lotus
-or IBM.</b> It is an independant project aiming to fill a space Lotus has left
-vacant. It is not within the scope of this project to integrate LDAP or SIP
-functionality, however often these technologies may be associated with the
+<p><b>The Meanwhile Project is neither endorsed by, nor affiliated
+with Lotus or IBM.</b> It is an independant project aiming to fill a
+space Lotus has left vacant.</p>
+
+<p>It is not within the scope of this project to provide LDAP or SIP
+functionality, though these technologies are often associated with the
 usage of Sametime.</p>
 
 
 <h2>The Meanwhile Library</h2>
-<p>The heart of the Meanwhile Project is the Meanwhile library, providing the
-basic Lotus Sametime session functionality along with the core services;
-Presence, Messaging, Conferencing, and Storage. This extensible client
-interface allows additional services to be added to a session at runtime,
-allowing for simple integration of future service handlers such as the user
-directory, whiteboard and screen-sharing, and file transfer.</p>
+
+<p>The heart of the Meanwhile Project is the Meanwhile library,
+providing the basic Lotus Sametime session functionality along with
+the core services; Presence Awareness, Instant Messaging, Multi-user
+Conferencing, Preferences Storage, Identity Resolution, and File
+Transfer. This extensible client interface allows additional services
+to be added to a session at runtime, allowing for simple integration
+of future service handlers such as the user directory and whiteboard
+and screen-sharing.</p>
 
 <p>The documentation aspect of both the library APIs and the protocol
-specifications-- as they are discovered-- contributes to a significant portion
-of the project's end goals. While this part of the project is coming together
-much more slowly than the library itself, the Meanwhile manual is of a priority
-second only to a functioning library.</p>
+specifications-- as they are discovered-- contributes to a significant
+portion of the project's end goals. While this part of the project is
+coming together much more slowly than the library itself, the
+Meanwhile manual is of a priority second only to a functioning
+library.</p>
 
 
 <h2>Client Plugins</h2>
-<p>Rather than design a custom application around the Meanwhile library, we
-turn to <a href="plugins/">existing instant-messaging projects</a>. Projects
-which provide for plugin-like additions of messaging protocols can be made to
-support Sametime sessions with a relatively minimal amount of development
-through use of the Meanwhile APIs.</p>
+
+<p>Rather than design a custom application around the Meanwhile
+library, we turn to <a href="plugins/">existing instant-messaging
+projects</a>. Projects which provide for plugin-like additions of
+messaging protocols can be made to support Sametime sessions with a
+relatively minimal amount of development through use of the Meanwhile
+APIs.</p>
 
 
 <h2>Meanwhile for Python</h2>
-<p><i>in CVS... </i><a href="http://python.org/">Python</a> module for the
-Meanwhile library, set to be a part of the upcoming 0.4.0 release. Primarily
-used for feature testing during development, the Meanwhile python module can
-also be used to prototype new client-side service handlers, add functionality
-to existing service handlers, or quickly connect an existing application to a
-Sametime community.</p>
+
+<p><i>available in CVS... </i><a href="http://python.org/">Python</a>
+module for the Meanwhile library. Primarily used for feature testing
+during development, the Meanwhile python module can also be used to
+prototype new client-side service handlers, add functionality to
+existing service handlers, or quickly connect an existing application
+to a Sametime community.</p>
 
 
