@@ -5,6 +5,6 @@ all:
 	make -C faq
 
 upload:	all
-	rsync -zur -e ssh --delete * $(HTDOCS)
+	rsync -v -zur -l -e ssh --delete .htaccess * $(HTDOCS)
 
 

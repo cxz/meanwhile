@@ -15,11 +15,11 @@ if(! $date)
 	$date = date("Y-m-d", filemtime($back . $body));
 
 
-function drawLink($href, $test) {
+function drawLink($href, $test, $depth) {
 	global $back, $title;
 	echo ($test == $title)?
-		"<p class=\"depth_1\">$test</p>\n":
-		"<a class=\"depth_1\" href=\"$back$href\">$test</a>\n";
+		"<p class=\"depth_$depth\">$test</p>\n":
+		"<a class=\"depth_$depth\" href=\"$back$href\">$test</a>\n";
 }
 
 ?>
@@ -90,13 +90,14 @@ require($full_path . "release.php");
       <td id="dNav" rowspan="2">
 	<div id="dNavMenu">
 	<?
-	drawLink("", "Meanwhile Project");
-	/* drawLink("news/", "News"); */
-	drawLink("download/", "Download");
-	drawLink("docs/", "Documentation");
-	drawLink("plugins/", "Client Plugins");
-	drawLink("faq/", "Questions");
-	drawLink("contact/", "Contact");
+	drawLink("", "Meanwhile Project", 1);
+	/* drawLink("news/", "News", 1); */
+	drawLink("plugins/", "Client Plugins", 1);
+	drawLink("download/", "Download", 1);
+	drawLink("docs/", "Documentation", 1);
+	drawLink("wiki/", "Wiki", 2);
+	drawLink("faq/", "Questions", 2);
+	drawLink("contact/", "Contact", 1);
 	?>
 	</div>
 

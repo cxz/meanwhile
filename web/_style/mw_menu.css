@@ -41,9 +41,16 @@
 	background-color: #def;
 }
 
+#dNavLink {
+	margin-top: 1em;
+}
+
+#dNavJunk {
+	margin-top: 2em;
+}
+
 #dNavLink, #dNavJunk {
 	font-size: 8pt;
-	margin-top: 2em;
 	vertical-align: top;
 }
 

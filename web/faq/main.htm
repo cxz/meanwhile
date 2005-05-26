@@ -39,11 +39,21 @@
         <a href="#what_is_gaim">What is Gaim?</a>
       </li>
       <li>
-        <a href="#case_sensitive">Why aren't some of my buddies showing as online?</a>
-      </li>
-      <li>
         <a href="#storage_buddy_list">How do I make the Meanwhile Gaim plugin use my server-side
 	buddy list?</a>
+      </li>
+      <li>
+        <a href="#nab">How do I add a Notes Address Book Group to my buddy
+	list?</a>
+      </li>
+      <li>
+        <a href="#psychic">What is "Psychic Mode" and what does it do?</a>
+      </li>
+      <li>
+        <a href="#force_login">What does the "Force Login" option do?</a>
+      </li>
+      <li>
+        <a href="#missing_logs">I seem to be missing some conversation logs...</a>
       </li>
       <li>
         <a href="#rfe">Why don't you support ${FEATURE}?</a>
@@ -75,7 +85,7 @@
       </li>
     </ul>
   </li>
-</ul><hr/><table class="question">
+</ul><hr/><h2>General</h2><table class="question">
   <tr>
     <td class="q-title">
       <a name="what_is_sametime" href="#what_is_sametime">What is Lotus Sametime?</a>
@@ -238,7 +248,7 @@
 	still, and API breakage is very very likely.</p>
     </td>
   </tr>
-</table><table class="question">
+</table><h2>Plugins</h2><table class="question">
   <tr>
     <td class="q-title">
       <a name="what_is_gaim" href="#what_is_gaim">What is Gaim?</a>
@@ -256,30 +266,6 @@
 	front end for all of a user's various instant messaging
 	accounts and buddy lists. The Meanwhile plugin for Gaim is
 	maintained as part of this project.</p>
-    </td>
-  </tr>
-</table><table class="question">
-  <tr>
-    <td class="q-title">
-      <a name="case_sensitive" href="#case_sensitive">Why aren't some of my buddies showing as online?</a>
-    </td>
-    <td class="q-back">
-      <a href="#content">back</a>
-    </td>
-  </tr>
-  <tr>
-    <td class="q-answer" colspan="2">
-      <p>It's been noted that the sametime protocol seems to be
-	case-sensitive in the identification of its users, unlike
-	virtually every other internet identity.</p>
-      <p>Therefore, if your buddy has been entered as 'mybuddy',
-	when in fact their ID is 'MyBuddy', sametime will happily
-	accept the addition into your buddy list but never provide any
-	status updates. You will also encounter confusing problems if
-	they message you, as gaim will attempt to reply to the
-	corresponding ID in your buddy-list, and sametime's messaging
-	service will erroneously inform you that the user you're
-	sending to is not online.</p>
     </td>
   </tr>
 </table><table class="question">
@@ -314,6 +300,107 @@
 </table><table class="question">
   <tr>
     <td class="q-title">
+      <a name="nab" href="#nab">How do I add a Notes Address Book Group to my buddy
+	list?</a>
+    </td>
+    <td class="q-back">
+      <a href="#content">back</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="q-answer" colspan="2">
+      <p>Look under Tools&#x2192;Account Options&#x2192;[your
+	account]&#x2192;Add Notes Address Book Group</p>
+    </td>
+  </tr>
+</table><table class="question">
+  <tr>
+    <td class="q-title">
+      <a name="psychic" href="#psychic">What is "Psychic Mode" and what does it do?</a>
+    </td>
+    <td class="q-back">
+      <a href="#content">back</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="q-answer" colspan="2">
+      <p>Psychic Mode is a strange feature. Put simply, it lets you know
+	when someone is going to send you an IM <i>before they actually send
+	you a message</i>. This is accomplished by opening a conversation
+	window/tab when a channel is opened over the IM service from a user.
+	Since most clients (including Meanwhile) open the IM channel as soon
+	as possible in order to negotiate features, a user of a psychic-enabled
+	client will have a conversation window open as soon as someone opens
+	a conversation window to them.</p>
+      <p>gaim-meanwhile didn't invent this feature. At least two other
+	Sametime clients support it, and it was added to this plugin at the
+	behest of many switching users.</p>
+      <p>"Psychic Mode" can be enabled from the preferences dialog. It is
+	disabled by default.</p>
+    </td>
+  </tr>
+</table><table class="question">
+  <tr>
+    <td class="q-title">
+      <a name="force_login" href="#force_login">What does the "Force Login" option do?</a>
+    </td>
+    <td class="q-back">
+      <a href="#content">back</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="q-answer" colspan="2">
+      <p>This is an option very few users are likely to need to enable.</p>
+      <p>A single Sametime community can be deployed across multiple
+	servers, with user accounts configured with a "home" server. When a
+	user logs in to a server in the community, its profile is checked for
+	that home value. If the home value exists and does not refer to the
+	currently used server, the protocol will instruct the connecting
+	client to redirect its login attempt to that other server. At this
+	point, if the "Force Login" option is enabled, the client will
+	instruct the server that it cannot use its home server, and that the
+	server should route the connection to the correct home server itself.
+	</p>
+      <p>The gaim-meanwhile plugin by default will actually attempt to
+	open a connection to the home server if it is instructed to. If the
+	plugin cannot reach the home server, then it will force the login. In
+	some cases, the act of attempting to open a connection to that other
+	server may take quite some time before failing. If a user is constantly
+	being redirected to a home server they know they can never reach, and
+	would like to completely skip attempting to redirect to it, they can
+	enable the "Force Login" option.</p>
+      <p>"Force Login" can be enabled from the preferences dialog. It is
+	disabled by default.</p>
+    </td>
+  </tr>
+</table><table class="question">
+  <tr>
+    <td class="q-title">
+      <a name="missing_logs" href="#missing_logs">I seem to be missing some conversation logs...</a>
+    </td>
+    <td class="q-back">
+      <a href="#content">back</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="q-answer" colspan="2">
+      <p>There was a release of the gaim-meanwhile plugin that changed the
+	way that Meanwhile accounts were named by appending
+	":server.host.name" to the login ID. Since the default loggers in Gaim
+	store log files under <code>~/.gaim/logs/meanwhile/[account]/</code>
+	all the logs for that release ended up in a different place.</p>
+      <p>Version 1.2.0 of the gaim-meanwhile plugin was the only release
+	that did this. Version 1.2.1 and later all switched back to naming
+	accounts by the login ID alone.</p>
+      <p>You can safely copy the contents of the badly-named account
+	directory to the correctly named account directly. This will add all
+	the conversation logs from the 1.2.0 release to where other releases
+	can find them.</p>
+    </td>
+  </tr>
+</table><table class="question">
+  <tr>
+    <td class="q-title">
       <a name="rfe" href="#rfe">Why don't you support ${FEATURE}?</a>
     </td>
     <td class="q-back">
@@ -330,7 +417,7 @@
 	that list, go ahead and do so.</p>
     </td>
   </tr>
-</table><table class="question">
+</table><h2>Contributions</h2><table class="question">
   <tr>
     <td class="q-title">
       <a name="how_to_help" href="#how_to_help">How can I help?</a>

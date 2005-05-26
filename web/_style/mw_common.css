@@ -70,20 +70,25 @@ a {
 
 /* Such nice headings */
 h1, h2, h3, h4, h5 {
-	color: #c60;
-	font-weight: bold;
-	margin: 0px;
-	clear: left;
+        font-weight: bold;
+        margin: 0px;
+        clear: left;
 }
+
+h1, h2 {color: #c60; }
+h3 {	color: #940; }
 
 h2, h3, h4 {
 	margin-top: 1.2em;
 }
+#dMainSide h2 {
+	margin-top: 0px;
+}
 
 h1 {		font-size: 15pt; }
 h2 {		font-size: 11pt; }
-h3 {		font-size: 10pt; }
-h4, h5 {	font-size: 9pt; }
+h3 {		font-size: 9pt; }
+#dMainSide h2, h4, h5 {	font-size: 9pt; }
 
 
 /* the pretty-pretty heading and title */

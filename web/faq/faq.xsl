@@ -7,7 +7,7 @@
 <xsl:template match="/">
 	<xsl:call-template name="gen-index" />
 	<hr />
-	<xsl:apply-templates select="faq/group/question" />
+	<xsl:apply-templates select="faq/group" />
 </xsl:template>
 
 
@@ -50,6 +50,12 @@
 		</xsl:choose>
 	</xsl:variable>
 	<li><a href="#{$qid}"><xsl:value-of select="title" /></a></li>
+</xsl:template>
+
+
+<xsl:template match="group">
+	<h2><xsl:value-of select="title" /></h2>
+	<xsl:apply-templates select="question" />
 </xsl:template>
 
 
