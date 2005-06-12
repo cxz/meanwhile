@@ -12,6 +12,15 @@ and <i>minimum</i> minor version of Gaim required for the plugin to function.
 The micro number only differentiates plugin releases and doesn't relate to
 Gaim in any way.</p>
 
+<h2>Repositories</h2>
+<p>The following repositories distribute the meanwhile and/or gaim-meanwhile
+packages</p>
+
+<ul>
+<li><a href="http://dag.wieers.com/home-made/apt/">Dag - APT/YUM RPM repository</a></li>
+<li><a href="http://fedoraproject.org/wiki/Extras">Fedora Extras</a></li>
+<li><a href="http://www.gentoo-portage.com/">Gentoo Portage</a></li>
+</ul>
 
 <h2>CVS</h2>
 <p>The CVS versions of meanwhile, gaim-meanwhile, and meanwhile-python are

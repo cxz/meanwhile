@@ -1,6 +1,6 @@
-<?= "<?xml version=\"1.0\" ?>\n" ?>
+<?php echo("<?xml version=\"1.0\" ?>\n"); ?>
 
-<?
+<?php
 global $full_path;
 $full_path = "/home/groups/m/me/meanwhile/htdocs/";
 
@@ -24,7 +24,7 @@ function drawLink($href, $test, $depth) {
 
 ?>
 
-<?
+<?php
 global $mw_release, $mw_release_url;
 global $mw_gaim, $mw_gaim_url;
 
@@ -39,13 +39,13 @@ require($full_path . "release.php");
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<meta http-equiv="Robots" content="index,nofollow" />
+<meta http-equiv="Robots" content="index,follow" />
 <meta name="Description" content="Meanwhile Project Home Page" />
 <meta name="Keywords" content="Meanwhile Sametime Linux Gaim" />
 <meta name="DC.Date" scheme="iso8601" content="<?= $date ?>" />
 <meta name="DC.Language" scheme="rfc1766" content="en-US" />
 
-<title><? echo($page_title); ?></title>
+<title><?= $page_title ?></title>
 
 <link rel="stylesheet" type="text/css" href="<?= $back ?>_style/mw.css" />
 </head>
@@ -89,7 +89,7 @@ require($full_path . "release.php");
       <!-- the menu, optional related links -->
       <td id="dNav" rowspan="2">
 	<div id="dNavMenu">
-	<?
+	<?php
 	drawLink("", "Meanwhile Project", 1);
 	/* drawLink("news/", "News", 1); */
 	drawLink("plugins/", "Client Plugins", 1);
@@ -105,8 +105,8 @@ require($full_path . "release.php");
 	  <ul>
 	  <li>Latest Releases
 	    <ul>
-	    <li><a href="<?= $mw_release_url ?>"><?= $mw_release ?></a></li>
-	    <li><a href="<?= $mw_gaim_url ?>"><?= $mw_gaim ?></a></li>
+<?php printf("<li><a href=\"%s\">%s</a></li>",$mw_release_url,$mw_release); ?>
+<?php printf("<li><a href=\"%s\">%s</a></li>",$mw_gaim_url,$mw_gaim); ?>
 	    </ul></li>
 
 	  <li>SF.net
@@ -121,7 +121,7 @@ require($full_path . "release.php");
         </div>
 
 	<div id="dNavLink">
-		<? if($links) require($full_path . $links); ?>
+		<?php if($links) require($full_path . $links); ?>
 	</div>
 
 	<div id="dNavFriendlies">
@@ -134,7 +134,7 @@ require($full_path . "release.php");
       <!-- ================================================================ -->
       <!-- date and nested path heading -->
       <td id="dMainHead" colspan="2">
-	<p>Last Modified: <? if($date) echo $date; ?></p>
+	<p>Last Modified: <?= $date ?></p>
       </td>
 
     </tr>
@@ -142,21 +142,21 @@ require($full_path . "release.php");
     <!-- ================================================================== -->
     <!-- the wide body, or the narrow body and a sidebar -->
     <tr>
-      <? if($side) { ?>
+      <?php if($side) { ?>
         <td id="dMainBody">
           <h1><?= $title ?></h1><a name="content"></a>
-          <? require($full_path . $body); ?>
+          <?php require($full_path . $body); ?>
         </td>
         <td id="dMainSide">
-          <? require($full_path . $side); ?>
+          <?php require($full_path . $side); ?>
         </td>
 
-      <? } else { ?>
+      <?php } else { ?>
         <td colspan="2" id="dMainBody">
           <h1><?= $title ?></h1><a name="content"></a>
-          <? require($full_path . $body); ?>
+          <?php require($full_path . $body); ?>
         </td>
-      <? } ?>
+      <?php } ?>
     </tr>
 
   </table>
