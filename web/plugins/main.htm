@@ -4,12 +4,11 @@ required to interface with a user and to provide network IO capabilities.
 Rather than writing yet another client, we instead turn to existing clients and
 provide plugins to enable the client to connect to a Sametime community.</p>
 
-<h2>Gaim</h2>
-<p><a href="http://gaim.sf.net/">
-<img src="gaim.png" alt="gaim.sf.net" class="pthumb" />
-http://gaim.sf.net</a>&nbsp;
-Gaim is GTK2-based instant messaging application. It supports multiple protocols via modules. Sametime support can be added to gaim through use of such a module built around the Meanwhile library. The package gaim-meanwhile provides this module, and is available in the download section.</p>
+<p>If you are interested in using Meanwhile to add Lotus Sametime support to
+your client, or have already done so and it is not listed below, please
+<a href="mailto:siege+mwpluin@preoccupied.net">let us know</a>.
 
+<!-- todo: write plugins for ayttm, bitlbee, and fire -->
 
 <h2>Adium</h2>
 <p><a href="http://adium.sf.net/">
@@ -19,6 +18,11 @@ Adium is a messaging client for OSX utilizing the backend code of Gaim. Adium
 packages a Meanwhile-based protocol plugin with their recent releases, so
 Sametime support should be built-in.</p>
 
+<h2>Gaim</h2>
+<p><a href="http://gaim.sf.net/">
+<img src="gaim.png" alt="gaim.sf.net" class="pthumb" />
+http://gaim.sf.net</a>&nbsp;
+Gaim is GTK2-based instant messaging application. It supports multiple protocols via modules. Sametime support can be added to gaim through use of such a module built around the Meanwhile library. The package gaim-meanwhile provides this module, and is available in the download section.</p>
 
 <h2>Kopete</h2>
 <p><a href="http://kopete.kde.org">
@@ -26,5 +30,16 @@ Sametime support should be built-in.</p>
 http://kopete.kde.org</a>&nbsp;
 Kopete is the KDE messaging client. It is designed as a flexible and extensible multi-protocol system using plugins, and will be featuring optional support
 for Lotus Sametime via a Meanwhile-based plugin with upcoming releases.</p>
+
+<h2>Proteus</h2>
+<p><a href="http://defaultware.com/proteus">
+<img src="proteus.png" alt="defaultware.com/proteus" class="pthumb" />
+http://proteusx.com</a>&nbsp;
+Proteus is a multi-protocol client for OSX based on the backend code of Gaim
+that attempts to get around the GPL by using an intermediary RPC mechanism to
+avoid linking to Gaim (or the Gaim Meanwhile plugin code) directly.
+Due to the sneakiness employed to slither around the terms of the GPL, I ask
+that you <b>please do not support this client</b>, and would recommend 
+<a href="http://adium.sf.net">Adium</a> to you instead.</p>
 
 

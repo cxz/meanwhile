@@ -1,0 +1,18 @@
+
+a.wikiunknown {
+	color: #444;
+	text-decoration: underline;
+}
+
+a.wikiknown {
+	text-decoration: underline;
+}
+
+.tightenable.top {
+	margin-top: 0px;
+}
+
+.tightenable.bottom {
+	margin-bottom: 0px;
+}
+

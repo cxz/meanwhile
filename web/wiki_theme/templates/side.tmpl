@@ -1,0 +1,71 @@
+
+
+<h2>Page Actions</h2>
+  <ul>
+
+<li><?php
+if ((!$page->get('locked') || $user->isAdmin()) and $revision) { ?>
+	<?= Button("edit", $revision->isCurrent() ?
+			 _("Edit") :
+			 _("Edit Old Revision")) ?>
+	<?php
+} else { ?>
+	<?= Button("viewsource", _("View Source")) ?>
+	<?php
+}
+?></li>
+
+
+<?php
+if ($user->isAdmin() or mayAccessPage('change', $page->getName())) { ?>
+	<li><?= Button($page->get('locked') ? 'unlock' : 'lock') ?></li>
+	<?php
+    	if (ENABLE_PAGEPERM and mayAccessPage('change', $page->getName())) { ?>
+		<li><?= Button('chown') ?></li>
+		<li><?= Button('setacl') ?></li>
+	<?php }
+}
+ 
+if ($user->isAdmin() or mayAccessPage('remove', $page->getName())) { ?>
+	<li><?= Button('remove') ?></li>
+    	<?php
+} ?>
+
+<li><?= Button("PageHistory", _("PageHistory")) ?></li>
+<li><?= Button("diff") ?></li>
+<li><?= Button("PageInfo", _("PageInfo")) ?></li>
+
+<?php
+if ((DEBUG and $request->getArg('action') == 'browse') ||
+		$user->isAdmin()) { ?>
+
+	<!-- Buttons really only for debugging -->
+	<li><?= Button("DebugInfo", _("DebugInfo")) ?></li>
+	<li><?= Button("PageDump", _("PageDump")) ?></li>
+
+	<?php
+	if (DEBUG & _DEBUG_SQL and USECACHE) {
+		$PurgeCache = Button(array('nocache' => 'purge'),
+				_("PurgeHtmlCache"), $page->getName());
+		$PurgeCache->addTooltip(_("Purge HTML cache for this page." .
+				" Regenerate from WikiMarkup when next" .
+				" accessed.")); ?>
+		<li><?= $PurgeCache ?></li>
+	<?php
+	}
+}
+
+if (defined('USE_EXTERNAL_HTML2PDF') and USE_EXTERNAL_HTML2PDF) { ?>
+	<li><?= Button("pdf") ?></li>
+	<?php
+} ?>
+
+  </ul>
+
+<h2>Wiki Overview</h2>
+<ul>
+<li><a href="./RecentChanges">Recent Changes</a></li>
+<li><a href="./PhpWikiAdministration">Administration</a></li>
+<li><a href="./SandBox">Sand Box</a></li>
+</ul>
+
