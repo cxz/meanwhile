@@ -36,8 +36,8 @@ HexDump.prototype = {
                 this.chunks = Array();
         },
 
-        add : function(len, title, desc) {
-                var chunk = Array(len, title, desc, null);
+        add : function(len, title, desc, css_class) {
+                var chunk = Array(len, title, desc, null, css_class);
                 this.chunks.push(chunk);
         },
 
@@ -55,9 +55,11 @@ HexDump.prototype = {
                 for(i = 0; i < this.chunks.length; i++) {
                         var ch = this.chunks[i];
 
-                        var ct = "<a href=\"#\" "
-                                + "id=\"" + this.element.id + "_off"
-                                + offset + "\">";
+                        var ct = "<a href=\"#\""
+                                + " id=\"" + this.element.id + "_off"
+                                + offset + "\"";
+			if(ch[4]) ct += " class=\"_" + ch[4] + "\"";
+			ct += ">";
 
                         var cs = hex.slice(offset, offset + ch[0]);
 
