@@ -58,6 +58,30 @@ class Theme_Meanwhile extends Theme {
     return $link;
   }
 
+  function makeActionButton($action, $label=false, $page_or_rev=false) {
+    
+    if(is_array($action)) {
+      $attr = $action;
+      $action = isset($attr['action'])? $attr['action']: 'browse';
+
+    } else {
+      $attr['action'] = $action;
+    }
+
+    if($action == 'login') {
+      $attr['auth[login]'] = 1;
+      $attr['action'] = 'browse';
+      if(! $label) $label = 'Log In';
+
+    } else if($action == 'logout') {
+      $attr['auth[logout]'] = 1;
+      $attr['action'] = 'browse';
+      if(! $label) $label = 'Log Out';
+    }
+
+    return parent::makeActionButton($attr, $label, $page_or_rev);
+  }
+
 }
 
 

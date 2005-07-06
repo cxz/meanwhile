@@ -31,6 +31,16 @@ if ($user->isAdmin() or mayAccessPage('remove', $page->getName())) { ?>
     	<?php
 } ?>
 
+
+<?php if(empty($NOSIGNIN)) {
+	if ($user->isAuthenticated()) { ?>
+		<li><?= Button('logout') ?></li>
+	<?php } else { ?>
+		<li><?= Button('login') ?></li>
+	<?php }
+} ?>
+
+
 <li><?= Button("PageHistory", _("PageHistory")) ?></li>
 <li><?= Button("diff") ?></li>
 <li><?= Button("PageInfo", _("PageInfo")) ?></li>
@@ -62,10 +72,12 @@ if (defined('USE_EXTERNAL_HTML2PDF') and USE_EXTERNAL_HTML2PDF) { ?>
 
   </ul>
 
+
 <h2>Wiki Overview</h2>
 <ul>
 <li><a href="./RecentChanges">Recent Changes</a></li>
 <li><a href="./PhpWikiAdministration">Administration</a></li>
 <li><a href="./SandBox">Sand Box</a></li>
 </ul>
+
 
