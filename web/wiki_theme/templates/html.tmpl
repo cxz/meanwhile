@@ -55,6 +55,9 @@ if($mtime > 0)
 <link rel="stylesheet" type="text/css" href="themes/meanwhile/mw_wiki.css" />
 <link rel="stylesheet" type="text/css" href="themes/meanwhile/hexdump.css" />
 
+<link rel="home" title="<?= HOME_PAGE ?>" href="<?= WikiURL(HOME_PAGE) ?>" />
+<link rel="copyright" title="<?= COPYRIGHTPAGE_TITLE ?>"
+  href="<?= COPYRIGHTPAGE_URL ?>" />
 <link rel="alternate" type="application/rss+xml" title="RSS"
   href="<?=WikiURL(_("RecentChanges"), array('format' => 'rss'))?>" />
 
