@@ -70,7 +70,7 @@ require($full_path . "release.php");
     </div>
 
     <div id="dHeadNav">
-      <a href="http://sf.net/">SF.net</a> |
+      <a href="https://sf.net/">SF.net</a> |
       <a href="http://gnu.org/copyleft/gpl.html">GNU GPL</a> |
       <a href="https://sourceforge.net/donate/index.php?group_id=110565">Donate</a>
     </div>
@@ -111,11 +111,11 @@ require($full_path . "release.php");
 
 	  <li>SF.net
 	    <ul>
-	    <li><a href="http://sf.net/projects/meanwhile">Project Page</a></li>
-	    <li><a href="http://sf.net/projects/meanwhile/files/">Files</a></li>
-	    <li><a href="http://sf.net/forum/?group_id=110565">Forums</a></li>
-	    <li><a href="http://sf.net/tracker/?group_id=110565">Trackers</a></li>
-	    <li><a href="http://cvs.sourceforge.net/viewcvs.py/meanwhile/">CVS</a></li>
+	    <li><a href="https://sf.net/projects/meanwhile">Project Page</a></li>
+	    <li><a href="https://sf.net/projects/meanwhile/files/">Files</a></li>
+	    <li><a href="https://sf.net/forum/?group_id=110565">Forums</a></li>
+	    <li><a href="https://sf.net/tracker/?group_id=110565">Trackers</a></li>
+	    <li><a href="https://cvs.sourceforge.net/viewcvs.py/meanwhile/">CVS</a></li>
 	    </ul></li>
 	  </ul>
         </div>

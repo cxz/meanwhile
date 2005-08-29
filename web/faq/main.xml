@@ -263,6 +263,20 @@
 
 	</answer>
 	</question>
+
+
+	<question id="suse_rpm">
+	<title>I'm using SUSE and installed from RPM. Why isn't it working?
+	</title>
+
+	<answer>
+	<p>SUSE's Gaim installation looks for plugins in
+	<code>/opt/gnome/lib/gaim</code>, and the gaim-meanwhile RPM installs
+	to <code>/usr/lib/gaim</code>. So all you need to do to get things
+	working is:</p>
+	<p><code>su -c "ln -s /usr/lib/gaim/libmwgaim.so /opt/gnome/lib/gaim/"</code></p>
+	</answer>
+	</question>
 </group>
 
 
@@ -379,6 +393,11 @@
 	<p>Because I am broke. Please note that I immediately hand
 	over 50% to the <a href="http://eff.org/">EFF</a>. The rest
 	will probably buy me toys, or manga, or something.</p>
+
+	<p>If handing over cash isn't your bag, but you still want to
+	provide a material reward, there's always my
+	<a href="http://del.icio.us/taliesein/wishlist">del.icio.us
+	wishlist</a>!</p>
 
 	</answer>
 	</question>

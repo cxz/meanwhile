@@ -58,6 +58,10 @@
       <li>
         <a href="#rfe">Why don't you support ${FEATURE}?</a>
       </li>
+      <li>
+        <a href="#suse_rpm">I'm using SUSE and installed from RPM. Why isn't it working?
+	</a>
+      </li>
     </ul>
   </li>
   <li>
@@ -417,6 +421,27 @@
 	that list, go ahead and do so.</p>
     </td>
   </tr>
+</table><table class="question">
+  <tr>
+    <td class="q-title">
+      <a name="suse_rpm" href="#suse_rpm">I'm using SUSE and installed from RPM. Why isn't it working?
+	</a>
+    </td>
+    <td class="q-back">
+      <a href="#content">back</a>
+    </td>
+  </tr>
+  <tr>
+    <td class="q-answer" colspan="2">
+      <p>SUSE's Gaim installation looks for plugins in
+	<code>/opt/gnome/lib/gaim</code>, and the gaim-meanwhile RPM installs
+	to <code>/usr/lib/gaim</code>. So all you need to do to get things
+	working is:</p>
+      <p>
+        <code>su -c "ln -s /usr/lib/gaim/libmwgaim.so /opt/gnome/lib/gaim/"</code>
+      </p>
+    </td>
+  </tr>
 </table><h2>Contributions</h2><table class="question">
   <tr>
     <td class="q-title">
@@ -554,6 +579,10 @@
       <p>Because I am broke. Please note that I immediately hand
 	over 50% to the <a href="http://eff.org/">EFF</a>. The rest
 	will probably buy me toys, or manga, or something.</p>
+      <p>If handing over cash isn't your bag, but you still want to
+	provide a material reward, there's always my
+	<a href="http://del.icio.us/taliesein/wishlist">del.icio.us
+	wishlist</a>!</p>
     </td>
   </tr>
 </table>
