@@ -26,7 +26,7 @@
 }
 
 #dNavMenu a.depth_1 {
-	background-color: #eee;
+	background-color: #e8e8e8;
 }
 
 #dNavMenu .depth_2 {
@@ -34,11 +34,11 @@
 }
 
 #dNavMenu a.depth_2 {
-	background-color: #ddd;
+	background-color: #d8d8d8;
 }
 
 #dNavMenu a:hover {
-	background-color: #def;
+	background-color: #d0e0f0;
 }
 
 #dNavLink {

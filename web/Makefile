@@ -7,4 +7,6 @@ all:
 upload:	all
 	rsync -v -zur -l -e ssh --delete .htaccess * $(HTDOCS)
 
+download:	
+	rsync -v -zur -l -e ssh $(HTDOCS)/* ./
 

@@ -93,7 +93,7 @@ h3 {		font-size: 9pt; }
 
 /* the pretty-pretty heading and title */
 #dHead {
-	background: #eee
+	background: #e8e8e8
 	 url("img/site_mark.png")
 	 no-repeat left;
 	border-bottom: 1pt solid #555;
