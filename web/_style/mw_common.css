@@ -192,8 +192,7 @@ h3 {		font-size: 9pt; }
 /* Formatting for the footer text: a goodbye and a copyright notice */
 #dFoot {
 	color: #aaa;
-	margin-left: auto;
-	margin-right: auto;
+	margin: 3em auto 0 auto;
 	width: 40em;
 }
 
