@@ -28,6 +28,10 @@ written to work with each other, rather than to work with any  of the existing
 releases. Because it's a rather dynamic environment, one or two of the modules
 may be un-buildable from time to time.</p>
 
+<p>Follow the instructions on the <a href="https://sourceforge.net/cvs/?group_id=110565">CVS page</a> to checkout a local
+sandbox. Please keep in mind that the anonymous CVS access is lagged behind
+developer CVS access by four to eight hours.</p>
+
 <p>To build from CVS, just check out the appropriate module and
 use <code>autogen.sh</code> to generate the configure script. gaim-meanwhile
 has a handy <code>private-install</code> target to install the plugin to
