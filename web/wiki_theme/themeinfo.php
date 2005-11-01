@@ -28,7 +28,7 @@ class Theme_Meanwhile extends Theme {
   }
 
   function linkExistingWikiWord($wikiword, $linktext='', $version=false) {
-    $link = parent::linkExistingWikiWord($wikiword);
+    $link = parent::linkExistingWikiWord($wikiword, $linktext);
     $link->setAttr('class', 'wikiknown');
 
     return $link;
