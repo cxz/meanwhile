@@ -30,6 +30,7 @@ hr {
 p {
 	margin: 0.2em 0px 1.2em 0px;
 	font-weight: normal;
+	line-height: 1.2em;
 	/* text-align: justify; */
 }
 
@@ -110,6 +111,7 @@ h3 {		font-size: 9pt; }
 	font-size: 18pt; 
 	font-weight: bold;
 	left: 140px;
+	line-height: 1em;
 	position: absolute;
 	top: 14px;
 }
