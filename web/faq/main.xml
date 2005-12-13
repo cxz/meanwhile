@@ -277,6 +277,40 @@
 	<p><code>su -c "ln -s /usr/lib/gaim/libmwgaim.so /opt/gnome/lib/gaim/"</code></p>
 	</answer>
 	</question>
+
+
+	<question id="not_authorized">
+	<title>I'm getting a "Not authorized" error when I try to connect to
+	my Sametime server, what's wrong?</title>
+	<answer>
+	<p>When a client connects to a Sametime server, before it sends any
+	authentication data, it sends a client ID number. The client ID is used
+	by the server to determine what sort of client it is that is trying
+	to log in. By default, most servers will accept any value of client ID.
+	However, there is an option in the Sametime server configuration to
+	block any IDs not in a pre-defined list. When this setting is enabled
+	and a client attempts to log in using that client ID, it will be
+	rejected with this error.</p>
+	<p>Sometimes this setting will be enabled as part of an upgrade in
+	server software, so after having used a Meanwhile based client for
+	quite some time, you may suddenly find yourself unable to log in.</p>
+	<p>There are two ways you can get things working again.</p>
+	<p>First, you should try to talk to the sametime administrators. They
+	may not be aware of the Meanwhile Project, and letting them know that
+	you're using it as a client may entice them to add Meanwhile's client
+	ID value (which is <code>0x1700</code>) to the filter list. Send them
+	a link to this page and be polite and there's a very good chance your
+	problem will go away.</p>
+	<p>Failing that, this value can be specified as an option at compile
+	time. See <code>./configure --help</code> for a list of compile-time
+	options. Some alternative client ID values can be found
+	<a href="/wiki/Client Type ID">in the wiki</a>.</p>
+	<p>If you are a Sametime Administrator and would like to know how to
+	change the Client ID filtering, see this
+	<a href="http://www-1.ibm.com/support/docview.wss?uid=swg21114318">IBM Technote</a>
+	on the subject.</p>
+	</answer>
+	</question>
 </group>
 
 
@@ -301,8 +335,7 @@
 	<title>How can I help with the protocol research?</title>
 	<answer>
 
-	<p>The two best ways are through <a
-	href="http://sourceforge.net/projects/libpcap/">libpcap</a>
+	<p>The best ways are through <a	href="http://sourceforge.net/projects/libpcap/">libpcap</a>
 	packet dumps, and written extrapolation on network antics. It
 	may be helpful to have used the Lotus libraries before, but
 	that's not necessary. If you notice that an unsupported
@@ -312,6 +345,12 @@
 
 	<p><code>tcpdump -i eth0 -w gaim-meanwhile.capture -s 0 tcp
 	port 1533</code></p>
+
+	<p>In the most recent release of the Meanwhile library (in the -doc
+	package) there are some code samples. One of these samples is for
+	a single-connection, logging, decrypting Sametime proxy (called
+	logging-proxy.c) which can be used as an alternative to capturing
+	network packets.</p>
 
 	</answer>
 	</question>

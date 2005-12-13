@@ -17,7 +17,7 @@ Gaim in any way.</p>
 packages</p>
 
 <ul>
-<li><a href="http://dag.wieers.com/home-made/apt/">Dag - APT/YUM RPM repository</a></li>
+<li><a href="http://rpmforge.net/user/">RPMforge.net</a></li>
 <li><a href="http://fedoraproject.org/wiki/Extras">Fedora Extras</a></li>
 <li><a href="http://www.gentoo-portage.com/">Gentoo Portage</a></li>
 </ul>
