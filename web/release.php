@@ -9,9 +9,9 @@
 	// the only part that should need to change for these is the
 	// name of the release, and the release_id
 
-	$mw_release = "meanwhile 1.0.0";
+	$mw_release = "meanwhile 1.0.1";
 	$mw_release_url = $base_url . "&amp;package_id=119439" .
-		"&amp;release_id=377870";
+		"&amp;release_id=378683";
 
 	$mw_gaim = "gaim-meanwhile 1.2.6";
 	$mw_gaim_url =  $base_url . "&amp;package_id=119703" .
