@@ -121,12 +121,8 @@
 	<title>Should I package Meanwhile into my distribution?</title>
 	<answer>
 
-	<p>I would strongly recommend against it until Meanwhile exits
-	beta and becomes version 1.0.0, which shouldn't be too far off
-	into the future. The 0.4.x release is going to be very similar
-	to the 1.0.0 release, but some things need to be nailed down
-	still, and API breakage is very very likely.</p>
-
+	<p>Anything from meanwhile 1.0.0 onward should be fine. I would
+	not recommend packaging anything before that.</p>
 	</answer>
 	</question> </group>
 
@@ -148,6 +144,20 @@
 
 	</answer>
 	</question>
+
+	
+	<question id="gaim_2">
+	<title>Does Meanwhile work with Gaim 2.0.0?</title>
+	<answer>
+	<p>Gaim 2.0.0 (and later) has merged in the gaim-meanwhile plugin
+	directly. Depending on where you get your binaries, you may have
+	Meanwhile support automatically. Alternately, you may find a
+	gaim-meanwhile package built for that version of Gaim. Either way
+	though, you'll likely still need to have a copy of the Meanwhile
+	library itself.</p>
+	</answer>
+	</question>
+
 
 	<question id="storage_buddy_list">
 	<title>How do I make the Meanwhile Gaim plugin use my server-side
@@ -175,6 +185,7 @@
 	</answer>
 	</question>
 
+
 	<question id="nab">
 	<title>How do I add a Notes Address Book Group to my buddy
 	list?</title>
@@ -183,6 +194,7 @@
 	account]&#x2192;Add Notes Address Book Group</p>
 	</answer>
 	</question>
+
 
 	<question id="psychic">
 	<title>What is &quot;Psychic Mode&quot; and what does it do?</title>
@@ -232,6 +244,27 @@
 	</answer>
 	</question>
 
+
+	<question id="sneaky_client_id">
+	<title>What does the "Hide Client Identity" option do?</title>
+	<answer>
+	<p>When a Sametime session begins, a 16bit value is sent from the
+	client to the server indicating what kind of client it is. Some
+	servers are set up by default to only permit clients using the
+	"official" values to connect. If you're receiving an error stating
+	that you are "Not authorized" when you attempt to connect, try
+	enabling this option. Doing so will cause the client to tell the
+	server that it is an official client, which will almost always allow
+	it to fully connect.</p>
+	<p>If you are a Sametime administrator, and would like to know how
+	to change the settings for client ID filtering, see this
+	<a href="http://www-1.ibm.com/support/docview.wss?uid=swg21114318">IBM Technote</a> on the subject.</p>
+	<p>A list of some known client ID values can be found
+	<a href="http://meanwhile.sourceforge.net/wiki/Client%20Type%20ID">in the wiki</a>.</p>
+	</answer>
+	</question>
+
+
 	<question id="missing_logs">
 	<title>I seem to be missing some conversation logs...</title>
 	<answer>
@@ -275,40 +308,6 @@
 	to <code>/usr/lib/gaim</code>. So all you need to do to get things
 	working is:</p>
 	<p><code>su -c "ln -s /usr/lib/gaim/libmwgaim.so /opt/gnome/lib/gaim/"</code></p>
-	</answer>
-	</question>
-
-
-	<question id="not_authorized">
-	<title>I'm getting a "Not authorized" error when I try to connect to
-	my Sametime server, what's wrong?</title>
-	<answer>
-	<p>When a client connects to a Sametime server, before it sends any
-	authentication data, it sends a client ID number. The client ID is used
-	by the server to determine what sort of client it is that is trying
-	to log in. By default, most servers will accept any value of client ID.
-	However, there is an option in the Sametime server configuration to
-	block any IDs not in a pre-defined list. When this setting is enabled
-	and a client attempts to log in using that client ID, it will be
-	rejected with this error.</p>
-	<p>Sometimes this setting will be enabled as part of an upgrade in
-	server software, so after having used a Meanwhile based client for
-	quite some time, you may suddenly find yourself unable to log in.</p>
-	<p>There are two ways you can get things working again.</p>
-	<p>First, you should try to talk to the sametime administrators. They
-	may not be aware of the Meanwhile Project, and letting them know that
-	you're using it as a client may entice them to add Meanwhile's client
-	ID value (which is <code>0x1700</code>) to the filter list. Send them
-	a link to this page and be polite and there's a very good chance your
-	problem will go away.</p>
-	<p>Failing that, this value can be specified as an option at compile
-	time. See <code>./configure --help</code> for a list of compile-time
-	options. Some alternative client ID values can be found
-	<a href="/wiki/Client Type ID">in the wiki</a>.</p>
-	<p>If you are a Sametime Administrator and would like to know how to
-	change the Client ID filtering, see this
-	<a href="http://www-1.ibm.com/support/docview.wss?uid=swg21114318">IBM Technote</a>
-	on the subject.</p>
 	</answer>
 	</question>
 </group>

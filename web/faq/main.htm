@@ -39,6 +39,9 @@
         <a href="#what_is_gaim">What is Gaim?</a>
       </li>
       <li>
+        <a href="#gaim_2">Does Meanwhile work with Gaim 2.0.0?</a>
+      </li>
+      <li>
         <a href="#storage_buddy_list">How do I make the Meanwhile Gaim plugin use my server-side
 	buddy list?</a>
       </li>
@@ -53,6 +56,9 @@
         <a href="#force_login">What does the "Force Login" option do?</a>
       </li>
       <li>
+        <a href="#sneaky_client_id">What does the "Hide Client Identity" option do?</a>
+      </li>
+      <li>
         <a href="#missing_logs">I seem to be missing some conversation logs...</a>
       </li>
       <li>
@@ -61,10 +67,6 @@
       <li>
         <a href="#suse_rpm">I'm using SUSE and installed from RPM. Why isn't it working?
 	</a>
-      </li>
-      <li>
-        <a href="#not_authorized">I'm getting a "Not authorized" error when I try to connect to
-	my Sametime server, what's wrong?</a>
       </li>
     </ul>
   </li>
@@ -93,246 +95,108 @@
       </li>
     </ul>
   </li>
-</ul><hr/><h2>General</h2><table class="question">
-  <tr>
-    <td class="q-title">
-      <a name="what_is_sametime" href="#what_is_sametime">What is Lotus Sametime?</a>
-    </td>
-    <td class="q-back">
-      <a href="#content">back</a>
-    </td>
-  </tr>
-  <tr>
-    <td class="q-answer" colspan="2">
-      <p><a href="http://www.lotus.com/products/lotussametime.nsf/wdocs/homepage">Lotus
+</ul><hr/><h2>General</h2><h3 id="what_is_sametime">What is Lotus Sametime?</h3><div class="answer">
+  <p><a href="http://www.lotus.com/products/lotussametime.nsf/wdocs/homepage">Lotus
 	Sametime</a> is a corporate Instant Messaging product sold by
 	IBM and Lotus.</p>
-      <p>It was originally offered by a company called Ubique as
+  <p>It was originally offered by a company called Ubique as
 	Virtual Places (VP), utilizing a client called VPBuddy. The
 	protocol and the client application were renamed to Sametime
 	when Ubique was purchased by Lotus. Later, the product again
 	underwent a name change and is now officially Lotus Instant
 	Messenger (LIM).</p>
-      <p>The VP protocol is what Meanwhile implements. LIM is slowly
+  <p>The VP protocol is what Meanwhile implements. LIM is slowly
 	moving away from VP, instead favoring SIP/SIMPLE as the
 	underlying messaging protocol. Hypothetically this means that
 	the Meanwhile project will slowly become obsolete.
 	Realistically, VP-based deployments of Sametime will probably
 	be around for quite a while.</p>
-      <p>If anyone has more information on the history of Ubique,
+  <p>If anyone has more information on the history of Ubique,
 	please let me know via the contact page.</p>
-    </td>
-  </tr>
-</table><table class="question">
-  <tr>
-    <td class="q-title">
-      <a name="what_is_meanwhile" href="#what_is_meanwhile">What is Meanwhile?</a>
-    </td>
-    <td class="q-back">
-      <a href="#content">back</a>
-    </td>
-  </tr>
-  <tr>
-    <td class="q-answer" colspan="2">
-      <p>Meanwhile is an open source project for connecting as a
+</div><h3 id="what_is_meanwhile">What is Meanwhile?</h3><div class="answer">
+  <p>Meanwhile is an open source project for connecting as a
 	client to a Lotus Sametime Connect community. There is a
 	stand-alone library portion, which can be used to write a
 	client, there is a Python module wrapping the library, and
 	there is a Gaim protocol plugin which turns Gaim into a
 	Sametime client. There is also a significant amount of work
 	into documenting the Sametime protocol.</p>
-    </td>
-  </tr>
-</table><table class="question">
-  <tr>
-    <td class="q-title">
-      <a name="born_free" href="#born_free">Is this project affiliated with IBM or Lotus?</a>
-    </td>
-    <td class="q-back">
-      <a href="#content">back</a>
-    </td>
-  </tr>
-  <tr>
-    <td class="q-answer" colspan="2">
-      <p>No. The Meanwhile project is neither affiliated with, nor
+</div><h3 id="born_free">Is this project affiliated with IBM or Lotus?</h3><div class="answer">
+  <p>No. The Meanwhile project is neither affiliated with, nor
 	endorsed, nor supported by, either IBM or Lotus.</p>
-      <p>The project was first available exclusively inside of IBM,
+  <p>The project was first available exclusively inside of IBM,
 	because I didn't want to be sued. This has been resolved with
 	Lotus, and Meanwhile is now open to the world.</p>
-      <p>To re-cap (because people really seem to have a hard time
+  <p>To re-cap (because people really seem to have a hard time
 	with this one), Meanwhile is not an IBM project. IBM does not
 	control Meanwhile.  IBM does not fund Meanwhile. IBM does not
 	support Meanwhile. Meanwhile is developed outside of IBM. The
 	development of Meanwhile is external to IBM. Inside of IBM is
 	not where Meanwhile is developed.</p>
-    </td>
-  </tr>
-</table><table class="question">
-  <tr>
-    <td class="q-title">
-      <a name="use_lotus" href="#use_lotus">Does Meanwhile use the Lotus toolkit?</a>
-    </td>
-    <td class="q-back">
-      <a href="#content">back</a>
-    </td>
-  </tr>
-  <tr>
-    <td class="q-answer" colspan="2">
-      <p>No. It is a project to opperate similarly to the Lotus
+</div><h3 id="use_lotus">Does Meanwhile use the Lotus toolkit?</h3><div class="answer">
+  <p>No. It is a project to opperate similarly to the Lotus
 	toolkit, but built from extrapolating the binary protocol from
 	captured network packets.</p>
-    </td>
-  </tr>
-</table><table class="question">
-  <tr>
-    <td class="q-title">
-      <a name="is_it_safe" href="#is_it_safe">Should I use Meanwhile?</a>
-    </td>
-    <td class="q-back">
-      <a href="#content">back</a>
-    </td>
-  </tr>
-  <tr>
-    <td class="q-answer" colspan="2">
-      <p>It's safest to say that Meanwhile is still a beta, and is
+</div><h3 id="is_it_safe">Should I use Meanwhile?</h3><div class="answer">
+  <p>It's safest to say that Meanwhile is still a beta, and is
 	not completely stable. If you are a hobbyist, or some other
 	variant of insane person, then go right ahead. Problems should
 	be logged in the appropriate trackers with as much pertinent
 	information as possible.</p>
-      <p>Remember: If it breaks, you get to keep the pieces!</p>
-    </td>
-  </tr>
-</table><table class="question">
-  <tr>
-    <td class="q-title">
-      <a name="where_can_it_run" href="#where_can_it_run">On what platforms can I use Meanwhile?</a>
-    </td>
-    <td class="q-back">
-      <a href="#content">back</a>
-    </td>
-  </tr>
-  <tr>
-    <td class="q-answer" colspan="2">
-      <p>Meanwhile has been successfully compiled and used on Linux,
+  <p>Remember: If it breaks, you get to keep the pieces!</p>
+</div><h3 id="where_can_it_run">On what platforms can I use Meanwhile?</h3><div class="answer">
+  <p>Meanwhile has been successfully compiled and used on Linux,
 	Win32 (via mingw), Solaris, and Darwin (Mac OSX). Possibly and
 	probably more, but those are the only ones I've heard of so
 	far.</p>
-      <p>Wanted: someone to get it to build under OS/2</p>
-    </td>
-  </tr>
-</table><table class="question">
-  <tr>
-    <td class="q-title">
-      <a name="why_no_srpm" href="#why_no_srpm">Why is there no SRPM?</a>
-    </td>
-    <td class="q-back">
-      <a href="#content">back</a>
-    </td>
-  </tr>
-  <tr>
-    <td class="q-answer" colspan="2">
-      <p>Primarily because you can make a source-rpm from the
+  <p>Wanted: someone to get it to build under OS/2</p>
+</div><h3 id="why_no_srpm">Why is there no SRPM?</h3><div class="answer">
+  <p>Primarily because you can make a source-rpm from the
 	release tarball with a single command:</p>
-      <p>
-        <code>rpmbuild -ts [tarball]</code>
-      </p>
-    </td>
-  </tr>
-</table><table class="question">
-  <tr>
-    <td class="q-title">
-      <a name="should_i_package" href="#should_i_package">Should I package Meanwhile into my distribution?</a>
-    </td>
-    <td class="q-back">
-      <a href="#content">back</a>
-    </td>
-  </tr>
-  <tr>
-    <td class="q-answer" colspan="2">
-      <p>I would strongly recommend against it until Meanwhile exits
-	beta and becomes version 1.0.0, which shouldn't be too far off
-	into the future. The 0.4.x release is going to be very similar
-	to the 1.0.0 release, but some things need to be nailed down
-	still, and API breakage is very very likely.</p>
-    </td>
-  </tr>
-</table><h2>Plugins</h2><table class="question">
-  <tr>
-    <td class="q-title">
-      <a name="what_is_gaim" href="#what_is_gaim">What is Gaim?</a>
-    </td>
-    <td class="q-back">
-      <a href="#content">back</a>
-    </td>
-  </tr>
-  <tr>
-    <td class="q-answer" colspan="2">
-      <p><a href="http://gaim.sf.net/">Gaim</a> is an open source
+  <p>
+    <code>rpmbuild -ts [tarball]</code>
+  </p>
+</div><h3 id="should_i_package">Should I package Meanwhile into my distribution?</h3><div class="answer">
+  <p>Anything from meanwhile 1.0.0 onward should be fine. I would
+	not recommend packaging anything before that.</p>
+</div><h2>Plugins</h2><h3 id="what_is_gaim">What is Gaim?</h3><div class="answer">
+  <p><a href="http://gaim.sf.net/">Gaim</a> is an open source
 	Instant Messaging client platform. Gaim supports almost every
 	instant messaging protocol, and any number of additional
 	protocols can be added in as modules. It provides a single
 	front end for all of a user's various instant messaging
 	accounts and buddy lists. The Meanwhile plugin for Gaim is
 	maintained as part of this project.</p>
-    </td>
-  </tr>
-</table><table class="question">
-  <tr>
-    <td class="q-title">
-      <a name="storage_buddy_list" href="#storage_buddy_list">How do I make the Meanwhile Gaim plugin use my server-side
-	buddy list?</a>
-    </td>
-    <td class="q-back">
-      <a href="#content">back</a>
-    </td>
-  </tr>
-  <tr>
-    <td class="q-answer" colspan="2">
-      <p>Back up your buddy list <i>right now</i> with an official
+</div><h3 id="gaim_2">Does Meanwhile work with Gaim 2.0.0?</h3><div class="answer">
+  <p>Gaim 2.0.0 (and later) has merged in the gaim-meanwhile plugin
+	directly. Depending on where you get your binaries, you may have
+	Meanwhile support automatically. Alternately, you may find a
+	gaim-meanwhile package built for that version of Gaim. Either way
+	though, you'll likely still need to have a copy of the Meanwhile
+	library itself.</p>
+</div><h3 id="storage_buddy_list">How do I make the Meanwhile Gaim plugin use my server-side
+	buddy list?</h3><div class="answer">
+  <p>Back up your buddy list <i>right now</i> with an official
 	client.</p>
-      <p>The act of obtaining the server-side list is
+  <p>The act of obtaining the server-side list is
 	trivial. Correctly parsing the data from it however has turned
 	out to be much more complex.</p>
-      <p>The level to which the server side list is used is set in a
+  <p>The level to which the server side list is used is set in a
 	preference attached to the protocol plugin. It has three
 	settings: Local Only; Load from Server; Load and Save to
 	Server. The default is safely set to Local Only.</p>
-      <p>Meanwhile's handling of certain problems with the list
+  <p>Meanwhile's handling of certain problems with the list
 	format mimics the official client, in that any saved aliases
 	with the comma (,) character in them will be misinterpreted
 	when the list is later loaded. Don't put commas in your buddy
 	aliases and you should be fine.
 	</p>
-    </td>
-  </tr>
-</table><table class="question">
-  <tr>
-    <td class="q-title">
-      <a name="nab" href="#nab">How do I add a Notes Address Book Group to my buddy
-	list?</a>
-    </td>
-    <td class="q-back">
-      <a href="#content">back</a>
-    </td>
-  </tr>
-  <tr>
-    <td class="q-answer" colspan="2">
-      <p>Look under Tools&#x2192;Account Options&#x2192;[your
-	account]&#x2192;Add Notes Address Book Group</p>
-    </td>
-  </tr>
-</table><table class="question">
-  <tr>
-    <td class="q-title">
-      <a name="psychic" href="#psychic">What is "Psychic Mode" and what does it do?</a>
-    </td>
-    <td class="q-back">
-      <a href="#content">back</a>
-    </td>
-  </tr>
-  <tr>
-    <td class="q-answer" colspan="2">
-      <p>Psychic Mode is a strange feature. Put simply, it lets you know
+</div><h3 id="nab">How do I add a Notes Address Book Group to my buddy
+	list?</h3><div class="answer">
+  <p>Look under Tools→Account Options→[your
+	account]→Add Notes Address Book Group</p>
+</div><h3 id="psychic">What is "Psychic Mode" and what does it do?</h3><div class="answer">
+  <p>Psychic Mode is a strange feature. Put simply, it lets you know
 	when someone is going to send you an IM <i>before they actually send
 	you a message</i>. This is accomplished by opening a conversation
 	window/tab when a channel is opened over the IM service from a user.
@@ -340,26 +204,14 @@
 	as possible in order to negotiate features, a user of a psychic-enabled
 	client will have a conversation window open as soon as someone opens
 	a conversation window to them.</p>
-      <p>gaim-meanwhile didn't invent this feature. At least two other
+  <p>gaim-meanwhile didn't invent this feature. At least two other
 	Sametime clients support it, and it was added to this plugin at the
 	behest of many switching users.</p>
-      <p>"Psychic Mode" can be enabled from the preferences dialog. It is
+  <p>"Psychic Mode" can be enabled from the preferences dialog. It is
 	disabled by default.</p>
-    </td>
-  </tr>
-</table><table class="question">
-  <tr>
-    <td class="q-title">
-      <a name="force_login" href="#force_login">What does the "Force Login" option do?</a>
-    </td>
-    <td class="q-back">
-      <a href="#content">back</a>
-    </td>
-  </tr>
-  <tr>
-    <td class="q-answer" colspan="2">
-      <p>This is an option very few users are likely to need to enable.</p>
-      <p>A single Sametime community can be deployed across multiple
+</div><h3 id="force_login">What does the "Force Login" option do?</h3><div class="answer">
+  <p>This is an option very few users are likely to need to enable.</p>
+  <p>A single Sametime community can be deployed across multiple
 	servers, with user accounts configured with a "home" server. When a
 	user logs in to a server in the community, its profile is checked for
 	that home value. If the home value exists and does not refer to the
@@ -369,7 +221,7 @@
 	instruct the server that it cannot use its home server, and that the
 	server should route the connection to the correct home server itself.
 	</p>
-      <p>The gaim-meanwhile plugin by default will actually attempt to
+  <p>The gaim-meanwhile plugin by default will actually attempt to
 	open a connection to the home server if it is instructed to. If the
 	plugin cannot reach the home server, then it will force the login. In
 	some cases, the act of attempting to open a connection to that other
@@ -377,261 +229,125 @@
 	being redirected to a home server they know they can never reach, and
 	would like to completely skip attempting to redirect to it, they can
 	enable the "Force Login" option.</p>
-      <p>"Force Login" can be enabled from the preferences dialog. It is
+  <p>"Force Login" can be enabled from the preferences dialog. It is
 	disabled by default.</p>
-    </td>
-  </tr>
-</table><table class="question">
-  <tr>
-    <td class="q-title">
-      <a name="missing_logs" href="#missing_logs">I seem to be missing some conversation logs...</a>
-    </td>
-    <td class="q-back">
-      <a href="#content">back</a>
-    </td>
-  </tr>
-  <tr>
-    <td class="q-answer" colspan="2">
-      <p>There was a release of the gaim-meanwhile plugin that changed the
+</div><h3 id="sneaky_client_id">What does the "Hide Client Identity" option do?</h3><div class="answer">
+  <p>When a Sametime session begins, a 16bit value is sent from the
+	client to the server indicating what kind of client it is. Some
+	servers are set up by default to only permit clients using the
+	"official" values to connect. If you're receiving an error stating
+	that you are "Not authorized" when you attempt to connect, try
+	enabling this option. Doing so will cause the client to tell the
+	server that it is an official client, which will almost always allow
+	it to fully connect.</p>
+  <p>If you are a Sametime administrator, and would like to know how
+	to change the settings for client ID filtering, see this
+	<a href="http://www-1.ibm.com/support/docview.wss?uid=swg21114318">IBM Technote</a> on the subject.</p>
+  <p>A list of some known client ID values can be found
+	<a href="http://meanwhile.sourceforge.net/wiki/Client%20Type%20ID">in the wiki</a>.</p>
+</div><h3 id="missing_logs">I seem to be missing some conversation logs...</h3><div class="answer">
+  <p>There was a release of the gaim-meanwhile plugin that changed the
 	way that Meanwhile accounts were named by appending
 	":server.host.name" to the login ID. Since the default loggers in Gaim
 	store log files under <code>~/.gaim/logs/meanwhile/[account]/</code>
 	all the logs for that release ended up in a different place.</p>
-      <p>Version 1.2.0 of the gaim-meanwhile plugin was the only release
+  <p>Version 1.2.0 of the gaim-meanwhile plugin was the only release
 	that did this. Version 1.2.1 and later all switched back to naming
 	accounts by the login ID alone.</p>
-      <p>You can safely copy the contents of the badly-named account
+  <p>You can safely copy the contents of the badly-named account
 	directory to the correctly named account directly. This will add all
 	the conversation logs from the 1.2.0 release to where other releases
 	can find them.</p>
-    </td>
-  </tr>
-</table><table class="question">
-  <tr>
-    <td class="q-title">
-      <a name="rfe" href="#rfe">Why don't you support ${FEATURE}?</a>
-    </td>
-    <td class="q-back">
-      <a href="#content">back</a>
-    </td>
-  </tr>
-  <tr>
-    <td class="q-answer" colspan="2">
-      <p>It's not entirely a matter of not supporting, it's more a
+</div><h3 id="rfe">Why don't you support ${FEATURE}?</h3><div class="answer">
+  <p>It's not entirely a matter of not supporting, it's more a
 	matter of not <i>yet</i> supporting. Please look through the
 	<a href="http://sourceforge.net/tracker/?atid=656721&amp;group_id=110565&amp;func=browse">RFE
 	Tracker</a> for features that the project intends to
 	eventually provide. If you have something you'd like to add to
 	that list, go ahead and do so.</p>
-    </td>
-  </tr>
-</table><table class="question">
-  <tr>
-    <td class="q-title">
-      <a name="suse_rpm" href="#suse_rpm">I'm using SUSE and installed from RPM. Why isn't it working?
-	</a>
-    </td>
-    <td class="q-back">
-      <a href="#content">back</a>
-    </td>
-  </tr>
-  <tr>
-    <td class="q-answer" colspan="2">
-      <p>SUSE's Gaim installation looks for plugins in
+</div><h3 id="suse_rpm">I'm using SUSE and installed from RPM. Why isn't it working?
+	</h3><div class="answer">
+  <p>SUSE's Gaim installation looks for plugins in
 	<code>/opt/gnome/lib/gaim</code>, and the gaim-meanwhile RPM installs
 	to <code>/usr/lib/gaim</code>. So all you need to do to get things
 	working is:</p>
-      <p>
-        <code>su -c "ln -s /usr/lib/gaim/libmwgaim.so /opt/gnome/lib/gaim/"</code>
-      </p>
-    </td>
-  </tr>
-</table><table class="question">
-  <tr>
-    <td class="q-title">
-      <a name="not_authorized" href="#not_authorized">I'm getting a "Not authorized" error when I try to connect to
-	my Sametime server, what's wrong?</a>
-    </td>
-    <td class="q-back">
-      <a href="#content">back</a>
-    </td>
-  </tr>
-  <tr>
-    <td class="q-answer" colspan="2">
-      <p>When a client connects to a Sametime server, before it sends any
-	authentication data, it sends a client ID number. The client ID is used
-	by the server to determine what sort of client it is that is trying
-	to log in. By default, most servers will accept any value of client ID.
-	However, there is an option in the Sametime server configuration to
-	block any IDs not in a pre-defined list. When this setting is enabled
-	and a client attempts to log in using that client ID, it will be
-	rejected with this error.</p>
-      <p>Sometimes this setting will be enabled as part of an upgrade in
-	server software, so after having used a Meanwhile based client for
-	quite some time, you may suddenly find yourself unable to log in.</p>
-      <p>There are two ways you can get things working again.</p>
-      <p>First, you should try to talk to the sametime administrators. They
-	may not be aware of the Meanwhile Project, and letting them know that
-	you're using it as a client may entice them to add Meanwhile's client
-	ID value (which is <code>0x1700</code>) to the filter list. Send them
-	a link to this page and be polite and there's a very good chance your
-	problem will go away.</p>
-      <p>Failing that, this value can be specified as an option at compile
-	time. See <code>./configure --help</code> for a list of compile-time
-	options. Some alternative client ID values can be found
-	<a href="/wiki/Client Type ID">in the wiki</a>.</p>
-      <p>If you are a Sametime Administrator and would like to know how to
-	change the Client ID filtering, see this
-	<a href="http://www-1.ibm.com/support/docview.wss?uid=swg21114318">IBM Technote</a>
-	on the subject.</p>
-    </td>
-  </tr>
-</table><h2>Contributions</h2><table class="question">
-  <tr>
-    <td class="q-title">
-      <a name="how_to_help" href="#how_to_help">How can I help?</a>
-    </td>
-    <td class="q-back">
-      <a href="#content">back</a>
-    </td>
-  </tr>
-  <tr>
-    <td class="q-answer" colspan="2">
-      <p>Be supportive! The developer may be very sad, and your
+  <p>
+    <code>su -c "ln -s /usr/lib/gaim/libmwgaim.so /opt/gnome/lib/gaim/"</code>
+  </p>
+</div><h2>Contributions</h2><h3 id="how_to_help">How can I help?</h3><div class="answer">
+  <p>Be supportive! The developer may be very sad, and your
 	happy words could turn his day right around!</p>
-      <p>In order of precedence, the following are all super
+  <p>In order of precedence, the following are all super
 	helpful: protocol insight; patches and bug fixes; bug reports;
 	happy thoughts; donations of cold, hard cash</p>
-    </td>
-  </tr>
-</table><table class="question">
-  <tr>
-    <td class="q-title">
-      <a name="protocol_help" href="#protocol_help">How can I help with the protocol research?</a>
-    </td>
-    <td class="q-back">
-      <a href="#content">back</a>
-    </td>
-  </tr>
-  <tr>
-    <td class="q-answer" colspan="2">
-      <p>The best ways are through <a href="http://sourceforge.net/projects/libpcap/">libpcap</a>
+</div><h3 id="protocol_help">How can I help with the protocol research?</h3><div class="answer">
+  <p>The best ways are through <a href="http://sourceforge.net/projects/libpcap/">libpcap</a>
 	packet dumps, and written extrapolation on network antics. It
 	may be helpful to have used the Lotus libraries before, but
 	that's not necessary. If you notice that an unsupported
 	feature seems to generate network traffic whenever you use it,
 	capture those packets and explain exactly what you were doing
 	to produce them. We'll get this thing figured out yet!</p>
-      <p>
-        <code>tcpdump -i eth0 -w gaim-meanwhile.capture -s 0 tcp
+  <p>
+    <code>tcpdump -i eth0 -w gaim-meanwhile.capture -s 0 tcp
 	port 1533</code>
-      </p>
-      <p>In the most recent release of the Meanwhile library (in the -doc
+  </p>
+  <p>In the most recent release of the Meanwhile library (in the -doc
 	package) there are some code samples. One of these samples is for
 	a single-connection, logging, decrypting Sametime proxy (called
 	logging-proxy.c) which can be used as an alternative to capturing
 	network packets.</p>
-    </td>
-  </tr>
-</table><table class="question">
-  <tr>
-    <td class="q-title">
-      <a name="patches" href="#patches">Are you accepting patches?</a>
-    </td>
-    <td class="q-back">
-      <a href="#content">back</a>
-    </td>
-  </tr>
-  <tr>
-    <td class="q-answer" colspan="2">
-      <p>Maybe.</p>
-      <p>As with any project, there are apparently arbitrary code
+</div><h3 id="patches">Are you accepting patches?</h3><div class="answer">
+  <p>Maybe.</p>
+  <p>As with any project, there are apparently arbitrary code
 	factors to be taken into account when submitting code. Look
 	for the HACKING file in your source tree. If there isn't one,
 	wait. I'll get to it eventually.</p>
-      <p>Added functionality should not step out of the scope of the
+  <p>Added functionality should not step out of the scope of the
 	rest of the file. Services should never co-mingle or require
 	one-another. Don't write code that's deployment specific. And
 	check your parameters on public interface functions.</p>
-      <p>If you're working for Lotus or IBM, it's very doubtful that
+  <p>If you're working for Lotus or IBM, it's very doubtful that
 	I'll be able to safely incorporate any changes or fixes. You
 	may be able to safely communicate the idea/fix, but please
 	check with your management first.</p>
-      <p>
-        <a href="http://sourceforge.net/tracker/?atid=656720&amp;group_id=110565&amp;func=browse">Patch Tracker</a>
-      </p>
-    </td>
-  </tr>
-</table><table class="question">
-  <tr>
-    <td class="q-title">
-      <a name="bug_reports" href="#bug_reports">What's the method for reporting bugs?</a>
-    </td>
-    <td class="q-back">
-      <a href="#content">back</a>
-    </td>
-  </tr>
-  <tr>
-    <td class="q-answer" colspan="2">
-      <p>First, ensure that no existing bug report for the same item
+  <p>
+    <a href="http://sourceforge.net/tracker/?atid=656720&amp;group_id=110565&amp;func=browse">Patch Tracker</a>
+  </p>
+</div><h3 id="bug_reports">What's the method for reporting bugs?</h3><div class="answer">
+  <p>First, ensure that no existing bug report for the same item
 	exists before creating a new report. If one does exist, read
 	through the commentary. If you feel you still have something
 	important to add, then continue on.</p>
-      <p>Next, indicate with specificity the nature, demeanor,
+  <p>Next, indicate with specificity the nature, demeanor,
 	astrological sign, molecular weight, and specific gravity of
 	the bug.</p>
-      <p>Finally, re-read the report. Check all fields. Is this
+  <p>Finally, re-read the report. Check all fields. Is this
 	enough information to actually figure out what you're talking
 	about? If-- and only if-- you are satisfied that adequate
 	information is provided, then submit/update the bug.</p>
-      <p>These are all parts of the bug reporting process. Failing
+  <p>These are all parts of the bug reporting process. Failing
 	these steps yet still submitting an item into the tracker is
 	not reporting a bug, it's just senseless noise.</p>
-      <p>
-        <a href="http://sourceforge.net/tracker/?atid=656718&amp;group_id=110565&amp;func=browse">Bug Tracker</a>
-      </p>
-    </td>
-  </tr>
-</table><table class="question">
-  <tr>
-    <td class="q-title">
-      <a name="attitude" href="#attitude">How do I keep the developer happy?</a>
-    </td>
-    <td class="q-back">
-      <a href="#content">back</a>
-    </td>
-  </tr>
-  <tr>
-    <td class="q-answer" colspan="2">
-      <p>A happy developer wants to solve your problems. He wants to
+  <p>
+    <a href="http://sourceforge.net/tracker/?atid=656718&amp;group_id=110565&amp;func=browse">Bug Tracker</a>
+  </p>
+</div><h3 id="attitude">How do I keep the developer happy?</h3><div class="answer">
+  <p>A happy developer wants to solve your problems. He wants to
 	help you out, and will take extra time just for you. An
 	unhappy developer will instruct you to put sharp things into
 	hurtful places on your body, and will then stomp away. In
 	order for a project to continue at a good pace, it's important
 	to keep the developer(s) happy.</p>
-      <p>For the most part, this just means Be Polite. Do not make
+  <p>For the most part, this just means Be Polite. Do not make
 	demands.  Don't act threatening or try to wrest control of the
 	project away.</p>
-    </td>
-  </tr>
-</table><table class="question">
-  <tr>
-    <td class="q-title">
-      <a name="donations" href="#donations">Why are you taking peoples' money?</a>
-    </td>
-    <td class="q-back">
-      <a href="#content">back</a>
-    </td>
-  </tr>
-  <tr>
-    <td class="q-answer" colspan="2">
-      <p>Because I am broke. Please note that I immediately hand
+</div><h3 id="donations">Why are you taking peoples' money?</h3><div class="answer">
+  <p>Because I am broke. Please note that I immediately hand
 	over 50% to the <a href="http://eff.org/">EFF</a>. The rest
 	will probably buy me toys, or manga, or something.</p>
-      <p>If handing over cash isn't your bag, but you still want to
+  <p>If handing over cash isn't your bag, but you still want to
 	provide a material reward, there's always my
 	<a href="http://del.icio.us/taliesein/wishlist">del.icio.us
 	wishlist</a>!</p>
-    </td>
-  </tr>
-</table>
+</div>

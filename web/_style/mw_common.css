@@ -206,39 +206,8 @@ h3 {		font-size: 9pt; }
 
 
 /* FAQ styles */
-table.question {
-	border: none;
-	margin: 1em 2em 0px 1em;
-	width: 100%;
-}
-
-td.q-title {
-	background-color: #9e9;
-	padding-left: 0.6em;
-	padding-right: 0.6em;
-	width: auto;
-}
-
-td.q-title a {
-	color: #000;
-	font-weight: bold;
-}
-
-td.q-back {
-	background-color: #ddd;
-	padding-right: 0.6em;
-	padding-left: 0.6em;
-	text-align: right;
-	width: 4em;
-}
-
-td.q-answer {	
-	border: thin solid #cdc;
-	padding: 0px 0.6em;
-}
-
-td.q-answer p {
-	margin-bottom: 0.5em;
+div.answer {
+	padding: 0 2em;
 }
 
 

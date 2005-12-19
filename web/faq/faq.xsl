@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:stylesheet version="1.0"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:output indent="yes" method="xml" omit-xml-declaration="yes" />
 
@@ -69,17 +70,11 @@
 		</xsl:choose>
 	</xsl:variable>
 
-	<table class="question">
-	<tr><td class="q-title">
-	<a name="{$qid}" href="#{$qid}"><xsl:value-of select="title" /></a>
-	</td><td class="q-back">
-	<a href="#content">back</a>
-	</td></tr>
-
-	<tr><td class="q-answer" colspan="2">
+	<h3 id="{$qid}"><xsl:value-of select="title" /></h3>
+	<div class="answer">
 	<xsl:apply-templates select="answer" />
-	</td></tr>
-	</table>
+	</div>
+
 </xsl:template>
 
 
