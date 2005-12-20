@@ -1,4 +1,4 @@
-<?php echo("<?xml version=\"1.0\" ?>\n"); ?>
+<?php echo("<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n"); ?>
 
 <?php
 global $full_path;
@@ -38,7 +38,7 @@ require($full_path . "release.php");
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta http-equiv="Robots" content="index,follow" />
 <meta name="Description" content="Meanwhile Project Home Page" />
 <meta name="Keywords" content="Meanwhile Sametime Linux Gaim" />

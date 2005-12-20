@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 
 <faq>
 
@@ -139,8 +140,10 @@
 	instant messaging protocol, and any number of additional
 	protocols can be added in as modules. It provides a single
 	front end for all of a user's various instant messaging
-	accounts and buddy lists. The Meanwhile plugin for Gaim is
-	maintained as part of this project.</p>
+	accounts and buddy lists.</p>
+
+	<p>For versions of Gaim prior to 2.0.0, the gaim-meanwhile plugin
+	is maintained as a part of this project.</p>
 
 	</answer>
 	</question>
@@ -149,12 +152,13 @@
 	<question id="gaim_2">
 	<title>Does Meanwhile work with Gaim 2.0.0?</title>
 	<answer>
-	<p>Gaim 2.0.0 (and later) has merged in the gaim-meanwhile plugin
-	directly. Depending on where you get your binaries, you may have
-	Meanwhile support automatically. Alternately, you may find a
-	gaim-meanwhile package built for that version of Gaim. Either way
-	though, you'll likely still need to have a copy of the Meanwhile
-	library itself.</p>
+	<p>Yes. Sametime support via Meanwhile is a built-in part of Gaim
+	starting with version 2.0.0beta1. However, depending on how you are
+	obtaining Gaim, the gaim-meanwhile plugin may be available as part
+	of the primary package, or part of an add-on package.</p>
+
+	<p>Meanwhile support in Gaim requires the presence of the Meanwhile
+	library, which is still maintained in this project</p>
 	</answer>
 	</question>
 
@@ -190,8 +194,10 @@
 	<title>How do I add a Notes Address Book Group to my buddy
 	list?</title>
 	<answer>
-	<p>Look under Tools&#x2192;Account Options&#x2192;[your
+	<p>In Gaim 1.5.0, look under Tools&#x2192;Account Options&#x2192;[your
 	account]&#x2192;Add Notes Address Book Group</p>
+	<p>In Gaim 2.0.0, look under Accounts&#x2192;[your account]&#x2192;Add
+	Notes Address Book Group</p>
 	</answer>
 	</question>
 
@@ -214,6 +220,10 @@
 
 	<p>"Psychic Mode" can be enabled from the preferences dialog. It is
 	disabled by default.</p>
+
+	<p>Note that this option was removed from the 2.0.0 version of
+	gaim-meanwhile. It is encouraged that a plugin be written to do this,
+	instead</p>
 	</answer>
 	</question>
 
@@ -231,6 +241,7 @@
 	instruct the server that it cannot use its home server, and that the
 	server should route the connection to the correct home server itself.
 	</p>
+
 	<p>The gaim-meanwhile plugin by default will actually attempt to
 	open a connection to the home server if it is instructed to. If the
 	plugin cannot reach the home server, then it will force the login. In
@@ -239,6 +250,7 @@
 	being redirected to a home server they know they can never reach, and
 	would like to completely skip attempting to redirect to it, they can
 	enable the "Force Login" option.</p>
+
 	<p>"Force Login" can be enabled from the preferences dialog. It is
 	disabled by default.</p>
 	</answer>
@@ -256,11 +268,14 @@
 	enabling this option. Doing so will cause the client to tell the
 	server that it is an official client, which will almost always allow
 	it to fully connect.</p>
+
 	<p>If you are a Sametime administrator, and would like to know how
 	to change the settings for client ID filtering, see this
 	<a href="http://www-1.ibm.com/support/docview.wss?uid=swg21114318">IBM Technote</a> on the subject.</p>
+
 	<p>A list of some known client ID values can be found
 	<a href="http://meanwhile.sourceforge.net/wiki/Client%20Type%20ID">in the wiki</a>.</p>
+
 	</answer>
 	</question>
 
