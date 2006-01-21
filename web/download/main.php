@@ -20,6 +20,7 @@ packages</p>
 <li><a href="http://rpmforge.net/user/">RPMforge.net</a></li>
 <li><a href="http://fedoraproject.org/wiki/Extras">Fedora Extras</a></li>
 <li><a href="http://www.gentoo-portage.com/">Gentoo Portage</a></li>
+<li><a href="http://www.linuxpackages.net/search_view.php?by=name&name=meanwhile&ver=">Slackware Linuxpackages</a></li>
 </ul>
 
 <h2>CVS</h2>
