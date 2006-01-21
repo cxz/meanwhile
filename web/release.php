@@ -13,8 +13,8 @@
 	$mw_release_url = $base_url . "&amp;package_id=119439" .
 		"&amp;release_id=356768";
 
-	$mw_gaim = "gaim-meanwhile 1.2.7";
+	$mw_gaim = "gaim-meanwhile 1.2.8";
 	$mw_gaim_url =  $base_url . "&amp;package_id=119703" .
-		"&amp;release_id=381391";
+		"&amp;release_id=387119";
 ?>
 
