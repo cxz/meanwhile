@@ -214,16 +214,16 @@
 	client will have a conversation window open as soon as someone opens
 	a conversation window to them.</p>
 
-	<p>gaim-meanwhile didn't invent this feature. At least two other
+	<p>Meanwhile didn't invent this feature. At least two other
 	Sametime clients support it, and it was added to this plugin at the
 	behest of many switching users.</p>
 
-	<p>"Psychic Mode" can be enabled from the preferences dialog. It is
+	<p>Psychic mode can be enabled from the preferences dialog. It is
 	disabled by default.</p>
 
-	<p>Note that this option was removed from the 2.0.0 version of
-	gaim-meanwhile. It is encouraged that a plugin be written to do this,
-	instead</p>
+	<p>Note that with the inclusion of the Sametime plugin in Gaim
+	2.0.0, this option was removed in favor of a more general Psychic
+	plugin.</p>
 	</answer>
 	</question>
 
