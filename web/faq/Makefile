@@ -1,9 +1,7 @@
 
-FAQ_SOURCE = faq.xml
 FAQ_TARGET = main.htm
 
 FAQ_TRANSFORM = faq.xsl
-
 
 all: $(FAQ_TARGET)
 

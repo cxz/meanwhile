@@ -318,6 +318,9 @@
 	</title>
 
 	<answer>
+	<p>First, ensure you've installed both the meanwhile library, and
+	the gaim-meanwhile plugin.</p>
+
 	<p>SUSE's Gaim installation looks for plugins in
 	<code>/opt/gnome/lib/gaim</code>, and the gaim-meanwhile RPM installs
 	to <code>/usr/lib/gaim</code>. So all you need to do to get things
