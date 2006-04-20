@@ -332,7 +332,7 @@
 (define lwis-array-declare-literal
   (lambda (var expr)
     (lambda (output)
-      (output (lwis-printf "~a[] = ~a"
+      (output (lwis-printf "~a[] = ~a;"
 			   (lwis-expr-eval (var 'declare))
 			   (lwis-expr-eval expr))))))
 
@@ -545,6 +545,19 @@
   (lambda ()
     (lambda (output)
       (output "return;\n"))))
+
+
+(define lwis-sysheader
+  (lambda (name)
+    (lambda (output)
+      (output (lwis-printf "#include <~a>\n" name)))))
+
+
+(define lwis-header
+  (lambda (name)
+    (lambda (output)
+      (output (lwis-printf "#include \"~a\"\n" name)))))
+
 
 
 ;; The end.

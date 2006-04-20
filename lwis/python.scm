@@ -50,8 +50,8 @@
 ;; expression to parse an args expression into a list of param
 ;; variables it expects all of the params to have already had their
 ;; unwrapped versions declared. 
-(define PyArgs_ParseTuple
-  (lambda (argsexp params)
+(define PyArg_ParseTuple
+  (lambda (args params)
     
     ;; a weird little string of python parsetuple entries
       ;; todo add an appropriate entry to types for these strings
@@ -67,7 +67,7 @@
 	      (lwis-printf "&~a" (param 'get-wrapped-name))))
 	   params))
     
-    (lwis-call "PyArgs_ParseTuple" `(,argsexp
+    (lwis-call "PyArg_ParseTuple" `(,(args 'get)
 				     ,(lwis-literal-str sob)
 				     . ,pob))))
 
@@ -76,12 +76,13 @@
 (define py-function
   (lambda (func)
 
-    (lwis-func
-     "static" PyObject* (lwis-printf "wrap__~a" (func 'get-name))
-     (func 'get-params)
-     
-     ;; need a return value
-     (let ((retvar (lwis-var-new (func 'get-type) "ret")))
+    (let ((retvar (lwis-var-new (func 'get-type) "ret"))
+	  (self (lwis-var-new PyObject* "self"))
+	  (args (lwis-var-new PyObject* "args")))
+
+      (lwis-func
+       "static" PyObject* (lwis-printf "wrap__~a" (func 'get-name))
+       `(,self ,args)
        
        (lwis-block
 	
@@ -100,10 +101,10 @@
 
 	(lwis-newline)
 	
-	;; PyArgs_ParseTupleAndKewords
+	;; PyArg_ParseTupleAndKewords
 	;; todo add error checking
 	(lwis-stmt
-	 (PyArgs_ParseTuple (lwis-literal 'args) (func 'get-params)))
+	 (PyArg_ParseTuple args (func 'get-params)))
 	
 	(lwis-newline)
 
@@ -140,12 +141,18 @@
 	(lwis-return-expr (retvar `get-wrapped)))))))
 
 
+(define METH_NOARGS
+  (lwis-literal "METH_NOARGS"))
+
+
+(define METH_VARARGS
+  (lwis-literal "METH_VARARGS"))
+
+
 (define py-function-flags
   (lambda (func)
-    (lambda (output)
-      (if (null? (func 'get-params))
-	  (output "PY_METHOD_NOARGS")
-	  (output "PY_METHOD_VARARGS")))))
+    (if (null? (func 'get-params))
+	METH_NOARGS METH_VARARGS)))
 
 
 (define py-function-struct
@@ -161,7 +168,7 @@
   (lambda (module)
     (lwis-call "Py_InitModule3"
 	       `(,(lwis-literal-str (module 'get-name))
-		 ,(lwis-literal-str
+		 ,(lwis-literal
 		   (lwis-printf "~a__methods" (module 'get-name)))
 		 ,(lwis-literal-str (module 'get-desc))))))
 
@@ -169,7 +176,7 @@
 (define py-module-init
   (lambda (module)
     (lwis-func
-     "" void (lwis-printf "init_~a" (module 'get-name)) '()
+     "" void (lwis-printf "init~a" (module 'get-name)) '()
      
      (let ((mod (lwis-var-new PyObject* "mod")))
 
@@ -194,8 +201,13 @@
     
     (lwis-exprs
 
-     ;; headers
+     ;; the Python headers
+     (lwis-sysheader "Python.h")
+     (lwis-newline)
+
+     ;; module headers
      ;; todo
+     (lwis-newline)
 
      ;; define all the functions we're wrapping
      (lwis-expr-list
