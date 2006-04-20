@@ -11,7 +11,7 @@
 
 (define test-foobar
   (lwis-wrapped-func-new
-   int "foobar" `(,(lwis-var-new char* "text"))))
+   void "foobar" `(,(lwis-var-new char* "text"))))
 
 ;(test-foobar
 ; 'set-desc
@@ -22,7 +22,7 @@
 
 (define test-barfoo
   (lwis-wrapped-func-new
-   int "barfoo" `(,(lwis-var-new char* "txet"))))
+   void "barfoo" `(,(lwis-var-new char* "txet"))))
 
 ;(test-barfoo
 ; 'set-desc

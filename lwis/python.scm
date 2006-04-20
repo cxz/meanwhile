@@ -7,12 +7,10 @@
     (lwis-call "Py_INCREF" `(,expr))))
 
 
-
 ;; expression calling Py_DECREF on the wrapped var
 (define Py_DECREF
   (lambda (expr)
     (lwis-call "Py_DECREF" `(,expr))))
-
 
 
 (define PyObject*
@@ -20,6 +18,15 @@
 
 (PyObject* 'set-dup Py_INCREF)
 (PyObject* 'set-del Py_DECREF)
+
+
+(define Py_None
+  (lwis-literal "Py_None"))
+
+
+(define Py_None_INCREF
+  (lambda args_ignored
+    (lwis-paren (lwis, (Py_INCREF Py_None) Py_None))))
 
 
 (define PyMethodDef
@@ -72,7 +79,6 @@
 				     . ,pob))))
 
 
-
 (define py-function
   (lambda (func)
 
@@ -103,8 +109,9 @@
 	
 	;; PyArg_ParseTupleAndKewords
 	;; todo add error checking
-	(lwis-stmt
-	 (PyArg_ParseTuple args (func 'get-params)))
+	(lwis-if
+	 (lwis-not (PyArg_ParseTuple args (func 'get-params)))
+	 (lwis-return-expr NULL))
 	
 	(lwis-newline)
 
@@ -129,13 +136,6 @@
 	 (retvar 'set-wrapped (retvar 'wrap)))
 	
 	(lwis-newline)
-	
-	;; release wrapped vars
-	(lwis-expr-list
-	 (map (lambda (p) (lwis-stmt (p 'del-wrapped)))
-	      (func 'get-params)))
-	
-	(lwis-newline)
 
 	;; return
 	(lwis-return-expr (retvar `get-wrapped)))))))
@@ -158,19 +158,19 @@
 (define py-function-struct
   (lambda (func)
     (lwis-struct
-     (lwis-literal-str (func 'get-name))
+     (func 'get-name)
      (lwis-literal (lwis-printf "wrap__~a" (func 'get-name)))
      (py-function-flags func)
-     (lwis-literal-str (func 'get-desc)))))
+     (func 'get-desc))))
 
 
 (define Py_InitModule
   (lambda (module)
     (lwis-call "Py_InitModule3"
-	       `(,(lwis-literal-str (module 'get-name))
+	       `(,(module 'get-name)
 		 ,(lwis-literal
 		   (lwis-printf "~a__methods" (module 'get-name)))
-		 ,(lwis-literal-str (module 'get-desc))))))
+		 ,(module 'get-desc)))))
 
 
 (define py-module-init
@@ -228,7 +228,9 @@
        
        (lwis-array-declare-literal
 	funclist
-	(lwis-array-list (map py-function-struct (module 'get-funcs)))))
+	(lwis-array-list
+	 (append (map py-function-struct (module 'get-funcs))
+		 `(,(lwis-struct NULL NULL 0 NULL))))))
      
      (lwis-newline)
      

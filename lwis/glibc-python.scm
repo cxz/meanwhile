@@ -8,7 +8,11 @@
 (define void
   (lwis-type-new
    "void" PyObject*
-   lwis-noop lwis-noop))
+   Py_None_INCREF lwis-noop))
+
+(void 'set-declare lwis-noop)
+(void 'set-setter (lambda (var expr) expr))
+(void 'set-getter Py_None_INCREF)
 
 
 (define int
