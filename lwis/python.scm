@@ -117,7 +117,7 @@
 
 	;; unwrap all vars
 	(lwis-expr-list
-	 (map (lambda (p) (lwis-stmt (p 'set (p 'unwrap))))
+	 (map (lambda (p) (p 'unwrap))
 	      (func 'get-params)))
 	
 	(lwis-newline)
@@ -130,11 +130,17 @@
 				      (func 'get-params)))))
 	
 	(lwis-newline)
-
-	;; wrap return var
-	(lwis-stmt
-	 (retvar 'set-wrapped (retvar 'wrap)))
 	
+	;; wrap return var
+	(retvar 'wrap)
+	
+	(lwis-newline)
+       
+	;; del unwrapped vars
+	(lwis-expr-list
+	 (map (lambda (p) (lwis-stmt (p 'del)))
+	      (func 'get-params)))
+
 	(lwis-newline)
 
 	;; return
@@ -203,10 +209,13 @@
 
      ;; the Python headers
      (lwis-sysheader "Python.h")
-     (lwis-newline)
 
      ;; module headers
-     ;; todo
+     (lwis-expr-list
+      (map lwis-sysheader (module 'get-sysheaders)))
+     (lwis-expr-list
+      (map lwis-header (module 'get-headers)))
+
      (lwis-newline)
 
      ;; define all the functions we're wrapping
