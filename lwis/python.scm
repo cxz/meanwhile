@@ -1,6 +1,7 @@
 ;; basic python module
 
 
+
 ;; exression calling Py_INCREF on the wrapped var
 (define Py_INCREF
   (lambda (expr)
@@ -13,24 +14,30 @@
     (lwis-call "Py_DECREF" `(,expr))))
 
 
+
 (define PyObject*
-  (lwis-target-type-new "PyObject*"))
+  (lwis-type-new "PyObject*" #f))
 
 (PyObject* 'set-dup Py_INCREF)
+
 (PyObject* 'set-del Py_DECREF)
 
 
+
 (define Py_None
-  (lwis-literal "Py_None"))
+  (PyObject* "Py_None"))
+
 
 
 (define Py_None_INCREF
   (lambda args_ignored
-    (lwis-paren (lwis, (Py_INCREF Py_None) Py_None))))
+    (lwis-paren (lwis, (Py_None 'dup) (Py_None 'get)))))
+
 
 
 (define PyMethodDef
-  (lwis-target-type-new "PyMethodDef"))
+  (lwis-type-new "PyMethodDef" #f))
+
 
 
 (define PyInt_AsLong
@@ -38,14 +45,17 @@
     (lwis-call "PyInt_AsLong" `(,expr))))
 
 
+
 (define PyInt_FromLong
   (lambda (expr)
     (lwis-call "PyInt_FromLong" `(,expr))))
 
 
+
 (define PyString_AsString
   (lambda (expr)
     (lwis-call "PyString_AsString" `(,expr))))
+
 
 
 (define PyString_FromString
@@ -79,12 +89,13 @@
 				     . ,pob))))
 
 
+
 (define py-function
   (lambda (func)
 
-    (let ((retvar (lwis-var-new (func 'get-type) "ret"))
-	  (self (lwis-var-new PyObject* "self"))
-	  (args (lwis-var-new PyObject* "args")))
+    (let ((retvar ((func 'get-type) "ret"))
+	  (self (PyObject* "self"))
+	  (args (PyObject* "args")))
 
       (lwis-func
        "static" PyObject* (lwis-printf "wrap__~a" (func 'get-name))
@@ -147,18 +158,22 @@
 	(lwis-return-expr (retvar `get-wrapped)))))))
 
 
+
 (define METH_NOARGS
   (lwis-literal "METH_NOARGS"))
+
 
 
 (define METH_VARARGS
   (lwis-literal "METH_VARARGS"))
 
 
+
 (define py-function-flags
   (lambda (func)
     (if (null? (func 'get-params))
 	METH_NOARGS METH_VARARGS)))
+
 
 
 (define py-function-struct
@@ -170,6 +185,7 @@
      (func 'get-desc))))
 
 
+
 (define Py_InitModule
   (lambda (module)
     (lwis-call "Py_InitModule3"
@@ -179,12 +195,13 @@
 		 ,(module 'get-desc)))))
 
 
+
 (define py-module-init
   (lambda (module)
     (lwis-func
      "" void (lwis-printf "init~a" (module 'get-name)) '()
      
-     (let ((mod (lwis-var-new PyObject* "mod")))
+     (let ((mod (PyObject* "mod")))
 
        (lwis-block
 	(lwis-stmt
@@ -200,6 +217,7 @@
 	;; todo: add classes
 	
 	)))))
+
 
 
 (define py-module
@@ -250,8 +268,10 @@
      )))
 
 
+
 ;(define Python
 ;  (lwis-target "python" py-module))
+
 
 
 ;; The end.

@@ -176,7 +176,9 @@
 ;; expression that is an indented block of sub-expressions wrapped in
 ;; sexy-braces
 (define lwis-block
-  (lambda exprs (lwis-block-list exprs)))
+  (lambda exprs
+    (lwis-block-list exprs)))
+
 
 
 ;; combines multiple expressions into a single expression

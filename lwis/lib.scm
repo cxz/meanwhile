@@ -29,100 +29,82 @@
 
 
 
-;;  type that doesn't get wrapped or unwrapped
-(define lwis-target-type-new
-  (lambda (name)
-    (lwis-type-new name #f lwis-noop lwis-noop)))
-
-
-
-;; type definition
-;; methods:
-;;   get-name       str, c name for this type
-;;   get-target     type, that we wrap to, unwrap from
-;;   wrap var       expr, that wraps a variable
-;;   unwrap var     expr, that unwraps a variable
-;;   dup var        expr, that duplicates a variable (new copy or reference)
-;;   dupw var       expr, that duplicates a variable (new copy or reference)
-;;   del var        expr, that deletes a variable copy or reference
-;;   delw var       expr, that deletes a variable copy or reference
-;;   get var        expr, that evaluates to the variable
-;;   getw var       expr, that evaluates to the variable
-;;   set var ex     expr, that sets the variable to an expression
-;;   setw var ex    expr, that sets the variable to an expression
-;;   declare var    expr, that declares the variable
-;;   declarew var   expr, that declares the variable
-;;   set-dup f      nil, sets the type's dup function
-;;   set-del f      nil, sets the type's del function
-;;   set-getter f   nil, sets the type's get function
-;;   set-setter f   nil, sets the type's set function
-;;   set-declare f  nil, sets the type's declare function
 (define lwis-type-new
-  (lambda (name target-type wrap unwrap)
-
-    (define _setter
-      (lambda (var expr)
-	(lwis= (lwis-literal (var 'get-name)) expr)))
+  (lambda (cname super)
 
     (define _getter
       (lambda (var)
 	(lwis-literal (var 'get-name))))
 
+    (define _setter
+      (lambda (var expr)
+	(lwis= (lwis-literal (var 'get-name)) expr)))
+    
     (define _declare
       (lambda (var)
-	(lambda (output)
-	  (output (lwis-printf
-		   (if (string=? "" (var 'get-flags)) "~a~a ~a" "~a ~a ~a")
-		   (var 'get-flags) name (var 'get-name))))))
+	(lwis-literal
+	 (lwis-printf
+	  (if (string=? "" (var 'get-flags)) "~a~a ~a" "~a ~a ~a")
+	  (var 'get-flags) ((var 'get-type) 'get-name) (var 'get-name)))))
 
-    (let ((dup lwis-noop)
+    (let ((target #f)
+	  (dup lwis-noop)
 	  (del lwis-noop)
-	  (setter _setter)
 	  (getter _getter)
-	  (declare _declare))
-      
+	  (setter _setter)
+	  (decl _declare)
+	  (wrap lwis-noop)
+	  (unwrap lwis-noop))
+
       (define self
 	(lambda args
 	  (apply
 	   (case (car args)
-	     ((get-name) get-name)
-	     ((get-target) get-target)
-	     ((wrap) wrap)
-	     ((unwrap) unwrap)
+	     ((get-name) (lambda () cname))
+	     ((get-target) (lambda () target))
+	     ((set-target) (lambda (t) (set! target t)))
+	     ((get-dup) (lambda () dup))
+	     ((set-dup) (lambda (f) (set! dup f)))
 	     ((dup) dup)
+	     ((get-del) (lambda () del))
+	     ((set-del) (lambda (f) (set! del f)))
 	     ((del) del)
+	     ((get-getter) (lambda () getter))
+	     ((set-getter) (lambda (f) (set! getter f)))
 	     ((get) getter)
+	     ((get-setter) (lambda () setter))
+	     ((set-setter) (lambda (f) (set! setter f)))
 	     ((set) setter)
-	     ((declare) declare)
-	     ((set-dup) set-dup)
-	     ((set-del) set-del)
-	     ((set-getter) set-getter)
-	     ((set-setter) set-setter)
-	     ((set-declare) set-declare)
-	     (else (error "No such method ~s in lwis-type" (car args))))
+	     ((get-decl) (lambda () decl))
+	     ((set-decl) (lambda (f) (set! decl f)))
+	     ((declare) decl)
+	     ((get-wrap) (lambda () wrap))
+	     ((set-wrap) (lambda (f) (set! wrap f)))
+	     ((wrap) wrap)
+	     ((get-unwrap) (lambda () unwrap))
+	     ((set-unwrap) (lambda (f) (set! unwrap f)))
+	     ((unwrap) unwrap)
+	     (else
+	      (if (string? (car args))
+		  (lambda () (new-var (car args)))
+		  (error "No such method in lwis-type: " (car args)))))
+
 	   (cdr args))))
       
-      (define get-name
-	(lambda () name))
-      
-      (define get-target
-	(lambda () target-type))
-      
-      (define set-dup
-	(lambda (dupfunc) (set! dup dupfunc)))
-      
-      (define set-del
-	(lambda (delfunc) (set! del delfunc)))
-      
-      (define set-getter
-	(lambda (getterfunc) (set! getter getterfunc)))
-      
-      (define set-setter
-	(lambda (setterfunc) (set! setter setterfunc)))
+      (define new-var
+	(lambda (name)
+	  (lwis-var-new self name)))
 
-      (define set-declare
-	(lambda (declarefunc) (set! declare declarefunc)))
-      
+      (if super
+	  (begin
+	    (set! target (super 'get-target))
+	    (set! dup (super 'get-dup))
+	    (set! getter (super 'get-getter))
+	    (set! setter (super 'get-setter))
+	    (set! decl (super 'get-decl))
+	    (set! wrap (super 'get-wrap))
+	    (set! unwrap (super 'get-unwrap))))
+
       self)))
 
 
@@ -155,7 +137,7 @@
 	     ((del-wrapped) del-wrapped)
 	     ((wrap) wrap)
 	     ((unwrap) unwrap)
-	     (else (error "No such method ~a" (car args))))
+	     (else (error "No such method in lwis-var: " (car args))))
 	   (cdr args))))
     
       

@@ -1,36 +1,60 @@
 ;; my test lib
 
 
+
+;; todo: we'll get rid of these two at some point
 (load "lib.scm")
 (require "glibc-python.scm")
+
+
+;; todo: specify lwis modules by name. the target-specific versions
+;; will get loaded as well
+;(lwis-use "glibc")
+
 
 
 (define test-lib
   (lwis-wrapped-lib-new "test"))
 
+
+;; add the header test.h to the wrapped lib
 (test-lib 'add-header "test.h")
 
 
+
+;; function foobar
 (define test-foobar
   (lwis-wrapped-func-new
-   void "foobar" `((,const-char* "text"))))
+   ;; return type
+   void
 
+   ;; c-name
+   "foobar"
+
+   ;; list of lwis-var parameters
+   `(,(const-char* "text"))))
+
+;; set the description
 (test-foobar
  'set-desc
  "this is a test function that will print text to stdout")
 
+;; add foobar to the wrapped library
 (test-lib 'add-func test-foobar)
 
 
+
+;; function barfoo
 (define test-barfoo
   (lwis-wrapped-func-new
-   void "barfoo" `((,const-char* "txet"))))
+   void "barfoo" `(,(const-char* "txet"))))
 
 (test-barfoo
  'set-desc
  "this is a test function that will print text backwards to stdout")
 
 (test-lib 'add-func test-barfoo)
+
 
 
 ;; example of something crazy. the reverse implementation modifies
@@ -42,36 +66,43 @@
 
 (define test-reverse
   (lwis-wrapped-func-new
-   const-char* "reverse" `((,char* "text"))))
+   const-char* "reverse" `(,(char* "text"))))
 
 (test-lib 'add-func test-reverse)
 
 
+
+;; function const_reverse
 (define test-const-reverse
   (lwis-wrapped-func-new
-   const-char* "const_reverse" `((,const-char* "text"))))
+   const-char* "const_reverse" `(,(const-char* "text"))))
 
 (test-lib 'add-func test-const-reverse)
 
 
+
+;; todo:
 ;(define TestPoint
 ;  (lwis-class-new
 ;   "struct test_point*" "TestPoint" PyObject*
-;   `((,int "x")
-;     (,int "y"))
+;   `(,(int "x")
+;     ,(int "y"))
 ;   ))
+;
 ;
 ;
 ;(define TestLine
 ;  (lwis-class-new
 ;   "struct test_line*" "TestLine" PyObject*
-;   `((,TestPoint "start")
-;     (,TestPoint "end"))
+;   `(,(TestPoint "start")
+;     ,(TestPoint "end"))
 ;   ))
 
 
-;; todo replace this with (lwis-target 'add-lib test-lib)
+
+;; todo: replace this with (lwis-target 'add-lib test-lib)
 ((py-module test-lib) display)
+
 
 
 ;; The end.
