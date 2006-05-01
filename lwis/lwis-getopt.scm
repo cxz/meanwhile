@@ -123,7 +123,7 @@
   (lambda (args opts longopts col)
     (getopt_spec&co
      args
-     (append (getopt_argspec opts) (getopt_longspec longopts))
+     (append (getopt_shortspec opts) (getopt_longspec longopts))
      col)))
 
 
