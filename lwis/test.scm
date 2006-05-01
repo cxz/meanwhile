@@ -1,15 +1,12 @@
 ;; my test lib
 
 
-
-;; todo: we'll get rid of these two at some point
-(load "lib.scm")
 (require "glibc-python.scm")
 
 
 ;; todo: specify lwis modules by name. the target-specific versions
 ;; will get loaded as well
-;(lwis-use "glibc")
+;(lwis-use "libc")
 
 
 
