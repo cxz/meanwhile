@@ -5,11 +5,6 @@
 (require "glibc-python.scm")
 
 
-;; todo: specify lwis modules by name. the target-specific versions
-;; will get loaded as well
-;(lwis-use "libc")
-
-
 
 (define test-lib
   (lwis-wrapped-lib-new "test"))
@@ -98,9 +93,9 @@
 
 
 
-;; todo: replace this with (lwis-target 'add-lib test-lib)
-((py-module test-lib) display)
-
+;; last thing, causes the module to be evaluated in the given target
+;; language
+(lwis-produce test-lib)
 
 
 ;; The end.

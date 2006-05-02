@@ -270,8 +270,8 @@
 
 
 
-;(define Python
-;  (lwis-target "python" py-module))
+;; this makes the Python target available
+(define target-produce py-module)
 
 
 

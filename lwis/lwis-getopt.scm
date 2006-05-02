@@ -112,7 +112,7 @@
 
 (define getopt_spec
   (lambda (args spec)
-    (getopt_spec&co args spec (lambda (o a) `(,o ,a)))))
+    (getopt_spec&co args spec (lambda (o a) `(,o . ,a)))))
 
 
 
@@ -142,7 +142,7 @@
 ;;
 (define getopt
   (lambda (args opts longopts)
-    (getopt&co args opts longopts (lambda (o a) `(,o ,a)))))
+    (getopt&co args opts longopts (lambda (o a) `(,o . ,a)))))
 
 
 ;; The end.
