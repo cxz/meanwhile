@@ -1,6 +1,7 @@
 ;; my test lib
 
 
+;; todo: shouldn't be required once the -I option to lwis functions
 (require "glibc-python.scm")
 
 
