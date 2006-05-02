@@ -40,7 +40,7 @@
 ;; function barfoo
 (define test-barfoo
   (lwis-wrapped-func-new
-   void "barfoo" `(,(const-char* "txet"))))
+   void "barfoo" `(,(const-char* "text"))))
 
 (test-barfoo
  'set-desc
