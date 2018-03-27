@@ -21,7 +21,7 @@
 #include <Python.h>
 #include <structmember.h>
 
-#include <glib/glist.h>
+#include <glib.h>
 
 #include <mw_channel.h>
 #include <mw_cipher.h>

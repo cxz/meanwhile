@@ -4,7 +4,7 @@ m4_define(pymeanwhile_version,		1.0.0cvs)
 
 # required minimum version of meanwhile
 m4_define(meanwhile_min_version,	0.5.0)
-m4_define(meanwhile_max_version,	0.6.0)
+m4_define(meanwhile_max_version,	2.1.0)
 
 # required min version of glib2.
 m4_define(glib_required_version,	2.0.0)

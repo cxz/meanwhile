@@ -19,6 +19,7 @@
 */
 
 #include <Python.h>
+
 #include "py_meanwhile.h"
 
 #include <mw_service.h>
@@ -29,21 +30,21 @@
 #include <mw_srvc_im.h>
 #include <mw_srvc_resolve.h>
 
-
 __attribute__((used))
 static void hushed_log_handler(const gchar *domain, GLogLevelFlags flags,
 			       const gchar *msg, gpointer data) {
-  ; /* that's pretty quiet! */
+  ; //that's pretty quiet!
 }
+
 
 
 static void setup_debug() {
 #if DEBUG
-  /* leave debugging the way it was already */
+  //leave debugging the way it was already
   ;
 #else
 
-  /* overwrite the debugging log handler with one that does nothing */
+  //overwrite the debugging log handler with one that does nothing
   GLogLevelFlags logflags =
     G_LOG_LEVEL_MASK | G_LOG_FLAG_FATAL | G_LOG_FLAG_RECURSION;
 
@@ -81,6 +82,7 @@ PyMODINIT_FUNC init_meanwhile() {
   INT_CONSTANT(m, "SERVICE_STOPPED", mwServiceState_STOPPED);
   INT_CONSTANT(m, "SERVICE_ERROR", mwServiceState_ERROR);
   INT_CONSTANT(m, "SERVICE_UNKNOWN", mwServiceState_UNKNOWN);
+
 
   /* session state constants */
   INT_CONSTANT(m, "SESSION_STARTING", mwSession_STARTING);
