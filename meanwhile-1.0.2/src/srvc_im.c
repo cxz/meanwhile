@@ -1,4 +1,3 @@
-
 /*
   Meanwhile - Unofficial Lotus Sametime Community Client Library
   Copyright (C) 2004  Christopher (siege) O'Brien
@@ -19,7 +18,6 @@
 */
 
 #include <glib.h>
-#include <glib/glist.h>
 #include <string.h>
 
 #include "mw_channel.h"
